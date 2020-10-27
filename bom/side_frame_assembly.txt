@@ -1,0 +1,16 @@
+side_frame_assemblies:
+Vitamins:
+  6 Ball bearing 6201-2RS 12mm x 32mm x 10mm
+  4 Extrusion E4040 x 1070mm
+  6 Extrusion E4040 x 80mm
+  2 Leadscrew nut for SFU1610
+  2 Leadscrew 16 x 935mm, 10mm lead, 1 starts
+  2 Linear rail HGH20CA x 1000mm
+  2 Smooth rod 10mm x 15mm
+  2 Smooth rod 12mm x 15mm
+  2 Smooth rod 12mm x 50mm
+ 12 Screw M5 cs cap x 40mm
+  2 undef 80mm x 80mm x undefmm
+
+CNC cut:
+  2 motor_mount_plate.dxf
