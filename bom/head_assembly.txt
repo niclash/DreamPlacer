@@ -1,0 +1,9 @@
+head_assembly:
+Vitamins:
+  1 Stepper motor NEMA17 x 47mm
+  8 Screw M3 cs cap x 10mm
+  1 Aluminium tooling plate 100mm x 114mm x 8mm
+  1 Aluminium tooling plate 100mm x 240mm x 8mm
+
+Assemblies:
+  2 picker_assemblies

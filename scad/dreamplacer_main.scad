@@ -20,19 +20,18 @@ KP_BLOCK=KP001;
 module main_assembly()
   assembly("main") {
       
-  frame_assembly();
+    frame_assembly();
+    build_bed(WIDTH,LENGTH);
+    translate([0, GANTRY_POS, X_AXIS_HEIGHT+78]) 
+      xaxis_assembly();
 
-  translate([0, GANTRY_POS, X_AXIS_HEIGHT+78]) 
-    xaxis_assembly();
-
-  x = WIDTH/2+20;
-  translate([x,0,X_AXIS_HEIGHT/2])
-    mirror([1,0,0]) 
-      side_frame_assembly();  // Right
+    x = WIDTH/2+20;
+    translate([x,0,X_AXIS_HEIGHT/2])
+      right_side_frame_assembly();  // Right
       
-  translate([-x,0,X_AXIS_HEIGHT/2])
-    side_frame_assembly(); // Left
-}
+    translate([-x,0,X_AXIS_HEIGHT/2])
+      left_side_frame_assembly(); // Left
+  }
 
 if($preview)
     main_assembly();
@@ -64,8 +63,7 @@ module xaxis_assembly()
 }
 
 module bracket_x1_axis_dxf() 
-//  dxf("bracket_x1_axis") {
-{
+  dxf("bracket_x1_axis") {
     difference() {
       union()  {
         sheet(AL8, 80,100,[0,3,3,0]);
@@ -94,8 +92,7 @@ module bracket_x1_axis_dxf()
   }
 
 module bracket_x2_axis_dxf() 
-//  dxf("bracket_x2_axis") {
-{
+  dxf("bracket_x2_axis") {
     difference() {
       union()  {
         translate([86,0,0]) rotate([0,0,-90]) 
@@ -251,8 +248,18 @@ module rail_block_assembly(length, pos){
     carriage(HGH20CA_carriage, HGH20CA );
 }
 
-module side_frame_assembly() 
-  assembly("side_frame") {
+module right_side_frame_assembly() 
+  assembly("right_side_frame") {
+    mirror([1,0,0])
+      side_frame();
+  }
+  
+module left_side_frame_assembly() 
+  assembly("left_side_frame") {
+    side_frame();
+  }
+  
+module side_frame() {
     length = LENGTH;
     height = X_AXIS_HEIGHT;
     block_pos = GANTRY_POS;
@@ -372,7 +379,6 @@ module frame_assembly()
       at_y(second-BACK_OFFSET) extrusion(E4040,width);
       at_y(-second) extrusion(E4040,width);
     }
-    build_bed(width,length);
   }
 
 module build_bed(width, length) {

@@ -1,54 +1,155 @@
 [
     {
-        "name": "side_frame_assembly",
+        "name": "left_side_frame_assembly",
+        "big": null,
+        "count": 1,
+        "assemblies": {},
+        "vitamins": {
+            "extrusion(E4040, 1070): Extrusion E4040 x 1070mm": {
+                "count": 2
+            },
+            "rail(HGH20CA, 1000): Linear rail HGH20CA x 1000mm": {
+                "count": 1
+            },
+            "extrusion(E4040, 80): Extrusion E4040 x 80mm": {
+                "count": 3
+            },
+            "leadscrew(16, 935, 10, 1): Leadscrew 16 x 935mm, 10mm lead, 1 starts": {
+                "count": 1
+            },
+            "rod(12, 50): Smooth rod 12mm x 50mm": {
+                "count": 1
+            },
+            "rod(10, 15): Smooth rod 10mm x 15mm": {
+                "count": 1
+            },
+            "rod(12, 15): Smooth rod 12mm x 15mm": {
+                "count": 1
+            },
+            "leadnut(SFU1610): Leadscrew nut for SFU1610": {
+                "count": 1
+            },
+            "ball_bearing(BB6201): Ball bearing 6201-2RS 12mm x 32mm x 10mm": {
+                "count": 3
+            },
+            "Servo(LCMT07L02NB_80M03530B): Servo motor90 x 178mm": {
+                "count": 1
+            },
+            "sheet(AL8, 160, 160, [3, 3, 3, 3]): Aluminium tooling plate 160mm x 160mm x 8mm": {
+                "count": 1
+            },
+            "screw(M5_cap_screw, 24): Screw M5 cap x 24mm": {
+                "count": 4
+            },
+            "washer(M5_washer): Washer  M5 x 10mm x 1mm": {
+                "count": 4
+            },
+            "nut(M5_nut, nyloc = true): Nut M5 x 4mm nyloc": {
+                "count": 4
+            },
+            "screw(M5_cs_cap_screw, 40): Screw M5 cs cap x 40mm": {
+                "count": 6
+            }
+        },
+        "printed": {},
+        "routed": {}
+    },
+    {
+        "name": "right_side_frame_assembly",
+        "big": null,
+        "count": 1,
+        "assemblies": {},
+        "vitamins": {
+            "extrusion(E4040, 1070): Extrusion E4040 x 1070mm": {
+                "count": 2
+            },
+            "rail(HGH20CA, 1000): Linear rail HGH20CA x 1000mm": {
+                "count": 1
+            },
+            "extrusion(E4040, 80): Extrusion E4040 x 80mm": {
+                "count": 3
+            },
+            "leadscrew(16, 935, 10, 1): Leadscrew 16 x 935mm, 10mm lead, 1 starts": {
+                "count": 1
+            },
+            "rod(12, 50): Smooth rod 12mm x 50mm": {
+                "count": 1
+            },
+            "rod(10, 15): Smooth rod 10mm x 15mm": {
+                "count": 1
+            },
+            "rod(12, 15): Smooth rod 12mm x 15mm": {
+                "count": 1
+            },
+            "leadnut(SFU1610): Leadscrew nut for SFU1610": {
+                "count": 1
+            },
+            "ball_bearing(BB6201): Ball bearing 6201-2RS 12mm x 32mm x 10mm": {
+                "count": 3
+            },
+            "Servo(LCMT07L02NB_80M03530B): Servo motor90 x 178mm": {
+                "count": 1
+            },
+            "sheet(AL8, 160, 160, [3, 3, 3, 3]): Aluminium tooling plate 160mm x 160mm x 8mm": {
+                "count": 1
+            },
+            "screw(M5_cap_screw, 24): Screw M5 cap x 24mm": {
+                "count": 4
+            },
+            "washer(M5_washer): Washer  M5 x 10mm x 1mm": {
+                "count": 4
+            },
+            "nut(M5_nut, nyloc = true): Nut M5 x 4mm nyloc": {
+                "count": 4
+            },
+            "screw(M5_cs_cap_screw, 40): Screw M5 cs cap x 40mm": {
+                "count": 6
+            }
+        },
+        "printed": {},
+        "routed": {}
+    },
+    {
+        "name": "picker_assembly",
         "big": null,
         "count": 2,
         "assemblies": {},
         "vitamins": {
-            "extrusion(E4040, 1070): Extrusion E4040 x 1070mm": {
+            "rail(MGN7, 200): Linear rail MGN7 x 200mm": {
+                "count": 2
+            },
+            "sheet(AL2, 30, 30): Aluminium tooling plate 30mm x 30mm x 2mm": {
                 "count": 4
             },
-            "rail(HGH20CA, 1000): Linear rail HGH20CA x 1000mm": {
+            "screw(M2_cs_cap_screw, 6): Screw M2 cs cap x  6mm": {
+                "count": 16
+            },
+            "NEMA(NEMA8 Hollow): Stepper motor NEMA8 x 30mm": {
                 "count": 2
+            }
+        },
+        "printed": {},
+        "routed": {}
+    },
+    {
+        "name": "head_assembly",
+        "big": null,
+        "count": 1,
+        "assemblies": {
+            "picker_assembly": 2
+        },
+        "vitamins": {
+            "sheet(AL8, 100, 114, [3, 3, 3, 3]): Aluminium tooling plate 100mm x 114mm x 8mm": {
+                "count": 1
             },
-            "extrusion(E4040, 80): Extrusion E4040 x 80mm": {
-                "count": 6
+            "sheet(AL8, 100, 240, [3, 3, 3, 3]): Aluminium tooling plate 100mm x 240mm x 8mm": {
+                "count": 1
             },
-            "leadscrew(16, 935, 10, 1): Leadscrew 16 x 935mm, 10mm lead, 1 starts": {
-                "count": 2
-            },
-            "rod(12, 50): Smooth rod 12mm x 50mm": {
-                "count": 2
-            },
-            "rod(10, 15): Smooth rod 10mm x 15mm": {
-                "count": 2
-            },
-            "rod(12, 15): Smooth rod 12mm x 15mm": {
-                "count": 2
-            },
-            "leadnut(SFU1610): Leadscrew nut for SFU1610": {
-                "count": 2
-            },
-            "ball_bearing(BB6201): Ball bearing 6201-2RS 12mm x 32mm x 10mm": {
-                "count": 6
-            },
-            "Servo(LCMT07L02NB_80M03530B): Servo motor90 x 178mm": {
-                "count": 2
-            },
-            "sheet(AL8, 160, 160, [3, 3, 3, 3]): Aluminium tooling plate 160mm x 160mm x 8mm": {
-                "count": 2
-            },
-            "screw(M5_cap_screw, 24): Screw M5 cap x 24mm": {
+            "screw(M3_cs_cap_screw, 10): Screw M3 cs cap x 10mm": {
                 "count": 8
             },
-            "washer(M5_washer): Washer  M5 x 10mm x 1mm": {
-                "count": 8
-            },
-            "nut(M5_nut, nyloc = true): Nut M5 x 4mm nyloc": {
-                "count": 8
-            },
-            "screw(M5_cs_cap_screw, 40): Screw M5 cs cap x 40mm": {
-                "count": 12
+            "NEMA(NEMA17): Stepper motor NEMA17 x 47mm": {
+                "count": 1
             }
         },
         "printed": {},
@@ -58,7 +159,9 @@
         "name": "xaxis_assembly",
         "big": null,
         "count": 1,
-        "assemblies": {},
+        "assemblies": {
+            "head_assembly": 1
+        },
         "vitamins": {
             "extrusion(E4080, 1640): Extrusion E4080 x 1640mm": {
                 "count": 1
@@ -87,57 +190,19 @@
             "sheet(AL8, 60, 80, [3, 3, 3, 3]): Aluminium tooling plate 60mm x 80mm x 8mm": {
                 "count": 2
             },
-            "sheet(AL8, 100, 114, [3, 3, 3, 3]): Aluminium tooling plate 100mm x 114mm x 8mm": {
-                "count": 1
-            },
-            "sheet(AL8, 100, 240, [3, 3, 3, 3]): Aluminium tooling plate 100mm x 240mm x 8mm": {
-                "count": 1
-            },
-            "screw(M3_cs_cap_screw, 10): Screw M3 cs cap x 10mm": {
-                "count": 8
-            },
-            "rail(MGN7, 200): Linear rail MGN7 x 200mm": {
-                "count": 2
-            },
-            "sheet(AL2, 30, 30): Aluminium tooling plate 30mm x 30mm x 2mm": {
-                "count": 4
-            },
-            "screw(M2_cs_cap_screw, 6): Screw M2 cs cap x  6mm": {
-                "count": 16
-            },
-            "NEMA(NEMA8 Hollow): Stepper motor NEMA8 x 30mm": {
-                "count": 2
-            },
-            "NEMA(NEMA17): Stepper motor NEMA17 x 47mm": {
-                "count": 1
-            },
             "Servo(LCMT07L02NB_80M03530B): Servo motor90 x 178mm": {
                 "count": 1
-            },
-            "sheet(AL8, 80, 100, [0, 3, 3, 0]): Aluminium tooling plate 80mm x 100mm x 8mm": {
-                "count": 1
-            },
-            "sheet(AL8, 50, 50, [3, 3, 0, 0]): Aluminium tooling plate 50mm x 50mm x 8mm": {
-                "count": 2
-            },
-            "sheet(AL8, 50, 50, [0, 0, 3, 3]): Aluminium tooling plate 50mm x 50mm x 8mm": {
-                "count": 2
-            },
-            "sheet(AL8, 100, 250, [3, 3, 3, 3]): Aluminium tooling plate 100mm x 250mm x 8mm": {
-                "count": 1
-            },
-            "screw(M5_cap_screw, 24): Screw M5 cap x 24mm": {
-                "count": 4
-            },
-            "washer(M5_washer): Washer  M5 x 10mm x 1mm": {
-                "count": 4
-            },
-            "nut(M5_nut, nyloc = true): Nut M5 x 4mm nyloc": {
-                "count": 4
             }
         },
         "printed": {},
-        "routed": {}
+        "routed": {
+            "bracket_x1_axis.dxf": {
+                "count": 1
+            },
+            "bracket_x2_axis.dxf": {
+                "count": 1
+            }
+        }
     },
     {
         "name": "frame_assembly",
@@ -147,9 +212,6 @@
         "vitamins": {
             "extrusion(E4040, 1500): Extrusion E4040 x 1500mm": {
                 "count": 5
-            },
-            "sheet(AL2, 1500, 645, 6): Aluminium tooling plate 1500mm x 645mm x 2mm": {
-                "count": 1
             }
         },
         "printed": {},
@@ -162,9 +224,14 @@
         "assemblies": {
             "frame_assembly": 1,
             "xaxis_assembly": 1,
-            "side_frame_assembly": 2
+            "right_side_frame_assembly": 1,
+            "left_side_frame_assembly": 1
         },
-        "vitamins": {},
+        "vitamins": {
+            "sheet(AL2, 1500, 645, 6): Aluminium tooling plate 1500mm x 645mm x 2mm": {
+                "count": 1
+            }
+        },
         "printed": {},
         "routed": {}
     }

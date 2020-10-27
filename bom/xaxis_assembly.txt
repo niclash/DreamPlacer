@@ -1,27 +1,19 @@
 xaxis_assembly:
 Vitamins:
-  1 Stepper motor NEMA17 x 47mm
-  2 Stepper motor NEMA8 x 30mm
   1 Servo motor90 x 178mm
   3 Ball bearing 6201-2RS 12mm x 32mm x 10mm
   1 Extrusion E4080 x 1640mm
   1 Leadscrew nut for SFU1610
   1 Leadscrew 16 x 1435mm, 10mm lead, 1 starts
-  4 Nut M5 x 4mm nyloc
   1 Linear rail HGH15CA x 1500mm
-  2 Linear rail MGN7 x 200mm
   1 Smooth rod 10mm x 15mm
   1 Smooth rod 12mm x 15mm
   1 Smooth rod 12mm x 50mm
- 16 Screw M2 cs cap x  6mm
-  8 Screw M3 cs cap x 10mm
-  4 Screw M5 cap x 24mm
-  4 Aluminium tooling plate 30mm x 30mm x 2mm
-  1 Aluminium tooling plate 100mm x 114mm x 8mm
-  1 Aluminium tooling plate 100mm x 240mm x 8mm
-  1 Aluminium tooling plate 100mm x 250mm x 8mm
-  2 Aluminium tooling plate 50mm x 50mm x 8mm
-  2 Aluminium tooling plate 50mm x 50mm x 8mm
   2 Aluminium tooling plate 60mm x 80mm x 8mm
-  1 Aluminium tooling plate 80mm x 100mm x 8mm
-  4 Washer  M5 x 10mm x 1mm
+
+CNC cut:
+  1 bracket_x1_axis.dxf
+  1 bracket_x2_axis.dxf
+
+Assemblies:
+  1 head_assembly

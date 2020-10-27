@@ -1,6 +1,9 @@
 main_assembly:
+Vitamins:
+  1 Aluminium tooling plate 1500mm x 645mm x 2mm
 
 Assemblies:
   1 frame_assembly
-  2 side_frame_assemblies
+  1 left_side_frame_assembly
+  1 right_side_frame_assembly
   1 xaxis_assembly
