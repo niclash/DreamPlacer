@@ -5,15 +5,18 @@ Vitamins:
   1 Extrusion E4080 x 1640mm
   1 Leadscrew nut for SFU1610
   1 Leadscrew 16 x 1435mm, 10mm lead, 1 starts
+  4 Nut M5 x 4mm nyloc
   1 Linear rail HGH15CA x 1500mm
   1 Smooth rod 10mm x 15mm
   1 Smooth rod 12mm x 15mm
   1 Smooth rod 12mm x 50mm
+  4 Screw M5 cap x 24mm
+  1 Aluminium tooling plate 100mm x 250mm x 8mm
+  2 Aluminium tooling plate 50mm x 50mm x 8mm
+  2 Aluminium tooling plate 50mm x 50mm x 8mm
   2 Aluminium tooling plate 60mm x 80mm x 8mm
-
-CNC cut:
-  1 bracket_x1_axis.dxf
-  1 bracket_x2_axis.dxf
+  1 Aluminium tooling plate 80mm x 100mm x 8mm
+  4 Washer  M5 x 10mm x 1mm
 
 Assemblies:
   1 head_assembly
