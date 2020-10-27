@@ -8,7 +8,7 @@ WIDTH=1500;
 LENGTH=1000;
 FEEDER_GAP = 100;
 X_AXIS_HEIGHT = 120;
-GANTRY_POS = 380;
+GANTRY_POS = 80;
 //GANTRY_POS = sin($t*360)*LENGTH/3;
 HEAD_POS = -200;
 //HEAD_POS = sin($t*180)*LENGTH/3;
@@ -28,7 +28,9 @@ module main_assembly()
 if($preview)
     main_assembly();
     
-
+module nothing_stl()
+  stl("nothing"){}
+  
 module xaxis_assembly() 
   assembly("xaxis") {
     length=WIDTH;
@@ -56,7 +58,8 @@ module xaxis_assembly()
 }
 
 module bracket_x1_axis_dxf() 
-  dxf("bracket_x1_axis") {
+//  dxf("bracket_x1_axis") {
+{
     difference() {
       union()  {
         sheet(AL8, 80,100,[0,3,3,0]);
@@ -85,7 +88,8 @@ module bracket_x1_axis_dxf()
   }
 
 module bracket_x2_axis_dxf() 
-  dxf("bracket_x2_axis") {
+//  dxf("bracket_x2_axis") {
+{
     difference() {
       union()  {
         translate([86,0,0]) rotate([0,0,-90]) 
@@ -319,8 +323,8 @@ module block_stand_off(double_holes) {
 }
 
 module motor_mount_plate_dxf(motor, height, width) 
-  dxf("motor_mount_plate") {
-  
+//  dxf("motor_mount_plate") {
+{  
     motor_mount_screw = mount_hole_dist( servo_mount(motor) )/2;
     mount_flange = mount_flange( servo_mount(motor));
     
@@ -375,7 +379,6 @@ module build_bed(width, length) {
   d = length - (BACK_OFFSET/2 + 2*(40+FEEDER_GAP));
   translate([0,-BACK_OFFSET/2,20]) 
     sheet(AL2, width, d, 6);
-  echo( "Bed:", width, d);
 }
 
 module at_z(z_translate) {

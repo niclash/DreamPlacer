@@ -1,0 +1,10 @@
+{
+    "assemblies/main_assembled.png": 3.051,
+    "assemblies/main_assembly.png": 3.097,
+    "assemblies/xaxis_assembled.png": 2.277,
+    "assemblies/xaxis_assembly.png": 2.042,
+    "assemblies/side_frame_assembled.png": 1.828,
+    "assemblies/side_frame_assembly.png": 1.584,
+    "assemblies/frame_assembled.png": 2.248,
+    "assemblies/frame_assembly.png": 2.226
+}

@@ -1,7 +1,7 @@
-ECHO: "~bracket_x1_axis.dxf"
-Geometries in cache: 1
-Geometry cache size in bytes: 0
+Compiling design (CSG Products normalization)...
+Normalized CSG tree has 298 elements
+Geometries in cache: 242
+Geometry cache size in bytes: 1654424
 CGAL Polyhedrons in cache: 0
 CGAL cache size in bytes: 0
-Total rendering time: 0:00:00.000
-Current top level object is not a 2D object.
+Total rendering time: 0:00:00.376

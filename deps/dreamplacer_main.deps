@@ -1,4 +1,4 @@
-dxfs/bracket_x1_axis.dxf: \
+tmp.png: \
 	/home/niclas/dev/3D/NopSCADlib/vitamins/e3d.scad \
 	/home/niclas/dev/3D/NopSCADlib/vitamins/dip.scad \
 	/home/niclas/dev/3D/NopSCADlib/utils/core/sphere.scad \
@@ -68,6 +68,10 @@ dxfs/bracket_x1_axis.dxf: \
 	/home/niclas/dev/3D/NopSCADlib/vitamins/microswitch.scad \
 	/home/niclas/dev/3D/NopSCADlib/utils/core/polyholes.scad \
 	/home/niclas/dev/3D/NopSCADlib/vitamins/green_terminal.scad \
+	/home/niclas/dev/3D/NopSCADlib/vitamins/spring.scad \
+	/home/niclas/dev/3D/NopSCADlib/vitamins/iecs.scad \
+	/home/niclas/dev/3D/NopSCADlib/utils/core/core.scad \
+	/home/niclas/dev/3D/NopSCADlib/vitamins/circlip.scad \
 	/home/niclas/dev/3D/NopSCADlib/vitamins/psus.scad \
 	/home/niclas/dev/3D/NopSCADlib/vitamins/rod.scad \
 	/home/niclas/dev/3D/NopSCADlib/vitamins/screws.scad \
@@ -101,10 +105,6 @@ dxfs/bracket_x1_axis.dxf: \
 	/home/niclas/dev/3D/NopSCADlib/vitamins/button.scad \
 	/home/niclas/dev/3D/NopSCADlib/vitamins/mains_sockets.scad \
 	/home/niclas/dev/3D/NopSCADlib/vitamins/transformer.scad \
-	/home/niclas/dev/3D/NopSCADlib/vitamins/spring.scad \
-	/home/niclas/dev/3D/NopSCADlib/vitamins/iecs.scad \
-	/home/niclas/dev/3D/NopSCADlib/utils/core/core.scad \
-	/home/niclas/dev/3D/NopSCADlib/vitamins/circlip.scad \
 	/home/niclas/dev/3D/NopSCADlib/vitamins/pin_headers.scad \
 	/home/niclas/dev/3D/NopSCADlib/vitamins/inserts.scad \
 	/home/niclas/dev/3D/NopSCADlib/vitamins/pcb.scad \
@@ -138,7 +138,6 @@ dxfs/bracket_x1_axis.dxf: \
 	/home/niclas/dev/3D/NopSCADlib/vitamins/rails.scad \
 	/home/niclas/dev/3D/NopSCADlib/vitamins/rail.scad \
 	/home/niclas/dev/3D/NopSCADlib/utils/thread.scad \
-	dxf.scad \
 	/home/niclas/dev/3D/NopSCADlib/vitamins/ring_terminal.scad \
 	/home/niclas/dev/3D/NopSCADlib/vitamins/scs_bearing_blocks.scad \
 	/home/niclas/dev/3D/NopSCADlib/vitamins/kp_pillow_blocks.scad \
@@ -154,6 +153,7 @@ dxfs/bracket_x1_axis.dxf: \
 	/home/niclas/dev/3D/NopSCADlib/vitamins/sk_brackets.scad \
 	/home/niclas/dev/3D/NopSCADlib/vitamins/ssrs.scad \
 	/home/niclas/dev/3D/NopSCADlib/vitamins/zipties.scad \
+	png.scad \
 	/home/niclas/dev/3D/NopSCADlib/vitamins/light_strips.scad \
 	/home/niclas/dev/3D/NopSCADlib/vitamins/stepper_motor.scad \
 	/home/niclas/dev/3D/NopSCADlib/vitamins/swiss_clips.scad \
