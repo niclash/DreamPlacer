@@ -1,6 +1,6 @@
 xaxis_assembly:
 Vitamins:
-  1 80ST standard mount 90 x 178mm
+  1 Servo 80ST standard mount 90 x 178mm
   3 Ball bearing 6201-2RS 12mm x 32mm x 10mm
   1 Extrusion E4080 x 1640mm
   1 Leadscrew nut for SFU1610

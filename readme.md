@@ -22,7 +22,6 @@
 | <span style="writing-mode: vertical-rl; text-orientation: mixed;">Left&nbsp;Side&nbsp;Frame</span> | <span style="writing-mode: vertical-rl; text-orientation: mixed;">Right&nbsp;Side&nbsp;Frame</span> | <span style="writing-mode: vertical-rl; text-orientation: mixed;">Picker</span> | <span style="writing-mode: vertical-rl; text-orientation: mixed;">Head</span> | <span style="writing-mode: vertical-rl; text-orientation: mixed;">Xaxis</span> | <span style="writing-mode: vertical-rl; text-orientation: mixed;">Frame</span> | <span style="writing-mode: vertical-rl; text-orientation: mixed;">Main</span> | <span style="writing-mode: vertical-rl; text-orientation: mixed;">TOTALS</span> |  |
 |---:|---:|---:|---:|---:|---:|---:|---:|:---|
 |  |  |  |  |  |  |  | | **Vitamins** |
-| &nbsp;&nbsp;1&nbsp; | &nbsp;&nbsp;1&nbsp; | &nbsp;&nbsp;.&nbsp; | &nbsp;&nbsp;.&nbsp; | &nbsp;&nbsp;1&nbsp; | &nbsp;&nbsp;.&nbsp; | &nbsp;&nbsp;.&nbsp; |  &nbsp;&nbsp;3&nbsp; | &nbsp;&nbsp; 80ST standard mount 90 x 178mm |
 | &nbsp;&nbsp;.&nbsp; | &nbsp;&nbsp;.&nbsp; | &nbsp;&nbsp;.&nbsp; | &nbsp;&nbsp;1&nbsp; | &nbsp;&nbsp;.&nbsp; | &nbsp;&nbsp;.&nbsp; | &nbsp;&nbsp;.&nbsp; |  &nbsp;&nbsp;1&nbsp; | &nbsp;&nbsp; Aluminium tooling plate 100mm x 114mm x 8mm |
 | &nbsp;&nbsp;.&nbsp; | &nbsp;&nbsp;.&nbsp; | &nbsp;&nbsp;.&nbsp; | &nbsp;&nbsp;1&nbsp; | &nbsp;&nbsp;.&nbsp; | &nbsp;&nbsp;.&nbsp; | &nbsp;&nbsp;.&nbsp; |  &nbsp;&nbsp;1&nbsp; | &nbsp;&nbsp; Aluminium tooling plate 100mm x 240mm x 8mm |
 | &nbsp;&nbsp;.&nbsp; | &nbsp;&nbsp;.&nbsp; | &nbsp;&nbsp;.&nbsp; | &nbsp;&nbsp;.&nbsp; | &nbsp;&nbsp;1&nbsp; | &nbsp;&nbsp;.&nbsp; | &nbsp;&nbsp;.&nbsp; |  &nbsp;&nbsp;1&nbsp; | &nbsp;&nbsp; Aluminium tooling plate 100mm x 250mm x 8mm |
@@ -49,6 +48,7 @@
 | &nbsp;&nbsp;.&nbsp; | &nbsp;&nbsp;.&nbsp; | &nbsp;&nbsp;.&nbsp; | &nbsp;&nbsp;8&nbsp; | &nbsp;&nbsp;.&nbsp; | &nbsp;&nbsp;.&nbsp; | &nbsp;&nbsp;.&nbsp; |  &nbsp;&nbsp;8&nbsp; | &nbsp;&nbsp; Screw M3 cs cap x 10mm |
 | &nbsp;&nbsp;4&nbsp; | &nbsp;&nbsp;4&nbsp; | &nbsp;&nbsp;.&nbsp; | &nbsp;&nbsp;.&nbsp; | &nbsp;&nbsp;4&nbsp; | &nbsp;&nbsp;.&nbsp; | &nbsp;&nbsp;.&nbsp; |  &nbsp;&nbsp;12&nbsp; | &nbsp;&nbsp; Screw M5 cap x 24mm |
 | &nbsp;&nbsp;6&nbsp; | &nbsp;&nbsp;6&nbsp; | &nbsp;&nbsp;.&nbsp; | &nbsp;&nbsp;.&nbsp; | &nbsp;&nbsp;.&nbsp; | &nbsp;&nbsp;.&nbsp; | &nbsp;&nbsp;.&nbsp; |  &nbsp;&nbsp;12&nbsp; | &nbsp;&nbsp; Screw M5 cs cap x 40mm |
+| &nbsp;&nbsp;1&nbsp; | &nbsp;&nbsp;1&nbsp; | &nbsp;&nbsp;.&nbsp; | &nbsp;&nbsp;.&nbsp; | &nbsp;&nbsp;1&nbsp; | &nbsp;&nbsp;.&nbsp; | &nbsp;&nbsp;.&nbsp; |  &nbsp;&nbsp;3&nbsp; | &nbsp;&nbsp; Servo 80ST standard mount 90 x 178mm |
 | &nbsp;&nbsp;1&nbsp; | &nbsp;&nbsp;1&nbsp; | &nbsp;&nbsp;.&nbsp; | &nbsp;&nbsp;.&nbsp; | &nbsp;&nbsp;1&nbsp; | &nbsp;&nbsp;.&nbsp; | &nbsp;&nbsp;.&nbsp; |  &nbsp;&nbsp;3&nbsp; | &nbsp;&nbsp; Smooth rod 10mm x 15mm |
 | &nbsp;&nbsp;1&nbsp; | &nbsp;&nbsp;1&nbsp; | &nbsp;&nbsp;.&nbsp; | &nbsp;&nbsp;.&nbsp; | &nbsp;&nbsp;1&nbsp; | &nbsp;&nbsp;.&nbsp; | &nbsp;&nbsp;.&nbsp; |  &nbsp;&nbsp;3&nbsp; | &nbsp;&nbsp; Smooth rod 12mm x 15mm |
 | &nbsp;&nbsp;1&nbsp; | &nbsp;&nbsp;1&nbsp; | &nbsp;&nbsp;.&nbsp; | &nbsp;&nbsp;.&nbsp; | &nbsp;&nbsp;1&nbsp; | &nbsp;&nbsp;.&nbsp; | &nbsp;&nbsp;.&nbsp; |  &nbsp;&nbsp;3&nbsp; | &nbsp;&nbsp; Smooth rod 12mm x 50mm |
@@ -65,7 +65,6 @@
 ### Vitamins
 |Qty|Description|
 |---:|:----------|
-|1| 80ST standard mount 90 x 178mm|
 |1| Aluminium tooling plate 160mm x 160mm x 8mm|
 |3| Ball bearing 6201-2RS 12mm x 32mm x 10mm|
 |2| Extrusion E4040 x 1070mm|
@@ -76,6 +75,7 @@
 |4| Nut M5 x 4mm nyloc|
 |4| Screw M5 cap x 24mm|
 |6| Screw M5 cs cap x 40mm|
+|1| Servo 80ST standard mount 90 x 178mm|
 |1| Smooth rod 10mm x 15mm|
 |1| Smooth rod 12mm x 15mm|
 |1| Smooth rod 12mm x 50mm|
@@ -95,7 +95,6 @@
 ### Vitamins
 |Qty|Description|
 |---:|:----------|
-|1| 80ST standard mount 90 x 178mm|
 |1| Aluminium tooling plate 160mm x 160mm x 8mm|
 |3| Ball bearing 6201-2RS 12mm x 32mm x 10mm|
 |2| Extrusion E4040 x 1070mm|
@@ -106,6 +105,7 @@
 |4| Nut M5 x 4mm nyloc|
 |4| Screw M5 cap x 24mm|
 |6| Screw M5 cs cap x 40mm|
+|1| Servo 80ST standard mount 90 x 178mm|
 |1| Smooth rod 10mm x 15mm|
 |1| Smooth rod 12mm x 15mm|
 |1| Smooth rod 12mm x 50mm|
@@ -171,7 +171,6 @@
 ### Vitamins
 |Qty|Description|
 |---:|:----------|
-|1| 80ST standard mount 90 x 178mm|
 |1| Aluminium tooling plate 100mm x 250mm x 8mm|
 |2| Aluminium tooling plate 50mm x 50mm x 8mm|
 |2| Aluminium tooling plate 50mm x 50mm x 8mm|
@@ -184,6 +183,7 @@
 |1| Linear rail HGH15CA x 1500mm|
 |4| Nut M5 x 4mm nyloc|
 |4| Screw M5 cap x 24mm|
+|1| Servo 80ST standard mount 90 x 178mm|
 |1| Smooth rod 10mm x 15mm|
 |1| Smooth rod 12mm x 15mm|
 |1| Smooth rod 12mm x 50mm|
