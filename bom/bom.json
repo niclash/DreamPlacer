@@ -216,7 +216,14 @@
             }
         },
         "printed": {},
-        "routed": {}
+        "routed": {
+            "bracket_x1_axis.dxf": {
+                "count": 1
+            },
+            "bracket_x2_axis.dxf": {
+                "count": 1
+            }
+        }
     },
     {
         "name": "frame_assembly",

@@ -63,9 +63,8 @@ module xaxis_assembly()
 }
 
 
-module bracket_x1_axis_dxf() 
-//  dxf("bracket_x1_axis") {
-{
+module bracket_x1_axis_dxf() {
+    dxf("bracket_x1_axis");
     difference() {
       union()  {
         sheet(AL8, 80,100,[0,3,3,0]);
@@ -93,9 +92,8 @@ module bracket_x1_axis_dxf()
     }
   }
 
-module bracket_x2_axis_dxf() 
-//  dxf("bracket_x2_axis") {
-{
+module bracket_x2_axis_dxf() {
+    dxf("bracket_x2_axis");
     difference() {
       union()  {
         translate([86,0,0]) rotate([0,0,-90]) 
