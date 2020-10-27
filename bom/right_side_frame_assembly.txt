@@ -1,6 +1,6 @@
 right_side_frame_assembly:
 Vitamins:
-  1 Servo(LCMT07L02NB_80M03530B):LCMT07L02NB_80M03530B 90 x 178mm
+  1 80ST standard mount 90 x 178mm
   3 Ball bearing 6201-2RS 12mm x 32mm x 10mm
   2 Extrusion E4040 x 1070mm
   3 Extrusion E4040 x 80mm

@@ -32,7 +32,7 @@
             "ball_bearing(BB6201): Ball bearing 6201-2RS 12mm x 32mm x 10mm": {
                 "count": 3
             },
-            "Servo(LCMT07L02NB_80M03530B):LCMT07L02NB_80M03530B 90 x 178mm": {
+            "Servo(LCMT07L02NB_80M03530B) : 80ST standard mount 90 x 178mm": {
                 "count": 1
             },
             "sheet(AL8, 160, 160, [3, 3, 3, 3]): Aluminium tooling plate 160mm x 160mm x 8mm": {
@@ -87,7 +87,7 @@
             "ball_bearing(BB6201): Ball bearing 6201-2RS 12mm x 32mm x 10mm": {
                 "count": 3
             },
-            "Servo(LCMT07L02NB_80M03530B):LCMT07L02NB_80M03530B 90 x 178mm": {
+            "Servo(LCMT07L02NB_80M03530B) : 80ST standard mount 90 x 178mm": {
                 "count": 1
             },
             "sheet(AL8, 160, 160, [3, 3, 3, 3]): Aluminium tooling plate 160mm x 160mm x 8mm": {
@@ -190,7 +190,7 @@
             "sheet(AL8, 60, 80, [3, 3, 3, 3]): Aluminium tooling plate 60mm x 80mm x 8mm": {
                 "count": 2
             },
-            "Servo(LCMT07L02NB_80M03530B):LCMT07L02NB_80M03530B 90 x 178mm": {
+            "Servo(LCMT07L02NB_80M03530B) : 80ST standard mount 90 x 178mm": {
                 "count": 1
             },
             "sheet(AL8, 80, 100, [0, 3, 3, 0]): Aluminium tooling plate 80mm x 100mm x 8mm": {
