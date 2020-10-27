@@ -21,16 +21,22 @@ module main_assembly()
   assembly("main") {
       
   frame_assembly();
+
   translate([0, GANTRY_POS, X_AXIS_HEIGHT+78]) 
     xaxis_assembly();
+
+  x = WIDTH/2+20;
+  translate([x,0,X_AXIS_HEIGHT/2])
+    mirror([1,0,0]) 
+      side_frame_assembly();  // Right
+      
+  translate([-x,0,X_AXIS_HEIGHT/2])
+    side_frame_assembly(); // Left
 }
 
 if($preview)
     main_assembly();
     
-module nothing_stl()
-  stl("nothing"){}
-  
 module xaxis_assembly() 
   assembly("xaxis") {
     length=WIDTH;
@@ -356,12 +362,6 @@ module frame_assembly()
   assembly("frame") {
     width = WIDTH;
     length = LENGTH;
-    x =  width/2+20;
-    g = GANTRY_POS;
-    translate([x,0,X_AXIS_HEIGHT/2])
-      mirror([1,0,0]) side_frame_assembly();  // Right
-    translate([-x,0,X_AXIS_HEIGHT/2])
-        side_frame_assembly(); // Left
   
     rotate([0,90,0]) {  
       first = length/2-20;

@@ -11,7 +11,7 @@ Vitamins:
  e  n  e  s
   |  |  | 1|  1 Stepper motor NEMA17 x 47mm
   |  |  | 2|  2 Stepper motor NEMA8 x 30mm
-  |  | 2| 1|  3 Servo(LCMT07L02NB_80M03530B)
+  |  | 2| 1|  3 Servo motor90 x 178mm
   |  | 6| 3|  9 Ball bearing 6201-2RS 12mm x 32mm x 10mm
   |  | 4|  |  4 Extrusion E4040 x 1070mm
  5|  |  |  |  5 Extrusion E4040 x 1500mm

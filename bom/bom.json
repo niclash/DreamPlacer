@@ -1,5 +1,60 @@
 [
     {
+        "name": "side_frame_assembly",
+        "big": null,
+        "count": 2,
+        "assemblies": {},
+        "vitamins": {
+            "extrusion(E4040, 1070): Extrusion E4040 x 1070mm": {
+                "count": 4
+            },
+            "rail(HGH20CA, 1000): Linear rail HGH20CA x 1000mm": {
+                "count": 2
+            },
+            "extrusion(E4040, 80): Extrusion E4040 x 80mm": {
+                "count": 6
+            },
+            "leadscrew(16, 935, 10, 1): Leadscrew 16 x 935mm, 10mm lead, 1 starts": {
+                "count": 2
+            },
+            "rod(12, 50): Smooth rod 12mm x 50mm": {
+                "count": 2
+            },
+            "rod(10, 15): Smooth rod 10mm x 15mm": {
+                "count": 2
+            },
+            "rod(12, 15): Smooth rod 12mm x 15mm": {
+                "count": 2
+            },
+            "leadnut(SFU1610): Leadscrew nut for SFU1610": {
+                "count": 2
+            },
+            "ball_bearing(BB6201): Ball bearing 6201-2RS 12mm x 32mm x 10mm": {
+                "count": 6
+            },
+            "Servo(LCMT07L02NB_80M03530B): Servo motor90 x 178mm": {
+                "count": 2
+            },
+            "sheet(AL8, 160, 160, [3, 3, 3, 3]): Aluminium tooling plate 160mm x 160mm x 8mm": {
+                "count": 2
+            },
+            "screw(M5_cap_screw, 24): Screw M5 cap x 24mm": {
+                "count": 8
+            },
+            "washer(M5_washer): Washer  M5 x 10mm x 1mm": {
+                "count": 8
+            },
+            "nut(M5_nut, nyloc = true): Nut M5 x 4mm nyloc": {
+                "count": 8
+            },
+            "screw(M5_cs_cap_screw, 40): Screw M5 cs cap x 40mm": {
+                "count": 12
+            }
+        },
+        "printed": {},
+        "routed": {}
+    },
+    {
         "name": "xaxis_assembly",
         "big": null,
         "count": 1,
@@ -56,7 +111,7 @@
             "NEMA(NEMA17): Stepper motor NEMA17 x 47mm": {
                 "count": 1
             },
-            "Servo(LCMT07L02NB_80M03530B)": {
+            "Servo(LCMT07L02NB_80M03530B): Servo motor90 x 178mm": {
                 "count": 1
             },
             "sheet(AL8, 80, 100, [0, 3, 3, 0]): Aluminium tooling plate 80mm x 100mm x 8mm": {
@@ -85,67 +140,10 @@
         "routed": {}
     },
     {
-        "name": "side_frame_assembly",
-        "big": null,
-        "count": 2,
-        "assemblies": {},
-        "vitamins": {
-            "extrusion(E4040, 1070): Extrusion E4040 x 1070mm": {
-                "count": 4
-            },
-            "rail(HGH20CA, 1000): Linear rail HGH20CA x 1000mm": {
-                "count": 2
-            },
-            "extrusion(E4040, 80): Extrusion E4040 x 80mm": {
-                "count": 6
-            },
-            "leadscrew(16, 935, 10, 1): Leadscrew 16 x 935mm, 10mm lead, 1 starts": {
-                "count": 2
-            },
-            "rod(12, 50): Smooth rod 12mm x 50mm": {
-                "count": 2
-            },
-            "rod(10, 15): Smooth rod 10mm x 15mm": {
-                "count": 2
-            },
-            "rod(12, 15): Smooth rod 12mm x 15mm": {
-                "count": 2
-            },
-            "leadnut(SFU1610): Leadscrew nut for SFU1610": {
-                "count": 2
-            },
-            "ball_bearing(BB6201): Ball bearing 6201-2RS 12mm x 32mm x 10mm": {
-                "count": 6
-            },
-            "Servo(LCMT07L02NB_80M03530B)": {
-                "count": 2
-            },
-            "sheet(AL8, 160, 160, [3, 3, 3, 3]): Aluminium tooling plate 160mm x 160mm x 8mm": {
-                "count": 2
-            },
-            "screw(M5_cap_screw, 24): Screw M5 cap x 24mm": {
-                "count": 8
-            },
-            "washer(M5_washer): Washer  M5 x 10mm x 1mm": {
-                "count": 8
-            },
-            "nut(M5_nut, nyloc = true): Nut M5 x 4mm nyloc": {
-                "count": 8
-            },
-            "screw(M5_cs_cap_screw, 40): Screw M5 cs cap x 40mm": {
-                "count": 12
-            }
-        },
-        "printed": {},
-        "routed": {}
-    },
-    {
         "name": "frame_assembly",
         "big": null,
         "count": 1,
-        "assemblies": {
-            "side_frame_assembly": 2
-        },
+        "assemblies": {},
         "vitamins": {
             "extrusion(E4040, 1500): Extrusion E4040 x 1500mm": {
                 "count": 5
@@ -163,7 +161,8 @@
         "count": 1,
         "assemblies": {
             "frame_assembly": 1,
-            "xaxis_assembly": 1
+            "xaxis_assembly": 1,
+            "side_frame_assembly": 2
         },
         "vitamins": {},
         "printed": {},

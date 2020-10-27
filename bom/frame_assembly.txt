@@ -2,6 +2,3 @@ frame_assembly:
 Vitamins:
   5 Extrusion E4040 x 1500mm
   1 Aluminium tooling plate 1500mm x 645mm x 2mm
-
-Assemblies:
-  2 side_frame_assemblies

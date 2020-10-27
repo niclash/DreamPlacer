@@ -2,4 +2,5 @@ main_assembly:
 
 Assemblies:
   1 frame_assembly
+  2 side_frame_assemblies
   1 xaxis_assembly
