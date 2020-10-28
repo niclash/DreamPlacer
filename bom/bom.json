@@ -193,14 +193,8 @@
             "Servo(LCMT07L02NB_80M03530B) : Servo 80ST standard mount 90 x 178mm": {
                 "count": 1
             },
-            "sheet(AL8, 80, 100, [0, 3, 3, 0]): Aluminium tooling plate 80mm x 100mm x 8mm": {
+            "sheet(AL8, 200, 170, 1): Aluminium tooling plate 200mm x 170mm x 8mm": {
                 "count": 1
-            },
-            "sheet(AL8, 50, 50, [3, 3, 0, 0]): Aluminium tooling plate 50mm x 50mm x 8mm": {
-                "count": 2
-            },
-            "sheet(AL8, 50, 50, [0, 0, 3, 3]): Aluminium tooling plate 50mm x 50mm x 8mm": {
-                "count": 2
             },
             "sheet(AL8, 100, 250, [3, 3, 3, 3]): Aluminium tooling plate 100mm x 250mm x 8mm": {
                 "count": 1
@@ -213,15 +207,19 @@
             },
             "nut(M5_nut, nyloc = true): Nut M5 x 4mm nyloc": {
                 "count": 4
+            },
+            "sheet(AL8, 50, 50, [3, 3, 0, 0]): Aluminium tooling plate 50mm x 50mm x 8mm": {
+                "count": 1
+            },
+            "sheet(AL8, 50, 50, [0, 0, 3, 3]): Aluminium tooling plate 50mm x 50mm x 8mm": {
+                "count": 1
             }
         },
         "printed": {},
         "routed": {
-            "bracket_x1_axis.dxf": {
-                "count": 1
-            },
-            "bracket_x2_axis.dxf": {
-                "count": 1
+            "bracket_right.dxf": {
+                "count": 1,
+                "colour": "[0.9, 0.9, 0.9, 1]"
             }
         }
     },

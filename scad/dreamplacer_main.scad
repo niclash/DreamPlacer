@@ -56,44 +56,40 @@ module xaxis_assembly()
       rotate([0,-90,0]) {
         at_z(-1) servo(motor);
       }
-    translate([-length/2-74,0,-62]) rotate([0,-90,0])
-      bracket_x1_axis_dxf();
+    translate([-length/2-74,0,-79]) rotate([90,0,-90])
+      bracket_right();
     translate([length/2+74,0,-62]) rotate([0,-90,0])
-      bracket_x2_axis_dxf();
+      bracket_x2_axis();
 }
 
+module bracket_right_dxf() {
+  dxf("bracket_right");
+  holes = [[-90,-16,5.2],[-54,-16,5.2], [-90,16,5.2],[-54,16,5.2],
+          [90,-16,5.2],[54,-16,5.2], [90,16,5.2],[54,16,5.2],[-12,-79,5.2],[12,-79,5.2],[-12,-39,5.2],[12,-39,5.2], [-20,50,6.2], [20,50,6.2]];
+  difference() {
+    sheet_2D(AL8, 200, 170, 1);
+    translate([50,23]) square([50,65]);
+    translate([-100,23]) square([50,65]);
+    translate([-100,-86]) square([50,65]);
+    translate([50,-86]) square([50,65]);
+    for(h=holes)
+      translate(h)
+        circle(d=h[2]);
+  }    
+}
+module bracket_right() render_2D_sheet(AL8) bracket_right_dxf();
 
-module bracket_x1_axis_dxf() {
-    dxf("bracket_x1_axis");
-    difference() {
-      union()  {
-        sheet(AL8, 80,100,[0,3,3,0]);
-        translate([-15,75,0]) sheet(AL8, 50,50,[3,3,0,0]);
-        translate([-15,-75,0]) sheet(AL8, 50,50,[0,0,3,3]);
-      }
-      
-      translate([-30,87,-5])
-        cylinder(h=10,d=5.5);
-      translate([0,87,-5])
-        cylinder(h=10,d=5.5);
-      translate([-30,52,-5])
-        cylinder(h=10,d=5.5);
-      translate([0,52,-5])
-        cylinder(h=10,d=5.5);
-  
-      translate([-30,-88,-5])
-        cylinder(h=10,d=5.5);
-      translate([0,-88,-5])
-        cylinder(h=10,d=5.5);
-      translate([-30,-52,-5])
-        cylinder(h=10,d=5.5);
-      translate([0,-52,-5])
-        cylinder(h=10,d=5.5);
-    }
-  }
+//module bracket_right() {
+//  let($dxf_colour = sheet_colour(AL8) )
+//    color($dxf_colour)
+//      linear_extrude(8) 
+//        milling_dxf("right_bracket",
+//          [[-100,-25],[-100,25],[-50,25],[-50,69],[50,69],[50,25],[100,25],[100,-25],[50,-25],[50,-90], [-50,-90], [-50,-25]],
+          
+//        );
+//}
 
-module bracket_x2_axis_dxf() {
-    dxf("bracket_x2_axis");
+module bracket_x2_axis() {
     difference() {
       union()  {
         translate([86,0,0]) rotate([0,0,-90]) 
@@ -146,9 +142,9 @@ module lead_screw_assembly(length,pos, rotation=0) {
 
   }
   
-  translate([0, 6, pos-10]) { 
+  translate([0, 6, pos+11]) { 
     leadnut(SFU1610);
-    translate([0,0,10.1]) rotate([0,0,rotation])
+    rotate([0,180,rotation])
       difference() {
         linear_extrude(40)
           polygon([[-26,-20], [-26,8], [-13,20], [13,20],[26,8],[26,-20]]);

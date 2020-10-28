@@ -2,8 +2,6 @@ tmp.png: \
 	/home/niclas/dev/3D/NopSCADlib/vitamins/e3d.scad \
 	/home/niclas/dev/3D/NopSCADlib/vitamins/dip.scad \
 	/home/niclas/dev/3D/NopSCADlib/utils/core/sphere.scad \
-	/home/niclas/dev/3D/NopSCADlib/vitamins/jhead.scad \
-	/home/niclas/dev/3D/DreamPlacer/scad/head.scad \
 	/home/niclas/dev/3D/NopSCADlib/utils/sector.scad \
 	/home/niclas/dev/3D/NopSCADlib/utils/rounded_polygon.scad \
 	/home/niclas/dev/3D/NopSCADlib/utils/core/rounded_rectangle.scad \
@@ -27,6 +25,11 @@ tmp.png: \
 	/home/niclas/dev/3D/NopSCADlib/vitamins/cable_strip.scad \
 	/home/niclas/dev/3D/NopSCADlib/vitamins/component.scad \
 	/home/niclas/dev/3D/NopSCADlib/vitamins/variac.scad \
+	/home/niclas/dev/3D/NopSCADlib/utils/core/polyholes.scad \
+	/home/niclas/dev/3D/NopSCADlib/vitamins/green_terminal.scad \
+	/home/niclas/dev/3D/NopSCADlib/vitamins/blower.scad \
+	/home/niclas/dev/3D/NopSCADlib/vitamins/washer.scad \
+	/home/niclas/dev/3D/NopSCADlib/vitamins/toggles.scad \
 	/home/niclas/dev/3D/NopSCADlib/vitamins/bulldog.scad \
 	/home/niclas/dev/3D/NopSCADlib/vitamins/blowers.scad \
 	/home/niclas/dev/3D/NopSCADlib/utils/core/bom.scad \
@@ -48,9 +51,6 @@ tmp.png: \
 	/home/niclas/dev/3D/NopSCADlib/vitamins/nut.scad \
 	/home/niclas/dev/3D/NopSCADlib/vitamins/microswitches.scad \
 	/home/niclas/dev/3D/NopSCADlib/vitamins/springs.scad \
-	/home/niclas/dev/3D/NopSCADlib/vitamins/washer.scad \
-	/home/niclas/dev/3D/NopSCADlib/vitamins/blower.scad \
-	/home/niclas/dev/3D/NopSCADlib/vitamins/toggles.scad \
 	/home/niclas/dev/3D/NopSCADlib/vitamins/sheets.scad \
 	/home/niclas/dev/3D/NopSCADlib/vitamins/stepper_motors.scad \
 	/home/niclas/dev/3D/NopSCADlib/vitamins/leds.scad \
@@ -66,8 +66,11 @@ tmp.png: \
 	/home/niclas/dev/3D/NopSCADlib/vitamins/spool.scad \
 	/home/niclas/dev/3D/NopSCADlib/utils/offset.scad \
 	/home/niclas/dev/3D/NopSCADlib/vitamins/microswitch.scad \
-	/home/niclas/dev/3D/NopSCADlib/utils/core/polyholes.scad \
-	/home/niclas/dev/3D/NopSCADlib/vitamins/green_terminal.scad \
+	/home/niclas/dev/3D/NopSCADlib/vitamins/jhead.scad \
+	/home/niclas/dev/3D/DreamPlacer/scad/head.scad \
+	/home/niclas/dev/3D/NopSCADlib/vitamins/fan.scad \
+	/home/niclas/dev/3D/NopSCADlib/vitamins/batteries.scad \
+	/home/niclas/dev/3D/NopSCADlib/vitamins/tubing.scad \
 	/home/niclas/dev/3D/NopSCADlib/vitamins/spring.scad \
 	/home/niclas/dev/3D/NopSCADlib/vitamins/iecs.scad \
 	/home/niclas/dev/3D/NopSCADlib/utils/core/core.scad \
@@ -78,9 +81,6 @@ tmp.png: \
 	/home/niclas/dev/3D/NopSCADlib/vitamins/camera.scad \
 	/home/niclas/dev/3D/NopSCADlib/vitamins/ssr.scad \
 	/home/niclas/dev/3D/NopSCADlib/vitamins/jack.scad \
-	/home/niclas/dev/3D/NopSCADlib/vitamins/fan.scad \
-	/home/niclas/dev/3D/NopSCADlib/vitamins/batteries.scad \
-	/home/niclas/dev/3D/NopSCADlib/vitamins/tubing.scad \
 	/home/niclas/dev/3D/NopSCADlib/vitamins/displays.scad \
 	/home/niclas/dev/3D/NopSCADlib/vitamins/spades.scad \
 	/home/niclas/dev/3D/NopSCADlib/utils/maths.scad \
@@ -157,7 +157,6 @@ tmp.png: \
 	/home/niclas/dev/3D/NopSCADlib/vitamins/light_strips.scad \
 	/home/niclas/dev/3D/NopSCADlib/vitamins/stepper_motor.scad \
 	/home/niclas/dev/3D/NopSCADlib/vitamins/swiss_clips.scad \
-	/home/niclas/dev/3D/DreamPlacer/scad/dreamplacer_main.scad \
 	/home/niclas/dev/3D/NopSCADlib/vitamins/toggle.scad \
 	/home/niclas/dev/3D/NopSCADlib/vitamins/tubings.scad \
 	/home/niclas/dev/3D/NopSCADlib/vitamins/ziptie.scad

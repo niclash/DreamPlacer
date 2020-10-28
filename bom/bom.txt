@@ -43,15 +43,14 @@ Vitamins:
   | 1|  |  |  |  |  |  1 Aluminium tooling plate 100mm x 240mm x 8mm
   |  |  |  |  |  | 1|  1 Aluminium tooling plate 100mm x 250mm x 8mm
   |  | 1|  |  | 1|  |  2 Aluminium tooling plate 160mm x 160mm x 8mm
-  |  |  |  |  |  | 2|  2 Aluminium tooling plate 50mm x 50mm x 8mm
-  |  |  |  |  |  | 2|  2 Aluminium tooling plate 50mm x 50mm x 8mm
+  |  |  |  |  |  | 1|  1 Aluminium tooling plate 200mm x 170mm x 8mm
+  |  |  |  |  |  | 1|  1 Aluminium tooling plate 50mm x 50mm x 8mm
+  |  |  |  |  |  | 1|  1 Aluminium tooling plate 50mm x 50mm x 8mm
   |  |  |  |  |  | 2|  2 Aluminium tooling plate 60mm x 80mm x 8mm
-  |  |  |  |  |  | 1|  1 Aluminium tooling plate 80mm x 100mm x 8mm
   |  | 4|  |  | 4| 4| 12 Washer  M5 x 10mm x 1mm
 
 CNC cut:
-  |  |  |  |  |  | 1|  1 bracket_x1_axis.dxf
-  |  |  |  |  |  | 1|  1 bracket_x2_axis.dxf
+  |  |  |  |  |  | 1|  1 bracket_right.dxf
 
 Assemblies:
   1 frame_assembly

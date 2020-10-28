@@ -1,1 +1,3 @@
-{}
+{
+    "bracket_right.dxf": 0.201
+}

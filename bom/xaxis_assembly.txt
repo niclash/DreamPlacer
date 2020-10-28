@@ -12,15 +12,14 @@ Vitamins:
   1 Smooth rod 12mm x 50mm
   4 Screw M5 cap x 24mm
   1 Aluminium tooling plate 100mm x 250mm x 8mm
-  2 Aluminium tooling plate 50mm x 50mm x 8mm
-  2 Aluminium tooling plate 50mm x 50mm x 8mm
+  1 Aluminium tooling plate 200mm x 170mm x 8mm
+  1 Aluminium tooling plate 50mm x 50mm x 8mm
+  1 Aluminium tooling plate 50mm x 50mm x 8mm
   2 Aluminium tooling plate 60mm x 80mm x 8mm
-  1 Aluminium tooling plate 80mm x 100mm x 8mm
   4 Washer  M5 x 10mm x 1mm
 
 CNC cut:
-  1 bracket_x1_axis.dxf
-  1 bracket_x2_axis.dxf
+  1 bracket_right.dxf
 
 Assemblies:
   1 head_assembly
