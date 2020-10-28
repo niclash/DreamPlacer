@@ -8,7 +8,7 @@ WIDTH=1500;
 LENGTH=1000;
 FEEDER_GAP = 100;
 X_AXIS_HEIGHT = 120;
-GANTRY_POS = 80;
+GANTRY_POS = 150;
 //GANTRY_POS = sin($t*360)*LENGTH/3;
 HEAD_POS = -200;
 //HEAD_POS = sin($t*180)*LENGTH/3;
@@ -43,12 +43,16 @@ module xaxis_assembly()
     shaft_length = shaft_length(servo_shaft(motor));
     translate([0,0,-30]) rotate([0,90,0])
       extrusion(E4080,length+140);
-    translate([0,-40,-30]) rotate([90,0,0])
+
+    translate([0,-40,-30]) rotate([90,0,0]) {
       rail_assembly(HGH15CA, length, HEAD_POS );
+      rail_hole_positions(HGH15CA, length)  
+        translate([0,0,10])
+          screw(M4_cap_screw, 20);
+    }
     translate([3,0,17]) rotate([90,0,90])
       lead_screw_assembly(length, HEAD_POS-15, 180); 
-    translate([length/2-24,0,-6]) sheet(AL8,60,80,[3,3,3,3]);
-    translate([-length/2+28,0,-6]) sheet(AL8,60,80,[3,3,3,3]);
+    x_axis_standoffs(length);
     translate([HEAD_POS,-72,-40])
       head_assembly();
     
@@ -56,22 +60,89 @@ module xaxis_assembly()
       rotate([0,-90,0]) {
         at_z(-1) servo(motor);
       }
-    translate([-length/2-74,0,-79]) rotate([90,0,-90])
+    translate([-length/2-74,0,-78]) rotate([90,0,-90])
+      bracket_left();
+    translate([length/2+74,0,-78]) rotate([90,0,-90])
       bracket_right();
-    translate([length/2+74,0,-62]) rotate([0,-90,0])
-      bracket_x2_axis();
 }
+
+module x_axis_standoffs(length) {
+    translate([length/2-24,0,-6]) x_axis_screw_standoff_right();
+    translate([-length/2+29,0,-6]) x_axis_screw_standoff_left();
+}
+
+module x_axis_screw_standoff_left_dxf() {
+  dxf("x_axis_screw_standoff_left");
+  difference() {
+    sheet_2D(AL8, 60,80, 3);
+    translate([15,20]) circle(d=8.2);
+    translate([15,-20]) circle(d=8.2);
+    translate([-15,20]) circle(d=8.2);
+    translate([-15,-20]) circle(d=8.2);
+    translate([0,-23]) circle(d=5.0);
+    translate([0,23]) circle(d=5.0);
+  }
+}
+
+module x_axis_screw_standoff_left(){
+  render_2D_sheet(AL8) 
+    x_axis_screw_standoff_left_dxf();
+  // screws
+  translate([0,23,36]) screw(M6_cap_screw, 40);
+  translate([0,-23,36]) screw(M6_cap_screw, 40);
+  translate([15,20,4.05]) screw(M8_cs_cap_screw, 16);
+  translate([15,-20,4.05]) screw(M8_cs_cap_screw, 16);
+  translate([-15,20,4.05]) screw(M8_cs_cap_screw, 16);
+  translate([-15,-20,4.05]) screw(M8_cs_cap_screw, 16);
+}
+
+module x_axis_screw_standoff_right_dxf() {
+  dxf("x_axis_screw_standoff_right");
+  difference() {
+    sheet_2D(AL8, 60,80, 3);
+    translate([20,20]) circle(d=8.2);
+    translate([20,-20]) circle(d=8.2);
+    translate([-20,20]) circle(d=8.2);
+    translate([-20,-20]) circle(d=8.2);
+    translate([6.5,-23]) circle(d=5.0);
+    translate([6.5,23]) circle(d=5.0);
+    translate([-6.5,-23]) circle(d=5.0);
+    translate([-6.5,23]) circle(d=5.0);
+  }
+}
+
+module x_axis_screw_standoff_right() {
+  render_2D_sheet(AL8) 
+    x_axis_screw_standoff_right_dxf();
+
+  translate([6.5,23,36]) screw(M6_cap_screw, 40);
+  translate([6.5,-23,36]) screw(M6_cap_screw, 40);
+  translate([-6.5,23,36]) screw(M6_cap_screw, 40);
+  translate([-6.5,-23,36]) screw(M6_cap_screw, 40);
+  translate([20,20,4.05]) screw(M8_cs_cap_screw, 16);
+  translate([20,-20,4.05]) screw(M8_cs_cap_screw, 16);
+  translate([-20,20,4.05]) screw(M8_cs_cap_screw, 16);
+  translate([-20,-20,4.05]) screw(M8_cs_cap_screw, 16);
+}
+
 
 module bracket_right_dxf() {
   dxf("bracket_right");
-  holes = [[-90,-16,5.2],[-54,-16,5.2], [-90,16,5.2],[-54,16,5.2],
-          [90,-16,5.2],[54,-16,5.2], [90,16,5.2],[54,16,5.2],[-12,-79,5.2],[12,-79,5.2],[-12,-39,5.2],[12,-39,5.2], [-20,50,6.2], [20,50,6.2]];
+  holes = [[-12,-80,5.2],[12,-80,5.2],[-12,-40,5.2],[12,-40,5.2], 
+           [-20,50,6.2], [20,50,6.2]];
   difference() {
-    sheet_2D(AL8, 200, 170, 1);
-    translate([50,23]) square([50,65]);
-    translate([-100,23]) square([50,65]);
-    translate([-100,-86]) square([50,65]);
-    translate([50,-86]) square([50,65]);
+    sheet_2D(AL8, 200, 300, 3);
+    translate([50,23]) square([50,130]);
+    translate([-100,23]) square([50,130]);
+    translate([-100,-151]) square([50,130]);
+    translate([50,-151]) square([50,130]);
+    translate([-50,-150]) square([100,60]);
+    translate([75,0,0])
+      carriage_hole_positions(HGH20CA_carriage)
+        circle(d=carriage_screw(HGH20CA_carriage)[3]+0.2);
+    translate([-75,0,0])
+      carriage_hole_positions(HGH20CA_carriage)
+        circle(d=carriage_screw(HGH20CA_carriage)[3]+0.2);
     for(h=holes)
       translate(h)
         circle(d=h[2]);
@@ -79,44 +150,27 @@ module bracket_right_dxf() {
 }
 module bracket_right() render_2D_sheet(AL8) bracket_right_dxf();
 
-//module bracket_right() {
-//  let($dxf_colour = sheet_colour(AL8) )
-//    color($dxf_colour)
-//      linear_extrude(8) 
-//        milling_dxf("right_bracket",
-//          [[-100,-25],[-100,25],[-50,25],[-50,69],[50,69],[50,25],[100,25],[100,-25],[50,-25],[50,-90], [-50,-90], [-50,-25]],
-          
-//        );
-//}
-
-module bracket_x2_axis() {
-    difference() {
-      union()  {
-        translate([86,0,0]) rotate([0,0,-90]) 
-          motor_mount_plate_dxf(Y_AXIS_MOTOR, 100, 250);
-        translate([-15,75,0]) sheet(AL8, 50,50,[3,3,0,0]);
-        translate([-15,-75,0]) sheet(AL8, 50,50,[0,0,3,3]);
-      }
-      
-      translate([-30,87,-5])
-        cylinder(h=10,d=5.5);
-      translate([0,87,-5])
-        cylinder(h=10,d=5.5);
-      translate([-30,52,-5])
-        cylinder(h=10,d=5.5);
-      translate([0,52,-5])
-        cylinder(h=10,d=5.5);
-  
-      translate([-30,-88,-5])
-        cylinder(h=10,d=5.5);
-      translate([0,-88,-5])
-        cylinder(h=10,d=5.5);
-      translate([-30,-52,-5])
-        cylinder(h=10,d=5.5);
-      translate([0,-52,-5])
-        cylinder(h=10,d=5.5);
-    }
-  }
+module bracket_left_dxf() {
+  dxf("bracket_right");
+  holes = [[-12,-80,5.2],[12,-80,5.2],[-12,-40,5.2],[12,-40,5.2], [-20,50,6.2], [20,50,6.2]];
+  difference() {
+    sheet_2D(AL8, 200, 180, 3);
+    translate([50,23]) square([50,70]);
+    translate([-100,23]) square([50,70]);
+    translate([-100,-91]) square([50,70]);
+    translate([50,-91]) square([50,70]);
+    translate([75,0,0])
+      carriage_hole_positions(HGH20CA_carriage)
+        circle(d=carriage_screw(HGH20CA_carriage)[3]+0.2);
+    translate([-75,0,0])
+      carriage_hole_positions(HGH20CA_carriage)
+        circle(d=carriage_screw(HGH20CA_carriage)[3]+0.2);
+    for(h=holes)
+      translate(h)
+        circle(d=h[2]);
+  }    
+}
+module bracket_left() render_2D_sheet(AL8) bracket_left_dxf();
 
 module lead_screw_assembly(length,pos, rotation=0) {
   translate([0,6,-3]) {
@@ -169,8 +223,8 @@ module lead_screw_assembly(length,pos, rotation=0) {
 }
 
 module bk12() {
+   vitamin(str("Bearing(", "BK12", ") : Bearing BK12 " ));
    translate([0,0,-16])
-
       difference() {
         union() {
           translate([-30,-25,0])
@@ -179,26 +233,26 @@ module bk12() {
             cube([35,35,25]);
         }
         translate([23,0,13])
-          cylinder(h=30,d=4,center=true);
+          cylinder(h=30,d=5.5,center=true);
         translate([-23,0,13])
-          cylinder(h=30,d=4,center=true);
+          cylinder(h=30,d=5.5,center=true);
         translate([23,-18,13])
-          cylinder(h=30,d=4,center=true);
+          cylinder(h=30,d=5.5,center=true);
         translate([-23,-18,13])
-          cylinder(h=30,d=4,center=true);
+          cylinder(h=30,d=5.5,center=true);
 
         translate([-23,0,6])
           rotate([90,0,0])
-            cylinder(h=50,d=6,center=true);
+            cylinder(h=50,d=6.6,center=true);
         translate([23,0,6])
           rotate([90,0,0])
-            cylinder(h=50,d=6,center=true);
+            cylinder(h=50,d=6.6,center=true);
         translate([-23,0,18])
           rotate([90,0,0])
-            cylinder(h=50,d=6,center=true);
+            cylinder(h=50,d=6.6,center=true);
         translate([23,0,18])
           rotate([90,0,0])
-            cylinder(h=50,d=6,center=true);
+            cylinder(h=50,d=6.6,center=true);
       }
     translate([0,0,5])
       ball_bearing(BB6201);
@@ -207,6 +261,7 @@ module bk12() {
 }
 
 module bf12() {
+  vitamin(str("Bearing(", "BF12", ") : Bearing BF12 " ));
   translate([0,0,-10])
     difference() {
       union() {
@@ -218,20 +273,20 @@ module bf12() {
       translate([0,0,-5])
       cylinder(h=40,d=25);
       translate([23,0,13])
-        cylinder(h=30,d=4,center=true);
+        cylinder(h=30,d=5.5,center=true);
       translate([-23,0,13])
-        cylinder(h=30,d=4,center=true);
+        cylinder(h=30,d=5.5,center=true);
       translate([23,-18,13])
-        cylinder(h=30,d=4,center=true);
+        cylinder(h=30,d=5.5,center=true);
       translate([-23,-18,13])
-        cylinder(h=30,d=4,center=true);
+        cylinder(h=30,d=5.5,center=true);
 
       translate([-23,0,10])
         rotate([90,0,0])
-          cylinder(h=50,d=6,center=true);
+          cylinder(h=50,d=6.6,center=true);
       translate([23,0,10])
         rotate([90,0,0])
-          cylinder(h=50,d=6,center=true);
+          cylinder(h=50,d=6.6,center=true);
     }
   ball_bearing(BB6201);
 }
@@ -239,10 +294,13 @@ module bf12() {
 module rail_block_assembly(length, pos){
   translate([0, 0, 0] )
     rail(HGH20CA, length );
-  translate([pos-70,0,0])
+  translate([pos-75,0,0])
     carriage(HGH20CA_carriage, HGH20CA );
-  translate([pos+70,0,0])
+  translate([pos+75,0,0])
     carriage(HGH20CA_carriage, HGH20CA );
+  translate([0,0,12])
+    rail_hole_positions(HGH20CA, length)
+      screw(M5_cap_screw, 24);
 }
 
 module right_side_frame_assembly() 
@@ -256,6 +314,22 @@ module left_side_frame_assembly()
     side_frame();
   }
   
+module bracket_y_motor_dxf() {
+  dxf("bracket_y_motor");
+  motor = Y_AXIS_MOTOR;
+  difference() {
+    sheet_2D(AL8, 200, X_AXIS_HEIGHT + 40, 3);
+    motor_mount_holes(motor);
+    translate([80,X_AXIS_HEIGHT/2]) circle(d=6.3);
+    translate([80,-X_AXIS_HEIGHT/2]) circle(d=6.3);
+    translate([80,X_AXIS_HEIGHT/4]) circle(d=8.3);
+    translate([80,0]) circle(d=8.3);
+    translate([80,-X_AXIS_HEIGHT/4]) circle(d=8.3);
+    translate([-100,-(X_AXIS_HEIGHT + 40)/2]) square([30,X_AXIS_HEIGHT+60]);
+  }  
+}
+module bracket_y_motor() render_2D_sheet(AL8) bracket_y_motor_dxf();
+
 module side_frame() {
     length = LENGTH;
     height = X_AXIS_HEIGHT;
@@ -268,99 +342,176 @@ module side_frame() {
         extrusion(E4040,length+70);
     }
     
-    translate([-20,0,height/2])
-      rotate([-90,0,90]) 
+    translate([-20,0,height/2]) 
+      rotate([-90,0,90])
         rail_block_assembly(length, block_pos );
     
-    at_y(length/2-34) extrusion(E4040,height-40);
+    at_y(length/2-50) extrusion(E4040,height-40);
     at_y(length/2+50) extrusion(E4040,height-40);
     at_y(-length/2+20) extrusion(E4040,height-40);
   
-    translate([-72,9,0]) 
+    translate([-72,-16,0]) 
       rotate([-90,90,0])
-        lead_screw_assembly(length,GANTRY_POS);
+        lead_screw_assembly(length,GANTRY_POS+25);
   
     motor=Y_AXIS_MOTOR;
     translate([-78, shaft_length( servo_shaft(motor) ) + length/2+39, 0])
       rotate([90,0,0]) {
         servo(motor);
-        difference(){
-          rotate([0,0,90]) motor_mount_plate_dxf(motor, X_AXIS_HEIGHT+40, 160);
-          translate([78,X_AXIS_HEIGHT/2,-5]) cylinder(10,d=5.5);
-          translate([78,-X_AXIS_HEIGHT/2,-5]) cylinder(10,d=5.5);
-          translate([78,X_AXIS_HEIGHT/4,-5]) cylinder(10,d=5.5);
-          translate([78,-X_AXIS_HEIGHT/4,-5]) cylinder(10,d=5.5);
-          translate([78,0,-5]) cylinder(10,d=5.5);
-        }
+        bracket_y_motor();
+        motor_mount_screws(motor);
+        translate([80,0,-4.01]) rotate([180,0,0]) color("darkgray") screw(M8_cs_cap_screw, 16);
+        translate([80,-X_AXIS_HEIGHT/4,-4.01]) rotate([180,0,0]) color("darkgray") screw(M8_cs_cap_screw, 16);
+        translate([80,X_AXIS_HEIGHT/4,-4.01]) rotate([180,0,0]) color("darkgray") screw(M8_cs_cap_screw, 16);
+        translate([80,-X_AXIS_HEIGHT/2,-4.01]) rotate([180,0,0]) color("darkgray") screw(M5_cs_cap_screw, 16);
+        translate([80,X_AXIS_HEIGHT/2,-4.01]) rotate([180,0,0]) color("darkgray") screw(M5_cs_cap_screw, 16);
       }
-    translate([-36.5,length/2-24,-2])
-      block_stand_off(true);
-    translate([-36.5,-length/2+30,0])
-      block_stand_off(false);
-  }
+      translate([-50,-length/2,0]) {
+        rotate([90,0,0])
+          ballscrew_mount1();
+      }
+      translate([-50,length/2-26,0]) {
+        rotate([90,0,0])
+          ballscrew_mount2();
+      }
+}
 
-module block_stand_off(double_holes) {
+module ballscrew_mount1_dxf() {
+  dxf("ballscrew_mount1");
   difference() {
-    cube([33,40,75],center=true);
-    translate([-16.6,-10,-25]) rotate([0,-90,0])
-      screw(M5_cs_cap_screw, 40);
-    translate([-16.6,-10,0]) rotate([0,-90,0])
-      screw(M5_cs_cap_screw, 40);
-    translate([-16.6,-10,25]) rotate([0,-90,0])
-      screw(M5_cs_cap_screw, 40);
-    if( double_holes ) {
-      translate([-17,0,25])
-        rotate([0,90,0])
-         cylinder(h=20,d=5);
-      translate([-17,0,-21])
-        rotate([0,90,0])
-         cylinder(h=20,d=5);
-      translate([-17,12,25])
-        rotate([0,90,0])
-         cylinder(h=20,d=5);
-      translate([-17,12,-21])
-        rotate([0,90,0])
-         cylinder(h=20,d=5);
-    } else {
-      translate([-17,5,23])
-        rotate([0,90,0])
-          cylinder(h=20,d=5);
-      translate([-17,5,-23])
-        rotate([0,90,0])
-          cylinder(h=20,d=5);
-    }
+    sheet_2D(AL8, 140, X_AXIS_HEIGHT+40, 3);
+    translate([-10,23]) circle(d=5.2);
+    translate([-28,23]) circle(d=5.2);
+    translate([-10,-23]) circle(d=5.2);
+    translate([-28,-23]) circle(d=5.2);
+      
+    translate([50,0]) circle(d=8.2);
+    translate([50,X_AXIS_HEIGHT/4]) circle(d=8.2);
+    translate([50,-X_AXIS_HEIGHT/4]) circle(d=8.2);
+
+    translate([50,X_AXIS_HEIGHT/2]) circle(d=5.2);
+    translate([50,-X_AXIS_HEIGHT/2]) circle(d=5.2);
   }
 }
 
-module motor_mount_plate_dxf(motor, height, width) 
-//  dxf("motor_mount_plate") {
-{  
-    motor_mount_screw = mount_hole_dist( servo_mount(motor) )/2;
-    mount_flange = mount_flange( servo_mount(motor));
+module ballscrew_mount1() {
+  unit = X_AXIS_HEIGHT/4;
+  m8 = M8_cs_cap_screw;
+  m5 = M5_cs_cap_screw;
+  render_2D_sheet(AL8) 
+    ballscrew_mount1_dxf();
+  translate([50,0,4.01]) color("darkgray") screw(m8, 16);
+  translate([50,-unit,4.01]) color("darkgray") screw(m8, 16);
+  translate([50,unit,4.01]) color("darkgray") screw(m8, 16);
+  translate([50,-2*unit,4.01]) color("darkgray") screw(m5, 16);
+  translate([50,2*unit,4.01]) color("darkgray") screw(m5, 16);
     
-    // Motor Mount Plate
-    screw_pos = [[motor_mount_screw,motor_mount_screw],
-                 [motor_mount_screw,-motor_mount_screw],
-                 [-motor_mount_screw,motor_mount_screw],
-                 [-motor_mount_screw,-motor_mount_screw]];
-    difference() {
-      translate([0,-width/2 + motor_mount_screw+30,0])
-        sheet(AL8,height,width, [3,3,3,3] );
-      translate([0,0,-4.05])
-        cylinder(h=8.1, d=mount_flange );  
-      for( pos = screw_pos )
-        translate([pos[0],pos[1], 0])
-          cylinder( h=10, d=5.4, center=true);
-    }
-    rotate([180,0,0])
-      for( pos = screw_pos )
-        translate([pos[0],pos[1], 9.2])
-        { 
-          screw(M5_cap_screw, 24);
-          at_z(-14) washer(M5_washer);
-          at_z(-14) rotate([180,0,0]) nut(M5_nut, nyloc = true);
-        }
+  translate([-10,-23, 4.05]) { 
+        screw(M5_cs_cap_screw, 40);
+        at_z(-25.1) washer(M5_washer);
+        at_z(-25.1) rotate([180,0,0]) nut(M5_nut, nyloc = true);
   }
+  translate([-10,23, 4.05]) { 
+        screw(M5_cs_cap_screw, 40);
+        at_z(-25.1) washer(M5_washer);
+        at_z(-25.1) rotate([180,0,0]) nut(M5_nut, nyloc = true);
+  }
+  translate([-28,-23, 4.05]) { 
+        screw(M5_cs_cap_screw, 40);
+        at_z(-25.1) washer(M5_washer);
+        at_z(-25.1) rotate([180,0,0]) nut(M5_nut, nyloc = true);
+  }
+  translate([-28,23, 4.05]) { 
+        screw(M5_cs_cap_screw, 40);
+        at_z(-25.1) washer(M5_washer);
+        at_z(-25.1) rotate([180,0,0]) nut(M5_nut, nyloc = true);
+  }
+
+}
+
+module ballscrew_mount2_dxf() {
+  dxf("ballscrew_mount2");
+  difference() {
+    sheet_2D(AL8, 140, X_AXIS_HEIGHT-42, 3);
+    translate([-10,23]) circle(d=5.2);
+    translate([-28,23]) circle(d=5.2);
+    translate([-10,-23]) circle(d=5.2);
+    translate([-28,-23]) circle(d=5.2);
+      
+    translate([50,0]) circle(d=8.2);
+    translate([50,X_AXIS_HEIGHT/4]) circle(d=8.2);
+    translate([50,-X_AXIS_HEIGHT/4]) circle(d=8.2);
+
+    translate([50,X_AXIS_HEIGHT/2]) circle(d=5.2);
+    translate([50,-X_AXIS_HEIGHT/2]) circle(d=5.2);
+  }
+}
+module ballscrew_mount2() {
+  unit = X_AXIS_HEIGHT/4;
+  m8 = M8_cs_cap_screw;
+  m5 = M5_cs_cap_screw;
+  render_2D_sheet(AL8) 
+    ballscrew_mount2_dxf();
+  rotate([180,0,0]){  
+    translate([50,0,4.01]) color("darkgray") screw(m8, 16);
+    translate([50,-unit,4.01]) color("darkgray") screw(m8, 16);
+    translate([50,unit,4.01]) color("darkgray") screw(m8, 16);
+
+    translate([-10,-23, 4.05]) { 
+        screw(m5, 45);
+        at_z(-34.1) washer(M5_washer);
+        at_z(-34.1) rotate([180,0,0]) nut(M5_nut, nyloc = true);
+    }
+    translate([-10,23, 4.05]) { 
+        screw(m5, 45);
+        at_z(-34.1) washer(M5_washer);
+        at_z(-34.1) rotate([180,0,0]) nut(M5_nut, nyloc = true);
+    }
+    translate([-28,-23, 4.05]) { 
+        screw(m5, 45);
+        at_z(-34.1) washer(M5_washer);
+        at_z(-34.1) rotate([180,0,0]) nut(M5_nut, nyloc = true);
+    }
+    translate([-28,23, 4.05]) { 
+        screw(m5, 45);
+        at_z(-34.1) washer(M5_washer);
+        at_z(-34.1) rotate([180,0,0]) nut(M5_nut, nyloc = true);
+    }
+}
+
+}
+
+module motor_mount_holes(motor) {  
+  motor_mount_screw = mount_hole_dist( servo_mount(motor) )/2;
+  mount_flange = mount_flange( servo_mount(motor));
+  screw_pos = [[motor_mount_screw,motor_mount_screw],
+               [motor_mount_screw,-motor_mount_screw],
+               [-motor_mount_screw,motor_mount_screw],
+               [-motor_mount_screw,-motor_mount_screw]];
+  union() {
+    translate([0,0,-4.05])
+      circle(d=mount_flange );  
+    for( pos = screw_pos )
+        translate([pos[0],pos[1], 0])
+          circle(d=6.3);
+    }
+}
+
+module motor_mount_screws(motor){
+  motor_mount_screw = mount_hole_dist( servo_mount(motor) )/2;
+  screw_pos = [[motor_mount_screw,motor_mount_screw],
+               [motor_mount_screw,-motor_mount_screw],
+               [-motor_mount_screw,motor_mount_screw],
+               [-motor_mount_screw,-motor_mount_screw]];
+  rotate([180,0,0])
+    for( pos = screw_pos )
+      translate([pos[0],pos[1], 9.2])
+      { 
+        screw(M6_cap_screw, 24);
+        at_z(-14) washer(M6_washer);
+        at_z(-14) rotate([180,0,0]) nut(M6_nut, nyloc = true);
+      }
+}
 
 module frame_assembly() 
   assembly("frame") {

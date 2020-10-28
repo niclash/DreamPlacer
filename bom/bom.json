@@ -11,6 +11,9 @@
             "rail(HGH20CA, 1000): Linear rail HGH20CA x 1000mm": {
                 "count": 1
             },
+            "screw(M5_cap_screw, 24): Screw M5 cap x 24mm": {
+                "count": 17
+            },
             "extrusion(E4040, 80): Extrusion E4040 x 80mm": {
                 "count": 3
             },
@@ -29,30 +32,70 @@
             "leadnut(SFU1610): Leadscrew nut for SFU1610": {
                 "count": 1
             },
+            "Bearing(BK12) : Bearing BK12 ": {
+                "count": 1
+            },
             "ball_bearing(BB6201): Ball bearing 6201-2RS 12mm x 32mm x 10mm": {
                 "count": 3
+            },
+            "Bearing(BF12) : Bearing BF12 ": {
+                "count": 1
             },
             "Servo(LCMT07L02NB_80M03530B) : Servo 80ST standard mount 90 x 178mm": {
                 "count": 1
             },
-            "sheet(AL8, 160, 160, [3, 3, 3, 3]): Aluminium tooling plate 160mm x 160mm x 8mm": {
+            "sheet(AL8, 200, 160, 3): Aluminium tooling plate 200mm x 160mm x 8mm": {
                 "count": 1
             },
-            "screw(M5_cap_screw, 24): Screw M5 cap x 24mm": {
+            "screw(M6_cap_screw, 24): Screw M6 cap x 24mm": {
+                "count": 4
+            },
+            "washer(M6_washer): Washer  M6 x 12.5mm x 1.5mm": {
+                "count": 4
+            },
+            "nut(M6_nut, nyloc = true): Nut M6 x 5mm nyloc": {
+                "count": 4
+            },
+            "screw(M8_cs_cap_screw, 16): Screw M8 cs cap x 16mm": {
+                "count": 9
+            },
+            "screw(M5_cs_cap_screw, 16): Screw M5 cs cap x 16mm": {
+                "count": 4
+            },
+            "sheet(AL8, 140, 160, 3): Aluminium tooling plate 140mm x 160mm x 8mm": {
+                "count": 1
+            },
+            "screw(M5_cs_cap_screw, 40): Screw M5 cs cap x 40mm": {
                 "count": 4
             },
             "washer(M5_washer): Washer  M5 x 10mm x 1mm": {
-                "count": 4
+                "count": 8
             },
             "nut(M5_nut, nyloc = true): Nut M5 x 4mm nyloc": {
-                "count": 4
+                "count": 8
             },
-            "screw(M5_cs_cap_screw, 40): Screw M5 cs cap x 40mm": {
-                "count": 6
+            "sheet(AL8, 140, 78, 3): Aluminium tooling plate 140mm x 78mm x 8mm": {
+                "count": 1
+            },
+            "screw(M5_cs_cap_screw, 45): Screw M5 cs cap x 45mm": {
+                "count": 4
             }
         },
         "printed": {},
-        "routed": {}
+        "routed": {
+            "bracket_y_motor.dxf": {
+                "count": 1,
+                "colour": "[0.9, 0.9, 0.9, 1]"
+            },
+            "ballscrew_mount1.dxf": {
+                "count": 1,
+                "colour": "[0.9, 0.9, 0.9, 1]"
+            },
+            "ballscrew_mount2.dxf": {
+                "count": 1,
+                "colour": "[0.9, 0.9, 0.9, 1]"
+            }
+        }
     },
     {
         "name": "right_side_frame_assembly",
@@ -66,6 +109,9 @@
             "rail(HGH20CA, 1000): Linear rail HGH20CA x 1000mm": {
                 "count": 1
             },
+            "screw(M5_cap_screw, 24): Screw M5 cap x 24mm": {
+                "count": 17
+            },
             "extrusion(E4040, 80): Extrusion E4040 x 80mm": {
                 "count": 3
             },
@@ -84,30 +130,70 @@
             "leadnut(SFU1610): Leadscrew nut for SFU1610": {
                 "count": 1
             },
+            "Bearing(BK12) : Bearing BK12 ": {
+                "count": 1
+            },
             "ball_bearing(BB6201): Ball bearing 6201-2RS 12mm x 32mm x 10mm": {
                 "count": 3
+            },
+            "Bearing(BF12) : Bearing BF12 ": {
+                "count": 1
             },
             "Servo(LCMT07L02NB_80M03530B) : Servo 80ST standard mount 90 x 178mm": {
                 "count": 1
             },
-            "sheet(AL8, 160, 160, [3, 3, 3, 3]): Aluminium tooling plate 160mm x 160mm x 8mm": {
+            "sheet(AL8, 200, 160, 3): Aluminium tooling plate 200mm x 160mm x 8mm": {
                 "count": 1
             },
-            "screw(M5_cap_screw, 24): Screw M5 cap x 24mm": {
+            "screw(M6_cap_screw, 24): Screw M6 cap x 24mm": {
+                "count": 4
+            },
+            "washer(M6_washer): Washer  M6 x 12.5mm x 1.5mm": {
+                "count": 4
+            },
+            "nut(M6_nut, nyloc = true): Nut M6 x 5mm nyloc": {
+                "count": 4
+            },
+            "screw(M8_cs_cap_screw, 16): Screw M8 cs cap x 16mm": {
+                "count": 9
+            },
+            "screw(M5_cs_cap_screw, 16): Screw M5 cs cap x 16mm": {
+                "count": 4
+            },
+            "sheet(AL8, 140, 160, 3): Aluminium tooling plate 140mm x 160mm x 8mm": {
+                "count": 1
+            },
+            "screw(M5_cs_cap_screw, 40): Screw M5 cs cap x 40mm": {
                 "count": 4
             },
             "washer(M5_washer): Washer  M5 x 10mm x 1mm": {
-                "count": 4
+                "count": 8
             },
             "nut(M5_nut, nyloc = true): Nut M5 x 4mm nyloc": {
-                "count": 4
+                "count": 8
             },
-            "screw(M5_cs_cap_screw, 40): Screw M5 cs cap x 40mm": {
-                "count": 6
+            "sheet(AL8, 140, 78, 3): Aluminium tooling plate 140mm x 78mm x 8mm": {
+                "count": 1
+            },
+            "screw(M5_cs_cap_screw, 45): Screw M5 cs cap x 45mm": {
+                "count": 4
             }
         },
         "printed": {},
-        "routed": {}
+        "routed": {
+            "bracket_y_motor.dxf": {
+                "count": 1,
+                "colour": "[0.9, 0.9, 0.9, 1]"
+            },
+            "ballscrew_mount1.dxf": {
+                "count": 1,
+                "colour": "[0.9, 0.9, 0.9, 1]"
+            },
+            "ballscrew_mount2.dxf": {
+                "count": 1,
+                "colour": "[0.9, 0.9, 0.9, 1]"
+            }
+        }
     },
     {
         "name": "picker_assembly",
@@ -169,6 +255,9 @@
             "rail(HGH15CA, 1500): Linear rail HGH15CA x 1500mm": {
                 "count": 1
             },
+            "screw(M4_cap_screw, 20): Screw M4 cap x 20mm": {
+                "count": 25
+            },
             "leadscrew(16, 1435, 10, 1): Leadscrew 16 x 1435mm, 10mm lead, 1 starts": {
                 "count": 1
             },
@@ -184,41 +273,46 @@
             "leadnut(SFU1610): Leadscrew nut for SFU1610": {
                 "count": 1
             },
+            "Bearing(BK12) : Bearing BK12 ": {
+                "count": 1
+            },
             "ball_bearing(BB6201): Ball bearing 6201-2RS 12mm x 32mm x 10mm": {
                 "count": 3
             },
-            "sheet(AL8, 60, 80, [3, 3, 3, 3]): Aluminium tooling plate 60mm x 80mm x 8mm": {
+            "Bearing(BF12) : Bearing BF12 ": {
+                "count": 1
+            },
+            "sheet(AL8, 60, 80, 3): Aluminium tooling plate 60mm x 80mm x 8mm": {
                 "count": 2
+            },
+            "screw(M6_cap_screw, 40): Screw M6 cap x 40mm": {
+                "count": 6
+            },
+            "screw(M8_cs_cap_screw, 16): Screw M8 cs cap x 16mm": {
+                "count": 8
             },
             "Servo(LCMT07L02NB_80M03530B) : Servo 80ST standard mount 90 x 178mm": {
                 "count": 1
             },
-            "sheet(AL8, 200, 170, 1): Aluminium tooling plate 200mm x 170mm x 8mm": {
+            "sheet(AL8, 200, 180, 3): Aluminium tooling plate 200mm x 180mm x 8mm": {
                 "count": 1
             },
-            "sheet(AL8, 100, 250, [3, 3, 3, 3]): Aluminium tooling plate 100mm x 250mm x 8mm": {
-                "count": 1
-            },
-            "screw(M5_cap_screw, 24): Screw M5 cap x 24mm": {
-                "count": 4
-            },
-            "washer(M5_washer): Washer  M5 x 10mm x 1mm": {
-                "count": 4
-            },
-            "nut(M5_nut, nyloc = true): Nut M5 x 4mm nyloc": {
-                "count": 4
-            },
-            "sheet(AL8, 50, 50, [3, 3, 0, 0]): Aluminium tooling plate 50mm x 50mm x 8mm": {
-                "count": 1
-            },
-            "sheet(AL8, 50, 50, [0, 0, 3, 3]): Aluminium tooling plate 50mm x 50mm x 8mm": {
+            "sheet(AL8, 200, 300, 3): Aluminium tooling plate 200mm x 300mm x 8mm": {
                 "count": 1
             }
         },
         "printed": {},
         "routed": {
-            "bracket_right.dxf": {
+            "x_axis_screw_standoff_right.dxf": {
                 "count": 1,
+                "colour": "[0.9, 0.9, 0.9, 1]"
+            },
+            "x_axis_screw_standoff_left.dxf": {
+                "count": 1,
+                "colour": "[0.9, 0.9, 0.9, 1]"
+            },
+            "bracket_right.dxf": {
+                "count": 2,
                 "colour": "[0.9, 0.9, 0.9, 1]"
             }
         }
