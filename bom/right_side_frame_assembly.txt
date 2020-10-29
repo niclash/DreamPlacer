@@ -17,7 +17,7 @@ Vitamins:
   1 Smooth rod 12mm x 15mm
   1 Smooth rod 12mm x 50mm
  17 Screw M5 cap x 24mm
-  4 Screw M5 cs cap x 16mm
+ 12 Screw M5 cs cap x 16mm
   4 Screw M5 cs cap x 40mm
   4 Screw M5 cs cap x 45mm
   4 Screw M6 cap x 24mm

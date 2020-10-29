@@ -129,14 +129,19 @@ module x_axis_screw_standoff_right() {
 module bracket_right_dxf() {
   dxf("bracket_right");
   holes = [[-12,-80,5.2],[12,-80,5.2],[-12,-40,5.2],[12,-40,5.2], 
-           [-20,50,6.2], [20,50,6.2]];
+           [-20,50,8.2], [20,50,8.2]];
   difference() {
-    sheet_2D(AL8, 200, 300, 3);
-    translate([50,23]) square([50,130]);
-    translate([-100,23]) square([50,130]);
-    translate([-100,-151]) square([50,130]);
-    translate([50,-151]) square([50,130]);
-    translate([-50,-150]) square([100,60]);
+    minkowski() {
+      difference() {
+        sheet_2D(AL8, 200, 300, 3);
+        translate([50,23]) square([50,130]);
+        translate([-100,23]) square([50,130]);
+        translate([-100,-151]) square([50,130]);
+        translate([50,-151]) square([50,130]);
+        translate([-50,-150]) square([100,60]);
+      }
+      circle(2);
+    }  
     translate([75,0,0])
       carriage_hole_positions(HGH20CA_carriage)
         circle(d=carriage_screw(HGH20CA_carriage)[3]+0.2);
@@ -146,7 +151,7 @@ module bracket_right_dxf() {
     for(h=holes)
       translate(h)
         circle(d=h[2]);
-  }    
+  }
 }
 module bracket_right() {
   render_2D_sheet(AL8) 
@@ -155,17 +160,26 @@ module bracket_right() {
   translate([-12,-80,4.05]) screw(M5_cs_cap_screw, 16);
   translate([12,-40,4.05]) screw(M5_cs_cap_screw, 16);
   translate([-12,-40,4.05]) screw(M5_cs_cap_screw, 16);
+
+  translate([-20,50,-4.05]) rotate([0,180,0]) screw(M8_cs_cap_screw, 24);
+  translate([20,50,-4.05]) rotate([0,180,0]) screw(M8_cs_cap_screw, 24);
 }
 
 module bracket_left_dxf() {
   dxf("bracket_left");
-  holes = [[-12,-80,5.2],[12,-80,5.2],[-12,-40,5.2],[12,-40,5.2], [-20,50,6.2], [20,50,6.2]];
+  holes = [[-12,-80,5.2],[12,-80,5.2],[-12,-40,5.2],[12,-40,5.2], [-20,50,8.2], [20,50,8.2]];
   difference() {
-    sheet_2D(AL8, 200, 180, 3);
-    translate([50,23]) square([50,70]);
-    translate([-100,23]) square([50,70]);
-    translate([-100,-91]) square([50,70]);
-    translate([50,-91]) square([50,70]);
+    minkowski() {
+      difference() {
+        sheet_2D(AL8, 200, 180, 3);
+        translate([50,23]) square([50,70]);
+        translate([-100,23]) square([50,70]);
+        translate([-100,-91]) square([50,70]);
+        translate([50,-91]) square([50,70]);
+        translate([-60,66]) square([120,30]);
+      }
+      circle(2);
+    }
     translate([75,0,0])
       carriage_hole_positions(HGH20CA_carriage)
         circle(d=carriage_screw(HGH20CA_carriage)[3]+0.2);
@@ -175,7 +189,8 @@ module bracket_left_dxf() {
     for(h=holes)
       translate(h)
         circle(d=h[2]);
-  }    
+  } 
+  
 }
 module bracket_left() {
   render_2D_sheet(AL8) 
@@ -184,6 +199,9 @@ module bracket_left() {
   translate([-12,-80,-4.05]) rotate([0,180,0]) screw(M5_cs_cap_screw, 16);
   translate([12,-40,-4.05]) rotate([0,180,0]) screw(M5_cs_cap_screw, 16);
   translate([-12,-40,-4.05]) rotate([0,180,0]) screw(M5_cs_cap_screw, 16);
+    
+  translate([-20,50,4.05]) rotate([0,0,0]) screw(M8_cs_cap_screw, 24);
+  translate([20,50,4.05]) rotate([0,0,0]) screw(M8_cs_cap_screw, 24);
 }
 
 module lead_screw_assembly(length,pos, rotation=0) {
@@ -315,6 +333,14 @@ module rail_block_assembly(length, pos){
   translate([0,0,12])
     rail_hole_positions(HGH20CA, length)
       screw(M5_cap_screw, 24);
+
+  translate([pos-76,0,8.05])
+    carriage_hole_positions(rail_carriage(HGH20CA))
+      screw(M5_cs_cap_screw, 16);
+  translate([pos+76,0,8.05])
+    carriage_hole_positions(rail_carriage(HGH20CA))
+      screw(M5_cs_cap_screw, 16);
+
 }
 
 module right_side_frame_assembly() 

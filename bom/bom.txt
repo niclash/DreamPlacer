@@ -42,11 +42,12 @@ Vitamins:
   |  | 1|  |  | 1| 1|  3 Smooth rod 12mm x 15mm
   |  | 1|  |  | 1| 1|  3 Smooth rod 12mm x 50mm
   |14|  |  |  |  |  | 14 Screw M2 cap x 10mm
+  |  |  |  |16|  |  | 16 Screw M2 cs cap x  6mm
   | 4|  |  |  |  |  |  4 Screw M3 cs cap x 12mm
   |  |  |  |  |  |25| 25 Screw M4 cap x 20mm
   | 4|  |  |  |  |  |  4 Screw M4 cs cap x 16mm
   |  |17|  |  |17|  | 34 Screw M5 cap x 24mm
-  |  | 4|  |  | 4| 8| 16 Screw M5 cs cap x 16mm
+  |  |12|  |  |12| 8| 32 Screw M5 cs cap x 16mm
   | 6|  |  |  |  |  |  6 Screw M5 cs cap x 20mm
   |  | 4|  |  | 4|  |  8 Screw M5 cs cap x 40mm
   |  | 4|  |  | 4|  |  8 Screw M5 cs cap x 45mm
@@ -54,6 +55,7 @@ Vitamins:
   |  |  |  |  |  | 6|  6 Screw M6 cap x 40mm
   |  | 2|  |  | 2|  |  4 Screw M8 cap x  8mm
   |  | 9|  |  | 9| 8| 26 Screw M8 cs cap x 16mm
+  |  |  |  |  |  | 4|  4 Screw M8 cs cap x 24mm
   |  |  | 1|  |  |  |  1 Aluminium tooling plate 1500mm x 645mm x 2mm
   |  |  |  | 4|  |  |  4 Aluminium tooling plate 30mm x 30mm x 2mm
   |  | 1|  |  | 1|  |  2 Aluminium tooling plate 140mm x 160mm x 8mm

@@ -112,13 +112,14 @@ module pick_bracket(nema) {
     translate([0,15,-2.5]) linear_extrude(3) nema_holes_dxf(nema);
     translate([0,0.5,15]) rotate([90,0,0]) linear_extrude(3) rail_holes_dxf();
   }
+  translate([0,-7.95,15]) rotate([-90,0,0]) carriage_hole_positions(MGN7_carriage) screw(M2_cs_cap_screw, 6);
+  translate([0,15,-2.05]) rotate([180,0,0]) NEMA_screw_positions(nema) {
+      screw(M2_cs_cap_screw, 6);
+  }
 }
 module rail_holes_dxf() {
   dxf("rail_holes");
-  translate([-6,-4,4.05]) circle(d=2.1);
-  translate([-6,4,4.05]) circle(d=2.1);
-  translate([6,-4,4.05]) circle(d=2.1);
-  translate([6,4,4.05]) circle(d=2.1);
+  carriage_hole_positions(MGN7_carriage) circle(d=2.1);
 }
 
 module nema_holes_dxf(nema) {
