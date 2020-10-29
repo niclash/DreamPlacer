@@ -19,7 +19,6 @@ KP_BLOCK=KP001;
 
 module main_assembly()
   assembly("main") {
-      
     frame_assembly();
     build_bed(WIDTH,LENGTH);
     translate([0, GANTRY_POS, X_AXIS_HEIGHT+78]) 
@@ -51,9 +50,9 @@ module xaxis_assembly()
           screw(M4_cap_screw, 20);
     }
     translate([3,0,17]) rotate([90,0,90])
-      lead_screw_assembly(length, HEAD_POS-15, 180); 
+      lead_screw_assembly(length, HEAD_POS+6, 180); 
     x_axis_standoffs(length);
-    translate([HEAD_POS,-72,-40])
+    translate([HEAD_POS,-72,-35])
       head_assembly();
     
     translate([length/2 + shaft_length + 39,0,25])
@@ -159,7 +158,7 @@ module bracket_right() {
 }
 
 module bracket_left_dxf() {
-  dxf("bracket_right");
+  dxf("bracket_left");
   holes = [[-12,-80,5.2],[12,-80,5.2],[-12,-40,5.2],[12,-40,5.2], [-20,50,6.2], [20,50,6.2]];
   difference() {
     sheet_2D(AL8, 200, 180, 3);

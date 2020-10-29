@@ -1,4 +1,10 @@
 picker_assemblies:
 Vitamins:
+  2 L-profile(30x30) 30mm
   2 Stepper motor NEMA8 x 30mm
-  2 Linear rail MGN7 x 200mm
+  2 Linear rail MGN7 x 100mm
+  4 Aluminium tooling plate 30mm x 30mm x 2mm
+
+CNC cut:
+  2 nema_holes.dxf
+  2 rail_holes.dxf

@@ -231,15 +231,28 @@
         "count": 2,
         "assemblies": {},
         "vitamins": {
-            "rail(MGN7, 200): Linear rail MGN7 x 200mm": {
+            "rail(MGN7, 100): Linear rail MGN7 x 100mm": {
                 "count": 2
             },
-            "NEMA(NEMA8 Hollow): Stepper motor NEMA8 x 30mm": {
+            "L-profile(30x30) : L-profile(30x30) 30mm": {
+                "count": 2
+            },
+            "sheet(AL2, 30, 30): Aluminium tooling plate 30mm x 30mm x 2mm": {
+                "count": 4
+            },
+            "NEMA(NEMA8): Stepper motor NEMA8 x 30mm": {
                 "count": 2
             }
         },
         "printed": {},
-        "routed": {}
+        "routed": {
+            "nema_holes.dxf": {
+                "count": 2
+            },
+            "rail_holes.dxf": {
+                "count": 2
+            }
+        }
     },
     {
         "name": "head_assembly",
@@ -249,19 +262,50 @@
             "picker_assembly": 2
         },
         "vitamins": {
-            "sheet(AL8, 100, 240, [3, 3, 3, 3]): Aluminium tooling plate 100mm x 240mm x 8mm": {
+            "sheet(AL8, 80, 240, [3, 3, 3, 3]): Aluminium tooling plate 80mm x 240mm x 8mm": {
                 "count": 1
             },
             "screw(M3_cs_cap_screw, 12): Screw M3 cs cap x 12mm": {
                 "count": 4
             },
+            "screw(M2_cap_screw, 10): Screw M2 cap x 10mm": {
+                "count": 14
+            },
             "NEMA(NEMA17): Stepper motor NEMA17 x 47mm": {
                 "count": 1
+            },
+            "sheet(AL8, 80, 120, [3, 3, 3, 3]): Aluminium tooling plate 80mm x 120mm x 8mm": {
+                "count": 1
+            },
+            "screw(M5_cs_cap_screw, 20): Screw M5 cs cap x 20mm": {
+                "count": 6
+            },
+            "washer(M5_washer): Washer  M5 x 10mm x 1mm": {
+                "count": 2
+            },
+            "nut(M5_nut, nyloc = true): Nut M5 x 4mm nyloc": {
+                "count": 2
+            },
+            "extrusion_corner_bracket(E40_corner_bracket): Extrusion corner bracket 35": {
+                "count": 2
+            },
+            "pulley(GT2x20ob_pulley): Pulley GT2OB 20 teeth": {
+                "count": 1
+            },
+            "belt(GT2x6, [[-2, -35, 0], [-6, 112, 0], [-3, 114, 0], [-2, 115, 0], [0, 116, 0], [2, 115, 0], [3, 114, 0], [6, 112, 0], [2, -35, 0]], 100, [0, -35, 0]): Belt GT2 x 6mm x nanmm": {
+                "count": 1
+            },
+            "screw(M4_cs_cap_screw, 16): Screw M4 cs cap x 16mm": {
+                "count": 4
             }
         },
         "printed": {},
         "routed": {
             "head_plate.dxf": {
+                "count": 1,
+                "colour": "[0.9, 0.9, 0.9, 1]"
+            },
+            "horiz_plate.dxf": {
                 "count": 1,
                 "colour": "[0.9, 0.9, 0.9, 1]"
             }
@@ -340,8 +384,12 @@
                 "count": 1,
                 "colour": "[0.9, 0.9, 0.9, 1]"
             },
+            "bracket_left.dxf": {
+                "count": 1,
+                "colour": "[0.9, 0.9, 0.9, 1]"
+            },
             "bracket_right.dxf": {
-                "count": 2,
+                "count": 1,
                 "colour": "[0.9, 0.9, 0.9, 1]"
             }
         }

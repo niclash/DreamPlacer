@@ -20,7 +20,8 @@ Vitamins:
   2 Aluminium tooling plate 60mm x 80mm x 8mm
 
 CNC cut:
-  2 bracket_right.dxf
+  1 bracket_left.dxf
+  1 bracket_right.dxf
   1 x_axis_screw_standoff_left.dxf
   1 x_axis_screw_standoff_right.dxf
 

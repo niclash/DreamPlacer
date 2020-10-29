@@ -17,31 +17,37 @@ Vitamins:
  e  d  e  n  r  e  s
   |  | 1|  |  | 1| 1|  3 Bearing BF12 
   |  | 1|  |  | 1| 1|  3 Bearing BK12 
+  |  |  |  | 2|  |  |  2 L-profile(30x30) 30mm
   | 1|  |  |  |  |  |  1 Stepper motor NEMA17 x 47mm
   |  |  |  | 2|  |  |  2 Stepper motor NEMA8 x 30mm
   |  | 1|  |  | 1| 1|  3 Servo 80ST standard mount 90 x 178mm
   |  | 3|  |  | 3| 3|  9 Ball bearing 6201-2RS 12mm x 32mm x 10mm
+  | 1|  |  |  |  |  |  1 Belt GT2 x 6mm x nanmm
   |  | 2|  |  | 2|  |  4 Extrusion E4040 x 1070mm
  5|  |  |  |  |  |  |  5 Extrusion E4040 x 1500mm
   |  | 3|  |  | 3|  |  6 Extrusion E4040 x 80mm
   |  |  |  |  |  | 1|  1 Extrusion E4080 x 1640mm
-  |  | 1|  |  | 1|  |  2 Extrusion corner bracket 35
+  | 2| 1|  |  | 1|  |  4 Extrusion corner bracket 35
   |  |15|  |  |15|  | 30 Extrusion inner corner bracket 8.5
   |  | 1|  |  | 1| 1|  3 Leadscrew nut for SFU1610
   |  |  |  |  |  | 1|  1 Leadscrew 16 x 1435mm, 10mm lead, 1 starts
   |  | 1|  |  | 1|  |  2 Leadscrew 16 x 935mm, 10mm lead, 1 starts
-  |  | 8|  |  | 8|  | 16 Nut M5 x 4mm nyloc
+  | 2| 8|  |  | 8|  | 18 Nut M5 x 4mm nyloc
   |  | 4|  |  | 4|  |  8 Nut M6 x 5mm nyloc
+  | 1|  |  |  |  |  |  1 Pulley GT2OB 20 teeth
   |  |  |  |  |  | 1|  1 Linear rail HGH15CA x 1500mm
   |  | 1|  |  | 1|  |  2 Linear rail HGH20CA x 1000mm
-  |  |  |  | 2|  |  |  2 Linear rail MGN7 x 200mm
+  |  |  |  | 2|  |  |  2 Linear rail MGN7 x 100mm
   |  | 1|  |  | 1| 1|  3 Smooth rod 10mm x 15mm
   |  | 1|  |  | 1| 1|  3 Smooth rod 12mm x 15mm
   |  | 1|  |  | 1| 1|  3 Smooth rod 12mm x 50mm
+  |14|  |  |  |  |  | 14 Screw M2 cap x 10mm
   | 4|  |  |  |  |  |  4 Screw M3 cs cap x 12mm
   |  |  |  |  |  |25| 25 Screw M4 cap x 20mm
+  | 4|  |  |  |  |  |  4 Screw M4 cs cap x 16mm
   |  |17|  |  |17|  | 34 Screw M5 cap x 24mm
   |  | 4|  |  | 4| 8| 16 Screw M5 cs cap x 16mm
+  | 6|  |  |  |  |  |  6 Screw M5 cs cap x 20mm
   |  | 4|  |  | 4|  |  8 Screw M5 cs cap x 40mm
   |  | 4|  |  | 4|  |  8 Screw M5 cs cap x 45mm
   |  | 4|  |  | 4|  |  8 Screw M6 cap x 24mm
@@ -49,24 +55,30 @@ Vitamins:
   |  | 2|  |  | 2|  |  4 Screw M8 cap x  8mm
   |  | 9|  |  | 9| 8| 26 Screw M8 cs cap x 16mm
   |  |  | 1|  |  |  |  1 Aluminium tooling plate 1500mm x 645mm x 2mm
-  | 1|  |  |  |  |  |  1 Aluminium tooling plate 100mm x 240mm x 8mm
+  |  |  |  | 4|  |  |  4 Aluminium tooling plate 30mm x 30mm x 2mm
   |  | 1|  |  | 1|  |  2 Aluminium tooling plate 140mm x 160mm x 8mm
   |  | 1|  |  | 1|  |  2 Aluminium tooling plate 140mm x 78mm x 8mm
   |  | 1|  |  | 1|  |  2 Aluminium tooling plate 200mm x 160mm x 8mm
   |  |  |  |  |  | 1|  1 Aluminium tooling plate 200mm x 180mm x 8mm
   |  |  |  |  |  | 1|  1 Aluminium tooling plate 200mm x 300mm x 8mm
   |  |  |  |  |  | 2|  2 Aluminium tooling plate 60mm x 80mm x 8mm
+  | 1|  |  |  |  |  |  1 Aluminium tooling plate 80mm x 120mm x 8mm
+  | 1|  |  |  |  |  |  1 Aluminium tooling plate 80mm x 240mm x 8mm
   |  | 2|  |  | 2|  |  4 Nut M8 sliding T
-  |  | 8|  |  | 8|  | 16 Washer  M5 x 10mm x 1mm
+  | 2| 8|  |  | 8|  | 18 Washer  M5 x 10mm x 1mm
   |  | 4|  |  | 4|  |  8 Washer  M6 x 12.5mm x 1.5mm
   |  | 2|  |  | 2|  |  4 Washer  M8 x 17mm x 1.6mm
 
 CNC cut:
   |  | 1|  |  | 1|  |  2 ballscrew_mount1.dxf
   |  | 1|  |  | 1|  |  2 ballscrew_mount2.dxf
-  |  |  |  |  |  | 2|  2 bracket_right.dxf
+  |  |  |  |  |  | 1|  1 bracket_left.dxf
+  |  |  |  |  |  | 1|  1 bracket_right.dxf
   |  | 1|  |  | 1|  |  2 bracket_y_motor.dxf
   | 1|  |  |  |  |  |  1 head_plate.dxf
+  | 1|  |  |  |  |  |  1 horiz_plate.dxf
+  |  |  |  | 2|  |  |  2 nema_holes.dxf
+  |  |  |  | 2|  |  |  2 rail_holes.dxf
   |  |  |  |  |  | 1|  1 x_axis_screw_standoff_left.dxf
   |  |  |  |  |  | 1|  1 x_axis_screw_standoff_right.dxf
 
