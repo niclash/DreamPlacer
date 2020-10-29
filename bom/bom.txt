@@ -25,6 +25,8 @@ Vitamins:
  5|  |  |  |  |  |  |  5 Extrusion E4040 x 1500mm
   |  | 3|  |  | 3|  |  6 Extrusion E4040 x 80mm
   |  |  |  |  |  | 1|  1 Extrusion E4080 x 1640mm
+  |  | 1|  |  | 1|  |  2 Extrusion corner bracket 35
+  |  |15|  |  |15|  | 30 Extrusion inner corner bracket 8.5
   |  | 1|  |  | 1| 1|  3 Leadscrew nut for SFU1610
   |  |  |  |  |  | 1|  1 Leadscrew 16 x 1435mm, 10mm lead, 1 starts
   |  | 1|  |  | 1|  |  2 Leadscrew 16 x 935mm, 10mm lead, 1 starts
@@ -36,19 +38,17 @@ Vitamins:
   |  | 1|  |  | 1| 1|  3 Smooth rod 10mm x 15mm
   |  | 1|  |  | 1| 1|  3 Smooth rod 12mm x 15mm
   |  | 1|  |  | 1| 1|  3 Smooth rod 12mm x 50mm
-  |  |  |  |16|  |  | 16 Screw M2 cs cap x  6mm
-  | 8|  |  |  |  |  |  8 Screw M3 cs cap x 10mm
+  | 4|  |  |  |  |  |  4 Screw M3 cs cap x 12mm
   |  |  |  |  |  |25| 25 Screw M4 cap x 20mm
   |  |17|  |  |17|  | 34 Screw M5 cap x 24mm
-  |  | 4|  |  | 4|  |  8 Screw M5 cs cap x 16mm
+  |  | 4|  |  | 4| 8| 16 Screw M5 cs cap x 16mm
   |  | 4|  |  | 4|  |  8 Screw M5 cs cap x 40mm
   |  | 4|  |  | 4|  |  8 Screw M5 cs cap x 45mm
   |  | 4|  |  | 4|  |  8 Screw M6 cap x 24mm
   |  |  |  |  |  | 6|  6 Screw M6 cap x 40mm
+  |  | 2|  |  | 2|  |  4 Screw M8 cap x  8mm
   |  | 9|  |  | 9| 8| 26 Screw M8 cs cap x 16mm
   |  |  | 1|  |  |  |  1 Aluminium tooling plate 1500mm x 645mm x 2mm
-  |  |  |  | 4|  |  |  4 Aluminium tooling plate 30mm x 30mm x 2mm
-  | 1|  |  |  |  |  |  1 Aluminium tooling plate 100mm x 114mm x 8mm
   | 1|  |  |  |  |  |  1 Aluminium tooling plate 100mm x 240mm x 8mm
   |  | 1|  |  | 1|  |  2 Aluminium tooling plate 140mm x 160mm x 8mm
   |  | 1|  |  | 1|  |  2 Aluminium tooling plate 140mm x 78mm x 8mm
@@ -56,14 +56,17 @@ Vitamins:
   |  |  |  |  |  | 1|  1 Aluminium tooling plate 200mm x 180mm x 8mm
   |  |  |  |  |  | 1|  1 Aluminium tooling plate 200mm x 300mm x 8mm
   |  |  |  |  |  | 2|  2 Aluminium tooling plate 60mm x 80mm x 8mm
+  |  | 2|  |  | 2|  |  4 Nut M8 sliding T
   |  | 8|  |  | 8|  | 16 Washer  M5 x 10mm x 1mm
   |  | 4|  |  | 4|  |  8 Washer  M6 x 12.5mm x 1.5mm
+  |  | 2|  |  | 2|  |  4 Washer  M8 x 17mm x 1.6mm
 
 CNC cut:
   |  | 1|  |  | 1|  |  2 ballscrew_mount1.dxf
   |  | 1|  |  | 1|  |  2 ballscrew_mount2.dxf
   |  |  |  |  |  | 2|  2 bracket_right.dxf
   |  | 1|  |  | 1|  |  2 bracket_y_motor.dxf
+  | 1|  |  |  |  |  |  1 head_plate.dxf
   |  |  |  |  |  | 1|  1 x_axis_screw_standoff_left.dxf
   |  |  |  |  |  | 1|  1 x_axis_screw_standoff_right.dxf
 

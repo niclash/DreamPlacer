@@ -62,6 +62,7 @@ module xaxis_assembly()
       }
     translate([-length/2-74,0,-78]) rotate([90,0,-90])
       bracket_left();
+        
     translate([length/2+74,0,-78]) rotate([90,0,-90])
       bracket_right();
 }
@@ -148,7 +149,14 @@ module bracket_right_dxf() {
         circle(d=h[2]);
   }    
 }
-module bracket_right() render_2D_sheet(AL8) bracket_right_dxf();
+module bracket_right() {
+  render_2D_sheet(AL8) 
+    bracket_right_dxf();
+  translate([12,-80,4.05]) screw(M5_cs_cap_screw, 16);
+  translate([-12,-80,4.05]) screw(M5_cs_cap_screw, 16);
+  translate([12,-40,4.05]) screw(M5_cs_cap_screw, 16);
+  translate([-12,-40,4.05]) screw(M5_cs_cap_screw, 16);
+}
 
 module bracket_left_dxf() {
   dxf("bracket_right");
@@ -170,7 +178,14 @@ module bracket_left_dxf() {
         circle(d=h[2]);
   }    
 }
-module bracket_left() render_2D_sheet(AL8) bracket_left_dxf();
+module bracket_left() {
+  render_2D_sheet(AL8) 
+    bracket_left_dxf();
+  translate([12,-80,-4.05]) rotate([0,180,0]) screw(M5_cs_cap_screw, 16);
+  translate([-12,-80,-4.05]) rotate([0,180,0]) screw(M5_cs_cap_screw, 16);
+  translate([12,-40,-4.05]) rotate([0,180,0]) screw(M5_cs_cap_screw, 16);
+  translate([-12,-40,-4.05]) rotate([0,180,0]) screw(M5_cs_cap_screw, 16);
+}
 
 module lead_screw_assembly(length,pos, rotation=0) {
   translate([0,6,-3]) {
@@ -349,7 +364,47 @@ module side_frame() {
     at_y(length/2-50) extrusion(E4040,height-40);
     at_y(length/2+50) extrusion(E4040,height-40);
     at_y(-length/2+20) extrusion(E4040,height-40);
-  
+    
+    translate([0,-length/2+40,-40]) rotate([90,0,90])
+      extrusion_inner_corner_bracket(E40_inner_corner_bracket, true);
+    translate([0,-length/2+40,40]) rotate([-90,0,90])
+      extrusion_inner_corner_bracket(E40_inner_corner_bracket, true);
+    translate([20,-length/2+20,-40]) rotate([90,0,0])
+      extrusion_corner_bracket_assembly(E40_corner_bracket, screw_type=M8_cap_screw, nut_type = M8_sliding_t_nut);
+
+    translate([0,length/2+40,-40]) rotate([90,0,-90])
+      extrusion_inner_corner_bracket(E40_inner_corner_bracket, true);
+    translate([0,length/2+40,40]) rotate([-90,0,-90])
+      extrusion_inner_corner_bracket(E40_inner_corner_bracket, true);
+
+    translate([0,length/2-60,-40]) rotate([90,0,-90])
+      extrusion_inner_corner_bracket(E40_inner_corner_bracket, true);
+    translate([0,length/2-60,40]) rotate([-90,0,-90])
+      extrusion_inner_corner_bracket(E40_inner_corner_bracket, true);
+
+    translate([20,length/2-150,-60]) rotate([0,0,0])
+      extrusion_inner_corner_bracket(E40_inner_corner_bracket, true);
+    translate([20,length/2-190,-60]) rotate([180,0,0])
+      extrusion_inner_corner_bracket(E40_inner_corner_bracket, true);
+
+    translate([20,length/2-250,-60]) rotate([0,0,0])
+      extrusion_inner_corner_bracket(E40_inner_corner_bracket, true);
+    translate([20,length/2-290,-60]) rotate([180,0,0])
+      extrusion_inner_corner_bracket(E40_inner_corner_bracket, true);
+
+    translate([20,-55,-60]) rotate([0,0,0])
+      extrusion_inner_corner_bracket(E40_inner_corner_bracket, true);
+    translate([20,-95,-60]) rotate([180,0,0])
+      extrusion_inner_corner_bracket(E40_inner_corner_bracket, true);
+
+    translate([20,-length/2 + 40,-60]) rotate([0,0,0])
+      extrusion_inner_corner_bracket(E40_inner_corner_bracket, true);
+    translate([20,-length/2 + 100,-60]) rotate([180,0,0])
+      extrusion_inner_corner_bracket(E40_inner_corner_bracket, true);
+    translate([20,-length/2 + 140,-60]) rotate([0,0,0])
+      extrusion_inner_corner_bracket(E40_inner_corner_bracket, true);
+
+    
     translate([-72,-16,0]) 
       rotate([-90,90,0])
         lead_screw_assembly(length,GANTRY_POS+25);
@@ -531,8 +586,9 @@ module frame_assembly()
 
 module build_bed(width, length) {
   d = length - (BACK_OFFSET/2 + 2*(40+FEEDER_GAP));
-  translate([0,-BACK_OFFSET/2,20]) 
+  translate([0,-BACK_OFFSET/2,20]) {
     sheet(AL2, width, d, 6);
+  }
 }
 
 module at_z(z_translate) {
