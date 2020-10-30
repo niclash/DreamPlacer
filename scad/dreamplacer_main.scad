@@ -11,9 +11,9 @@ WIDTH=1500;
 LENGTH=1000;
 FEEDER_GAP = 100;
 X_AXIS_HEIGHT = 120;
-GANTRY_POS = -LENGTH/2+120;
+GANTRY_POS = 370;
 //GANTRY_POS = sin($t*360)*LENGTH/3;
-HEAD_POS = -WIDTH/2+60;
+HEAD_POS = -680;
 //HEAD_POS = sin($t*180)*LENGTH/3;
 BACK_OFFSET=150;
 Y_AXIS_MOTOR=Lichuan_M03530_80ST;
@@ -27,7 +27,7 @@ module main_assembly()
     translate([0, GANTRY_POS, X_AXIS_HEIGHT+78]) 
       xaxis_assembly();
     translate([WIDTH/2+43,37,-18]) rotate([90,0,90]) L_shape(AL2, 40, 100, LENGTH+66);
-    *y_dragchain();
+    y_dragchain();
 
     x = WIDTH/2+20;
     translate([x,0,X_AXIS_HEIGHT/2])
@@ -72,7 +72,7 @@ module xaxis_assembly()
       
     translate([0,42,-45]) 
       L_shape(AL2, 30, 30, WIDTH+140);
-    *x_dragchain();
+    x_dragchain();
 
 }
 
@@ -640,13 +640,45 @@ module at_x(x_translate) {
 }
 
 module x_dragchain() {
-    chain_segments = [[1,0],[1,0],[1,0],[1,0],[1,0],[1,0],[1,0],[1,0],[1,0],[1,0],[1,0],[1,0],[1,0],[1,0],[1,0],[1,0],[1,0],[1,0],[1,0],[1,0],[1,0],[1,0],[1,0],[1,0],[1,0],[1,0],[1,0],[1,0],[1,0],[1,0],[1,0],[1,0],[1,0],[1,0],[1,0],[1,0],[1,0],[1,0],[1,0],[1,0],[1,0],[1,0],[1,0],[1,0],[1,0],[1,0],[1,0],[1,0],[1,0],[1,0],[1,0],[1,0],[1,0],[1,0],[1,0],[1,0],[1,0],[1,0],[1,0],[1,0],[1,0],[1,0],[1,0],[1,0],[1,0],[1,0],[1,0],[1,0],[1,0],[1,0],[1,0],[1,0],[1,0],[1,0],[1,0],[1,0],[1,0],[1,0],[1,0],[1,0],[1,0],[1,0],[1,0],[1,0],[1,0],[1,0],[1,0],[1,0],[1,0],[1,0],[1,0],[1,0],[1,0],[1,0],[1,0],[1,0],[1,0],[1,0],[1,0],[1,0],[1,0],[1,0],[1,0],[1,0],[1,0],[1,0],[1,0],[1,0],[1,0],[1,0],[1,0],[1,0],[1,0],[1,0],[1,0],[1,0],[1,0],[1,0],[1,0],[1,0],[1,0],[1,0],[1,0],[1,0],[1,0],[1,0],[1,0],[1,0],[1,0],[1,0],[1,15],[1,15],[1,15],[1,15],[1,15],[1,15],[1,15],[1,15],[1,15],[1,15],[1,15],[1,15],[1,0]];
+    m = (WIDTH/2 - 160);
+    pos = HEAD_POS + m;
+
+    end_links = floor(pos / 32)+2;
+    start_links = 90-end_links;
+
+    echo(pos, start_links, end_links);
+    
+    bend_segments = [
+      for( [1 : 9] ) [ 1,20 ]
+    ];
+    start_segments = [
+      for( [1 : start_links] ) [ 1,0 ]
+    ];
+    end_segments = [
+      for( [1 : end_links] ) [ 1,0 ]
+    ];
+    chain_segments = concat( start_segments, bend_segments, end_segments );
   translate([WIDTH/2+80,50,-50]) rotate([0,0,90])  
-    color("#606060") dragchain([30,15,21], chain_segments);
+    color("#606060") dragchain([25,15,25.5], chain_segments);
 }
 
 module y_dragchain() {
-    chain_segments = [[1,0],[1,0],[1,0],[1,0],[1,0],[1,0],[1,0],[1,0],[1,0],[1,0],[1,0],[1,0],[1,0],[1,0],[1,0],[1,0],[1,0],[1,0],[1,0],[1,0],[1,0],[1,0],[1,0],[1,0],[1,0],[1,0],[1,0],[1,0],[1,0],[1,0],[1,0],[1,0],[1,0],[1,0],[1,0],[1,0],[1,0],[1,0],[1,0],[1,0],[1,0],[1,0],[1,0],[1,0],[1,0],[1,0],[1,0],[1,0],[1,0],[1,0],[1,0],[1,0],[1,0],[1,0],[1,0],[1,0],[1,0],[1,0],[1,0],[1,0],[1,0],[1,0],[1,0],[1,0],[1,0],[1,0],[1,0],[1,0],[1,0],[1,0],[1,0],[1,0],[1,0],[1,0],[1,0],[1,0],[1,0],[1,0],[1,30],[1,30],[1,30],[1,30],[1,30],[1,30],[1,0]];
-  translate([WIDTH/2+128,LENGTH/2,-18]) rotate([0,0,180])
-    color("#606060") dragchain([50,15,21], chain_segments);
+    m = LENGTH/2;
+    pos = GANTRY_POS + m;
+
+    end_links = floor(pos / 51)+1;
+    start_links = 62-end_links;
+
+    echo(pos, start_links, end_links);
+    
+    bend_segments = [[1,30],[1,30],[1,30],[1,30],[1,30],[1,30]];
+    start_segments = [
+      for( [1 : start_links] ) [ 1,0 ]
+    ];
+    end_segments = [
+      for( [1 : end_links] ) [ 1,0 ]
+    ];
+    chain_segments = concat( start_segments, bend_segments, end_segments );
+  translate([WIDTH/2+68,LENGTH/2,20]) rotate([0,0,180])
+    color("#606060") dragchain([40,15,25.5], chain_segments);
 }

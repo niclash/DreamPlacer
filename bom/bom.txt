@@ -17,6 +17,8 @@ Vitamins:
  e  d  e  n  r  e  s
   |  | 1|  |  | 1| 1|  3 Bearing BF12 
   |  | 1|  |  | 1| 1|  3 Bearing BK12 
+  |  |  |  |  |  | 1|  1 Drag chain (25m x 15mm), length=2626.5mm
+  |  |  | 1|  |  |  |  1 Drag chain (40m x 15mm), length=1734mm
   |  |  |  |  |  | 1|  1 L-profile(30x30) 1640mm
   |  |  |  | 2|  |  |  2 L-profile(30x30) 30mm
   |  |  | 1|  |  |  |  1 L-profile(40x100) 1066mm

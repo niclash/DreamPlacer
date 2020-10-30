@@ -1,9 +1,7 @@
-WARNING: undefined operation (undefined + number) in file head.scad, line 100
-WARNING: Unable to convert translate([undef, 0, 22]) parameter to a vec3 or vec2 of numbers in file scad/head.scad, line 100
 Compiling design (CSG Products normalization)...
-Normalized CSG tree has 60 elements
-Geometries in cache: 132
-Geometry cache size in bytes: 758832
+Normalized CSG tree has 5 elements
+Geometries in cache: 30
+Geometry cache size in bytes: 42280
 CGAL Polyhedrons in cache: 0
 CGAL cache size in bytes: 0
-Total rendering time: 0:00:00.197
+Total rendering time: 0:00:00.122

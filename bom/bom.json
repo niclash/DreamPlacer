@@ -384,6 +384,9 @@
             },
             "sheet(AL2, 1640, 30): Aluminium tooling plate 1640mm x 30mm x 2mm": {
                 "count": 2
+            },
+            "Drag chain (25m x 15mm), length=2626.5mm : Drag chain (25m x 15mm), length=2626.5mm": {
+                "count": 1
             }
         },
         "printed": {},
@@ -440,6 +443,9 @@
                 "count": 1
             },
             "sheet(AL2, 1066, 100): Aluminium tooling plate 1066mm x 100mm x 2mm": {
+                "count": 1
+            },
+            "Drag chain (40m x 15mm), length=1734mm : Drag chain (40m x 15mm), length=1734mm": {
                 "count": 1
             }
         },

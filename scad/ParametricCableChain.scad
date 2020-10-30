@@ -2,6 +2,7 @@
 // PARAMETRIC Cable Chain v0.5
 // Zerginator 10/2015
 //
+include <NopSCADlib/core.scad>
 
 Type        =       1;         // 1: +45° Bewegbar, 2: +-45°
 Round       =       1;         // Runder oder eckiger Typ
@@ -14,7 +15,8 @@ module dragchain(size, ChainDef) {
     //! size[0] = width
     //! size[1] = height
     //! size[2] = pitch/length
-    
+    name = str( "Drag chain (",size[0], "m x ", size[1], "mm), length=", len(ChainDef) * size[2], "mm");
+    vitamin( str(name, " : ", name ));
     if( Round == 1)
     {
         vec = select2(ChainDef,[1]);

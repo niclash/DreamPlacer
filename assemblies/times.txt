@@ -1,16 +1,16 @@
 {
-    "assemblies/main_assembled.png": 9.352,
-    "assemblies/main_assembly.png": 9.271,
-    "assemblies/xaxis_assembled.png": 6.84,
-    "assemblies/xaxis_assembly.png": 7.143,
-    "assemblies/right_side_frame_assembled.png": 1.824,
-    "assemblies/right_side_frame_assembly.png": 2.036,
-    "assemblies/left_side_frame_assembled.png": 1.628,
-    "assemblies/left_side_frame_assembly.png": 1.98,
-    "assemblies/frame_assembled.png": 1.451,
-    "assemblies/frame_assembly.png": 1.601,
     "assemblies/head_assembled.png": 2.421,
     "assemblies/head_assembly.png": 2.488,
     "assemblies/picker_assembled.png": 1.407,
-    "assemblies/picker_assembly.png": 1.512
+    "assemblies/picker_assembly.png": 1.512,
+    "assemblies/main_assembled.png": 5.832,
+    "assemblies/main_assembly.png": 5.69,
+    "assemblies/xaxis_assembled.png": 4.233,
+    "assemblies/xaxis_assembly.png": 4.448,
+    "assemblies/right_side_frame_assembled.png": 2.07,
+    "assemblies/right_side_frame_assembly.png": 1.933,
+    "assemblies/left_side_frame_assembled.png": 1.696,
+    "assemblies/left_side_frame_assembly.png": 1.933,
+    "assemblies/frame_assembled.png": 1.443,
+    "assemblies/frame_assembly.png": 1.414
 }
