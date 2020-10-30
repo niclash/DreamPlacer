@@ -20,6 +20,9 @@ Y_AXIS_MOTOR=Lichuan_M03530_80ST;
 X_AXIS_MOTOR=Lichuan_M03530_80ST;
 KP_BLOCK=KP001;
 
+if($preview)
+  main_assembly();
+
 module main_assembly()
   assembly("main") {
     frame_assembly();
@@ -46,10 +49,8 @@ module main_assembly()
       left_side_frame_assembly(); // Left
   }
 
-if($preview)
-    main_assembly();
     
-module xaxis_assembly() pose([-261, 291, -90], [61, 0, 67])
+module xaxis_assembly() pose([-246, 80, -78], [73, 0, 58])
   assembly("xaxis") {
     length=WIDTH;
     motor = X_AXIS_MOTOR;
