@@ -40,7 +40,7 @@ module main_assembly()
 if($preview)
     main_assembly();
     
-module xaxis_assembly() 
+module xaxis_assembly() pose([-261, 291, -90], [61, 0, 67])
   assembly("xaxis") {
     length=WIDTH;
     motor = X_AXIS_MOTOR;
