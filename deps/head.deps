@@ -2,6 +2,7 @@ tmp.png: \
 	/home/niclas/dev/3D/NopSCADlib/vitamins/e3d.scad \
 	/home/niclas/dev/3D/NopSCADlib/vitamins/dip.scad \
 	/home/niclas/dev/3D/NopSCADlib/utils/core/sphere.scad \
+	/home/niclas/dev/3D/DreamPlacer/scad/L-profile.scad \
 	/home/niclas/dev/3D/NopSCADlib/utils/sector.scad \
 	/home/niclas/dev/3D/NopSCADlib/utils/rounded_polygon.scad \
 	/home/niclas/dev/3D/NopSCADlib/utils/core/rounded_rectangle.scad \

@@ -277,7 +277,7 @@
             "NEMA(NEMA17): Stepper motor NEMA17 x 47mm": {
                 "count": 1
             },
-            "sheet(AL8, 80, 120, [3, 3, 3, 3]): Aluminium tooling plate 80mm x 120mm x 8mm": {
+            "sheet(AL8, 80, 150, [3, 3, 3, 3]): Aluminium tooling plate 80mm x 150mm x 8mm": {
                 "count": 1
             },
             "screw(M5_cs_cap_screw, 20): Screw M5 cs cap x 20mm": {
@@ -378,6 +378,12 @@
             },
             "sheet(AL8, 200, 300, 3): Aluminium tooling plate 200mm x 300mm x 8mm": {
                 "count": 1
+            },
+            "L-profile(30x30) : L-profile(30x30) 1640mm": {
+                "count": 1
+            },
+            "sheet(AL2, 1640, 30): Aluminium tooling plate 1640mm x 30mm x 2mm": {
+                "count": 2
             }
         },
         "printed": {},
@@ -425,6 +431,15 @@
         },
         "vitamins": {
             "sheet(AL2, 1500, 645, 6): Aluminium tooling plate 1500mm x 645mm x 2mm": {
+                "count": 1
+            },
+            "L-profile(40x100) : L-profile(40x100) 1066mm": {
+                "count": 1
+            },
+            "sheet(AL2, 1066, 40): Aluminium tooling plate 1066mm x 40mm x 2mm": {
+                "count": 1
+            },
+            "sheet(AL2, 1066, 100): Aluminium tooling plate 1066mm x 100mm x 2mm": {
                 "count": 1
             }
         },

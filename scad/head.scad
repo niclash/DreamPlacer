@@ -1,4 +1,5 @@
 include <NopSCADlib/lib.scad>
+use <L-profile.scad>
 
 position = 0;
 stepper = NEMA17;
@@ -135,7 +136,7 @@ module nema_holes_dxf(nema) {
 module horiz_plate_dxf() {
   dxf("horiz_plate");
   difference() {
-    sheet_2D(AL8, 80, 120, [3,3,3,3] );
+    translate([0,15]) sheet_2D(AL8, 80, 150, [3,3,3,3] );
     holes = [[-12,-80,5.2],[12,-80,5.2],[-12,-40,5.2],[12,-40,5.2],[12,-40,5.2],[20,-109,5.2], [-20,-109,5.2]];
     translate([0,68,0]) for(h=holes)
       translate(h)
@@ -172,15 +173,3 @@ module nozzle() {
     translate([0,0,43]) color("black") cylinder(8,r1=2.5, r2=1);   
 }
 
-module L_shape(material, w1, w2, length) {
-  vitamin(str("L-profile(",w1,"x",w2,") : L-profile(",w1,"x",w2,") ", length, "mm" ));
-  color("silver")
-    translate([0,-sheet_thickness(material),-sheet_thickness(material)])
-      union() {
-        translate([0,w1/2,sheet_thickness(material)/2])
-          sheet(material, length, w1 );
-        translate([0,sheet_thickness(material)/2, w2/2])
-          rotate([90,0,0])
-            sheet(material, length, w2 );
-      }
-}
