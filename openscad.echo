@@ -160,14 +160,13 @@ ECHO: "~screw(M8_cs_cap_screw, 24): Screw M8 cs cap x 24mm"
 ECHO: "~L-profile(30x30) : L-profile(30x30) 1640mm"
 ECHO: "~sheet(AL2, 1640, 30): Aluminium tooling plate 1640mm x 30mm x 2mm"
 ECHO: "~sheet(AL2, 1640, 30): Aluminium tooling plate 1640mm x 30mm x 2mm"
-DEPRECATED: Using ranges of the form [begin:end] with begin value greater than the end value is deprecated in file dreamplacer_main.scad, line 658
-ECHO: -90, 91, -1
-ECHO: "~Drag chain (25m x 15mm), length=2626.5mm : Drag chain (25m x 15mm), length=2626.5mm"
+ECHO: 790, 64, 26
+ECHO: "~Drag chain (25m x 15mm), length=2524.5mm : Drag chain (25m x 15mm), length=2524.5mm"
 ECHO: "~}xaxis_assembly"
 ECHO: "~L-profile(40x100) : L-profile(40x100) 1066mm"
 ECHO: "~sheet(AL2, 1066, 40): Aluminium tooling plate 1066mm x 40mm x 2mm"
 ECHO: "~sheet(AL2, 1066, 100): Aluminium tooling plate 1066mm x 100mm x 2mm"
-ECHO: 870, 44, 18
+ECHO: 670, 48, 14
 ECHO: "~Drag chain (40m x 15mm), length=1734mm : Drag chain (40m x 15mm), length=1734mm"
 ECHO: "~right_side_frame_assembly{"
 ECHO: "~extrusion(E4040, 1070): Extrusion E4040 x 1070mm"
