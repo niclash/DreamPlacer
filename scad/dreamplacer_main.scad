@@ -50,7 +50,7 @@ module main_assembly()
   }
 
     
-module xaxis_assembly() pose([-246, 80, -78], [73, 0, 58])
+module xaxis_assembly()
   assembly("xaxis") {
     length=WIDTH;
     motor = X_AXIS_MOTOR;
@@ -157,6 +157,7 @@ module bracket_right_dxf() {
     minkowski() {
       difference() {
         sheet_2D(AL8, 200, 300, 3);
+        translate([0,105]) motor_mount_holes(X_AXIS_MOTOR);
         translate([50,23]) square([50,130]);
         translate([-100,23]) square([50,130]);
         translate([-100,-151]) square([50,130]);
@@ -186,6 +187,8 @@ module bracket_right() {
 
   translate([-20,50,-4.05]) rotate([0,180,0]) screw(M8_cs_cap_screw, 24);
   translate([20,50,-4.05]) rotate([0,180,0]) screw(M8_cs_cap_screw, 24);
+    
+  translate([0,105]) motor_mount_screws(X_AXIS_MOTOR);
 }
 
 module bracket_left_dxf() {

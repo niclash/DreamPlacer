@@ -379,6 +379,15 @@
             "sheet(AL8, 200, 300, 3): Aluminium tooling plate 200mm x 300mm x 8mm": {
                 "count": 1
             },
+            "screw(M6_cap_screw, 24): Screw M6 cap x 24mm": {
+                "count": 4
+            },
+            "washer(M6_washer): Washer  M6 x 12.5mm x 1.5mm": {
+                "count": 4
+            },
+            "nut(M6_nut, nyloc = true): Nut M6 x 5mm nyloc": {
+                "count": 4
+            },
             "L-profile(30x30) : L-profile(30x30) 1640mm": {
                 "count": 1
             },
