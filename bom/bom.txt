@@ -17,11 +17,9 @@ Vitamins:
  e  d  e  n  r  e  s
   |  | 1|  |  | 1| 1|  3 Bearing BF12 
   |  | 1|  |  | 1| 1|  3 Bearing BK12 
-  |  |  |  |  |  | 1|  1 Drag chain (25m x 15mm), length=2524.5mm
-  |  |  | 1|  |  |  |  1 Drag chain (40m x 15mm), length=1734mm
+  |  |  | 1|  |  |  |  1 L-profile(30x30) 1066mm
   |  |  |  |  |  | 1|  1 L-profile(30x30) 1640mm
   |  |  |  | 2|  |  |  2 L-profile(30x30) 30mm
-  |  |  | 1|  |  |  |  1 L-profile(40x100) 1066mm
   | 1|  |  |  |  |  |  1 Stepper motor NEMA17 x 47mm
   |  |  |  | 2|  |  |  2 Stepper motor NEMA8 x 30mm
   |  | 1|  |  | 1| 1|  3 Servo 80ST standard mount 90 x 178mm
@@ -58,10 +56,9 @@ Vitamins:
   |  | 4|  |  | 4|  |  8 Screw M6 cap x 24mm
   |  |  |  |  |  | 6|  6 Screw M6 cap x 40mm
   |  | 2|  |  | 2|  |  4 Screw M8 cap x  8mm
-  |  | 9|  |  | 9| 8| 26 Screw M8 cs cap x 16mm
+  |  | 9| 5|  | 9| 8| 31 Screw M8 cs cap x 16mm
   |  |  |  |  |  | 4|  4 Screw M8 cs cap x 24mm
-  |  |  | 1|  |  |  |  1 Aluminium tooling plate 1066mm x 100mm x 2mm
-  |  |  | 1|  |  |  |  1 Aluminium tooling plate 1066mm x 40mm x 2mm
+  |  |  | 2|  |  |  |  2 Aluminium tooling plate 1066mm x 30mm x 2mm
   |  |  | 1|  |  |  |  1 Aluminium tooling plate 1500mm x 645mm x 2mm
   |  |  |  |  |  | 2|  2 Aluminium tooling plate 1640mm x 30mm x 2mm
   |  |  |  | 4|  |  |  4 Aluminium tooling plate 30mm x 30mm x 2mm

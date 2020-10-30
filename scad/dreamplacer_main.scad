@@ -26,8 +26,17 @@ module main_assembly()
     build_bed(WIDTH,LENGTH);
     translate([0, GANTRY_POS, X_AXIS_HEIGHT+78]) 
       xaxis_assembly();
-    translate([WIDTH/2+43,37,-18]) rotate([90,0,90]) L_shape(AL2, 40, 100, LENGTH+66);
-    y_dragchain();
+    translate([WIDTH/2+42,37,18]) rotate([-90,0,-90]) { 
+      L_shape(AL2, 30, 30, LENGTH+66);
+      color("darkgray") 
+        for( p = [ 0 : 250 : LENGTH/2 ] ) {
+          translate([p,20,0.5]) screw(M8_cs_cap_screw, 16 );
+          if( p != 0 )
+            translate([-p,20,0.5]) screw(M8_cs_cap_screw, 16 );
+        }
+    }
+    if( !is_undef($pose) )
+      y_dragchain();
 
     x = WIDTH/2+20;
     translate([x,0,X_AXIS_HEIGHT/2])
@@ -72,7 +81,9 @@ module xaxis_assembly() pose([-261, 291, -90], [61, 0, 67])
       
     translate([0,42,-45]) 
       L_shape(AL2, 30, 30, WIDTH+140);
-    x_dragchain();
+
+    if( !is_undef($pose) )
+      x_dragchain();
 
 }
 

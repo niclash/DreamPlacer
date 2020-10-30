@@ -1,9 +1,8 @@
 main_assembly:
 Vitamins:
-  1 Drag chain (40m x 15mm), length=1734mm
-  1 L-profile(40x100) 1066mm
-  1 Aluminium tooling plate 1066mm x 100mm x 2mm
-  1 Aluminium tooling plate 1066mm x 40mm x 2mm
+  1 L-profile(30x30) 1066mm
+  5 Screw M8 cs cap x 16mm
+  2 Aluminium tooling plate 1066mm x 30mm x 2mm
   1 Aluminium tooling plate 1500mm x 645mm x 2mm
 
 Assemblies:
