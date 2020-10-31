@@ -1,7 +1,7 @@
 include <NopSCADlib/lib.scad>
 use <L-profile.scad>
 
-position = 0;
+position = -26;
 stepper = NEMA17;
 
 if( $preview ) { 
@@ -13,22 +13,27 @@ module head_assembly()
   translate([0,0,20])
     rotate([90,0,0])
       head_plate(); 
-  translate([17,-4,5])
+  translate([14,-4,5])
     rotate([90,90,0])
       picker_assembly(-position);
   
-  translate([-17,-4,5])
+  translate([-14,-4,5])
     rotate([90,90,0])
       picker_assembly(position);
  
-  translate([0,4,109])
+  translate([38,4,109])
+    rotate([90,0,0])
+      NEMA(stepper);
+      
+  translate([-38,4,109])
     rotate([90,0,0])
       NEMA(stepper);
       
   translate([0,64,82]) horiz_plate();
 
-  translate([-20,4,78]) rotate([0,90,0]) extrusion_corner_bracket(E40_corner_bracket);      
-  translate([20,4,78]) rotate([0,90,0]) extrusion_corner_bracket(E40_corner_bracket);      
+  translate([-30,4,78]) rotate([0,90,0]) extrusion_corner_bracket(E40_corner_bracket); 
+      
+  translate([30,4,78]) rotate([0,90,0]) extrusion_corner_bracket(E40_corner_bracket);      
       
       
   pulley_belt();  
@@ -48,24 +53,40 @@ module head_assembly()
 module head_plate_dxf() {
   dxf("head_plate");
   difference() {
-    sheet_2D(AL8, 80, 240, [3,3,3,3] );
-    translate([0,89]) 
+    sheet_2D(AL8, 120, 240, [3,3,3,3] );
+    translate([38,89]) 
       NEMA_screw_positions(stepper)
         circle(d=3.2);
-    translate([0,89,-5])
+    translate([38,89,-5])
       circle(NEMA_big_hole(stepper) );
+    translate([-38,89]) 
+      NEMA_screw_positions(stepper)
+        circle(d=3.2);
+    translate([-38,89,-5])
+      circle(NEMA_big_hole(stepper) );
+    
+    translate([30,38])
+      circle(d=5.2);
+    translate([-30,38])
+        circle(d=5.2);
+
+    translate([38,-110])
+      circle(d=5);
+    translate([-38,-110])
+      circle(d=5);
+    
     translate([0,-15]) {
-      translate([-13,13,4.05])
+      translate([-13,13])
         circle(d=4.2);
-      translate([13,13,4.05])
+      translate([13,13])
         circle(d=4.2);
-      translate([-13,-13,4.05])
+      translate([-13,-13])
         circle(d=4.2);
-      translate([13,-13,4.05])
+      translate([13,-13])
         circle(d=4.2);
-      translate([17,-50]) rotate(90) rail_hole_positions(MGN7, 100)  
+      translate([14,-50]) rotate(90) rail_hole_positions(MGN7, 100)  
         circle(d=2.1);
-      translate([-17,-50]) rotate(90) rail_hole_positions(MGN7, 100)  
+      translate([-14,-50]) rotate(90) rail_hole_positions(MGN7, 100)  
         circle(d=2.1);
     }
   }
@@ -76,21 +97,44 @@ module head_plate() {
     head_plate_dxf();
   pitch=NEMA_hole_pitch(stepper)/2;
   holes=[[-pitch,-pitch,4.05],[pitch,-pitch,4.05],[-pitch,pitch,4.05],[pitch,pitch,4.05]];
-  translate([0,89,0])
+  translate([38,89,0])
     for( hole = holes )
       translate(hole)
         screw(M3_cs_cap_screw, 12 );
-  translate([17,-65,6.5]) rotate(90) rail_hole_positions(MGN7, 100)
+  translate([-38,89,0])
+    for( hole = holes )
+      translate(hole)
+        screw(M3_cs_cap_screw, 12 );
+  translate([14,-65,6.5]) rotate(90) rail_hole_positions(MGN7, 100)
     screw(M2_cap_screw, 10 );
-  translate([-17,-65,6.5]) rotate(90) rail_hole_positions(MGN7, 100)
+  translate([-14,-65,6.5]) rotate(90) rail_hole_positions(MGN7, 100)
     screw(M2_cap_screw, 10 );
+
+  translate([30,38,4.05]) rotate(90) {
+    screw(M5_cs_cap_screw, 20 );
+    translate([0,0,-11]) washer(M5_washer);
+    translate([0,0,-11]) rotate([0,180,0]) nut(M5_nut, nyloc = true);
+  }
+  translate([-30,38,4.05]) rotate(90) {
+    screw(M5_cs_cap_screw, 20 );
+    translate([0,0,-11]) washer(M5_washer);
+    translate([0,0,-11]) rotate([0,180,0]) nut(M5_nut, nyloc = true);
+  }
 }
 
 module pulley_belt() {
-  translate([0,-4,109]) rotate([90,0,0]) pulley(GT2x20ob_pulley);
-  start=[-2,-position-35,0];
-  end=[2,position-35,0];
-  translate([0,-14,0]) rotate([90,0,0]) belt(GT2x6, [start,[-6,112,0],[-3,114,0],[-2,115,0],[0,116,0],[2,115,0],[3,114,0],[6,112,0],end], gap_pos=[0,-35,0], gap=100);
+  translate([38,-4,109]) rotate([90,0,0]) pulley(GT2x20ob_pulley);
+  translate([-38,-4,109]) rotate([90,0,0]) pulley(GT2x20ob_pulley);
+  translate([38,-4,-90]) rotate([90,0,0]) pulley(GT2x20ob_pulley);
+  translate([-38,-4,-90]) rotate([90,0,0]) pulley(GT2x20ob_pulley);
+  translate([38,-14,0]) rotate([90,0,0]) belt(GT2x6, [
+    [-6,112,0],[-3,114,0],[-2,115,0],[0,116,0],[2,115,0],[3,114,0],[6,112,0],
+    [6,-94,0],[3,-96,0],[2,-97,0],[0,-98,0],[-2,-97,0],[-3,-96,0],[-6,-94,0]
+  ]);
+  translate([-38,-14,0]) rotate([90,0,0]) belt(GT2x6, [
+    [-6,112,0],[-3,114,0],[-2,115,0],[0,116,0],[2,115,0],[3,114,0],[6,112,0],
+    [6,-94,0],[3,-96,0],[2,-97,0],[0,-98,0],[-2,-97,0],[-3,-96,0],[-6,-94,0]
+  ]);
 }
 
 module picker_assembly(position) 
@@ -109,7 +153,7 @@ module picker_assembly(position)
 
 module pick_bracket(nema) {
   difference() {
-    L_shape(AL2,30,30,30);
+    L_shape(AL2,30,30,25);
     translate([0,15,-2.5]) linear_extrude(3) nema_holes_dxf(nema);
     translate([0,0.5,15]) rotate([90,0,0]) linear_extrude(3) rail_holes_dxf();
   }
@@ -136,7 +180,7 @@ module nema_holes_dxf(nema) {
 module horiz_plate_dxf() {
   dxf("horiz_plate");
   difference() {
-    translate([0,15]) sheet_2D(AL8, 80, 150, [3,3,3,3] );
+    translate([0,15]) sheet_2D(AL8, 110, 150, [3,3,3,3] );
     holes = [[-12,-80,5.2],[12,-80,5.2],[-12,-40,5.2],[12,-40,5.2],[12,-40,5.2],[20,-109,5.2], [-20,-109,5.2]];
     translate([0,68,0]) for(h=holes)
       translate(h)
@@ -147,12 +191,12 @@ module horiz_plate_dxf() {
 module horiz_plate() {
   render_2D_sheet(AL8)
     horiz_plate_dxf();
-  translate([20,-41,4.05]) {
+  translate([30,-41,4.05]) {
       screw(M5_cs_cap_screw,20);
       translate([0,0,-11]) washer(M5_washer);
       translate([0,0,-11]) rotate([180,0,0]) nut(M5_nut, nyloc = true);
   }
-  translate([-20,-41,4.05]) {
+  translate([-30,-41,4.05]) {
       screw(M5_cs_cap_screw,20);
       translate([0,0,-11]) washer(M5_washer);
       translate([0,0,-11]) rotate([180,0,0]) nut(M5_nut, nyloc = true);
