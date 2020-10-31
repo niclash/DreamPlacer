@@ -34,9 +34,11 @@ Vitamins:
   |  | 1|  |  | 1| 1|  3 Leadscrew nut for SFU1610
   |  |  |  |  |  | 1|  1 Leadscrew 16 x 1435mm, 10mm lead, 1 starts
   |  | 1|  |  | 1|  |  2 Leadscrew 16 x 935mm, 10mm lead, 1 starts
+  | 4|  |  |  |  |  |  4 Nut M4 x 3.2mm 
   | 4| 8|  |  | 8|  | 20 Nut M5 x 4mm nyloc
   |  | 4|  |  | 4| 4| 12 Nut M6 x 5mm nyloc
-  | 4|  |  |  |  |  |  4 Pulley GT2OB 20 teeth
+  | 2|  |  |  |  |  |  2 Pulley GT2 idler smooth 12mm
+  | 2|  |  |  |  |  |  2 Pulley GT2OB 20 teeth
   |  |  |  |  |  | 1|  1 Linear rail HGH15CA x 1500mm
   |  | 1|  |  | 1|  |  2 Linear rail HGH20CA x 1000mm
   |  |  |  | 2|  |  |  2 Linear rail MGN7 x 100mm
@@ -47,6 +49,7 @@ Vitamins:
   |  |  |  |16|  |  | 16 Screw M2 cs cap x  6mm
   | 8|  |  |  |  |  |  8 Screw M3 cs cap x 12mm
   |  |  |  |  |  |25| 25 Screw M4 cap x 20mm
+  | 2|  |  |  |  |  |  2 Screw M4 cap x 30mm
   | 4|  |  |  |  |  |  4 Screw M4 cs cap x 16mm
   |  |17|  |  |17|  | 34 Screw M5 cap x 24mm
   |  |12|  |  |12| 8| 32 Screw M5 cs cap x 16mm
@@ -71,6 +74,7 @@ Vitamins:
   |  |  |  |  |  | 1|  1 Aluminium tooling plate 200mm x 300mm x 8mm
   |  |  |  |  |  | 2|  2 Aluminium tooling plate 60mm x 80mm x 8mm
   |  | 2|  |  | 2|  |  4 Nut M8 sliding T
+  | 8|  |  |  |  |  |  8 Washer  M4 x 9mm x 0.8mm
   | 4| 8|  |  | 8|  | 20 Washer  M5 x 10mm x 1mm
   |  | 4|  |  | 4| 4| 12 Washer  M6 x 12.5mm x 1.5mm
   |  | 2|  |  | 2|  |  4 Washer  M8 x 17mm x 1.6mm

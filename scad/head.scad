@@ -1,3 +1,17 @@
+//   Copyright 2020, Niclas Hedhman
+//
+//   Licensed under the Apache License, Version 2.0 (the "License");
+//   you may not use this file except in compliance with the License.
+//   You may obtain a copy of the License at
+//
+//       http://www.apache.org/licenses/LICENSE-2.0
+//
+//   Unless required by applicable law or agreed to in writing, software
+//   distributed under the License is distributed on an "AS IS" BASIS,
+//   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+//   See the License for the specific language governing permissions and
+//   limitations under the License.
+
 include <NopSCADlib/lib.scad>
 use <L-profile.scad>
 
@@ -36,7 +50,8 @@ module head_assembly()
   translate([30,4,78]) rotate([0,90,0]) extrusion_corner_bracket(E40_corner_bracket);      
       
       
-  pulley_belt();  
+  translate([38,-2,0]) pulley_belt();  
+  translate([-38,-2,0]) pulley_belt();  
   
   translate([0,0,5]) rotate([90,0,0]) {
     translate([-13,13,4.05])
@@ -70,11 +85,18 @@ module head_plate_dxf() {
     translate([-30,38])
         circle(d=5.2);
 
-    translate([38,-110])
-      circle(d=5);
-    translate([-38,-110])
-      circle(d=5);
-    
+    hull() {
+      translate([38,-100])
+        circle(d=5);
+      translate([38,-110])
+        circle(d=5);
+    }
+    hull() {
+      translate([-38,-100])
+        circle(d=5);
+      translate([-38,-110])
+        circle(d=5);
+    }
     translate([0,-15]) {
       translate([-13,13])
         circle(d=4.2);
@@ -123,18 +145,22 @@ module head_plate() {
 }
 
 module pulley_belt() {
-  translate([38,-4,109]) rotate([90,0,0]) pulley(GT2x20ob_pulley);
-  translate([-38,-4,109]) rotate([90,0,0]) pulley(GT2x20ob_pulley);
-  translate([38,-4,-90]) rotate([90,0,0]) pulley(GT2x20ob_pulley);
-  translate([-38,-4,-90]) rotate([90,0,0]) pulley(GT2x20ob_pulley);
-  translate([38,-14,0]) rotate([90,0,0]) belt(GT2x6, [
+  translate([0,0,109]) rotate([90,0,0]) pulley(GT2x20ob_pulley);
+  translate([0,-6,-90]) rotate([90,0,0]) pulley(GT2x20_plain_idler);
+  translate([0,-10,0]) rotate([90,0,0]) belt(GT2x6, [
     [-6,112,0],[-3,114,0],[-2,115,0],[0,116,0],[2,115,0],[3,114,0],[6,112,0],
     [6,-94,0],[3,-96,0],[2,-97,0],[0,-98,0],[-2,-97,0],[-3,-96,0],[-6,-94,0]
   ]);
-  translate([-38,-14,0]) rotate([90,0,0]) belt(GT2x6, [
-    [-6,112,0],[-3,114,0],[-2,115,0],[0,116,0],[2,115,0],[3,114,0],[6,112,0],
-    [6,-94,0],[3,-96,0],[2,-97,0],[0,-98,0],[-2,-97,0],[-3,-96,0],[-6,-94,0]
-  ]);
+  translate([0,-14.5,-90]) rotate([90,0,0]) screw_and_washer(M4_cap_screw, 30 );
+  translate([0,-6,-90]) rotate([-90,0,0]){
+    washer(screw_washer(M4_cap_screw));
+    nut(screw_nut(M4_cap_screw));
+    translate([0,0,3]) washer(screw_washer(M4_cap_screw));
+  }
+  translate([0,6,-90]) rotate([-90,0,0]){
+    washer(screw_washer(M4_cap_screw));
+    nut(screw_nut(M4_cap_screw));
+  }
 }
 
 module picker_assembly(position) 
