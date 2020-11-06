@@ -20,7 +20,7 @@ use <./head.scad>
 use <./L-profile.scad>
 use <./ParametricCableChain.scad>
 
-WIDTH=1500;
+WIDTH=1498;
 LENGTH=1000;
 FEEDER_GAP = 100;
 X_AXIS_HEIGHT = 120;
@@ -42,13 +42,13 @@ module main_assembly()
     build_bed(WIDTH,LENGTH);
     translate([0, GANTRY_POS, X_AXIS_HEIGHT+78]) 
       xaxis_assembly();
-    translate([WIDTH/2+42,37,18]) rotate([-90,0,-90]) { 
-      L_shape(AL2, 30, 30, LENGTH+66);
+    translate([WIDTH/2+40,37,18]) rotate([-90,180,-90]) { 
+      L_shape(2, 30, 30, LENGTH+66);
       color("darkgray") 
         for( p = [ 0 : 250 : LENGTH/2 ] ) {
-          translate([p,20,0.5]) screw(M8_cs_cap_screw, 16 );
+          translate([p,-20,2.05]) screw(M8_cs_cap_screw, 16 );
           if( p != 0 )
-            translate([-p,20,0.5]) screw(M8_cs_cap_screw, 16 );
+            translate([-p,-20,2.05]) screw(M8_cs_cap_screw, 16 );
         }
     }
     if( !is_undef($pose) )
@@ -93,8 +93,9 @@ module xaxis_assembly()
     translate([length/2+74,0,-78]) rotate([90,0,-90])
       bracket_right();
       
-    translate([0,42,-45]) 
-      L_shape(AL2, 30, 30, WIDTH+140);
+    translate([0,40,-45])
+      rotate([-90,0,0])
+      L_shape(2, 30, 30, WIDTH+140);
 
     if( !is_undef($pose) )
       x_dragchain();

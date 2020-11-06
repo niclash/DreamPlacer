@@ -2,8 +2,7 @@ main_assembly:
 Vitamins:
   1 L-profile(30x30) 1066mm
   5 Screw M8 cs cap x 16mm
-  2 Aluminium tooling plate 1066mm x 30mm x 2mm
-  1 Aluminium tooling plate 1500mm x 645mm x 2mm
+  1 Aluminium tooling plate 1498mm x 645mm x 2mm
 
 Assemblies:
   1 frame_assembly

@@ -237,9 +237,6 @@
             "L-profile(30x30) : L-profile(30x30) 25mm": {
                 "count": 2
             },
-            "sheet(AL2, 25, 30): Aluminium tooling plate 25mm x 30mm x 2mm": {
-                "count": 4
-            },
             "screw(M2_cs_cap_screw, 6): Screw M2 cs cap x  6mm": {
                 "count": 16
             },
@@ -310,6 +307,9 @@
             "nut(M4_nut): Nut M4 x 3.2mm ": {
                 "count": 4
             },
+            "camera(rpi_camera_v2): Raspberry Pi camera V2": {
+                "count": 1
+            },
             "screw(M4_cs_cap_screw, 16): Screw M4 cs cap x 16mm": {
                 "count": 4
             }
@@ -334,16 +334,16 @@
             "head_assembly": 1
         },
         "vitamins": {
-            "extrusion(E4080, 1640): Extrusion E4080 x 1640mm": {
+            "extrusion(E4080, 1638): Extrusion E4080 x 1638mm": {
                 "count": 1
             },
-            "rail(HGH15CA, 1500): Linear rail HGH15CA x 1500mm": {
+            "rail(HGH15CA, 1498): Linear rail HGH15CA x 1498mm": {
                 "count": 1
             },
             "screw(M4_cap_screw, 20): Screw M4 cap x 20mm": {
                 "count": 25
             },
-            "leadscrew(16, 1435, 10, 1): Leadscrew 16 x 1435mm, 10mm lead, 1 starts": {
+            "leadscrew(16, 1433, 10, 1): Leadscrew 16 x 1433mm, 10mm lead, 1 starts": {
                 "count": 1
             },
             "rod(12, 50): Smooth rod 12mm x 50mm": {
@@ -400,11 +400,8 @@
             "nut(M6_nut, nyloc = true): Nut M6 x 5mm nyloc": {
                 "count": 4
             },
-            "L-profile(30x30) : L-profile(30x30) 1640mm": {
+            "L-profile(30x30) : L-profile(30x30) 1638mm": {
                 "count": 1
-            },
-            "sheet(AL2, 1640, 30): Aluminium tooling plate 1640mm x 30mm x 2mm": {
-                "count": 2
             }
         },
         "printed": {},
@@ -433,7 +430,7 @@
         "count": 1,
         "assemblies": {},
         "vitamins": {
-            "extrusion(E4040, 1500): Extrusion E4040 x 1500mm": {
+            "extrusion(E4040, 1498): Extrusion E4040 x 1498mm": {
                 "count": 5
             }
         },
@@ -451,14 +448,11 @@
             "left_side_frame_assembly": 1
         },
         "vitamins": {
-            "sheet(AL2, 1500, 645, 6): Aluminium tooling plate 1500mm x 645mm x 2mm": {
+            "sheet(AL2, 1498, 645, 6): Aluminium tooling plate 1498mm x 645mm x 2mm": {
                 "count": 1
             },
             "L-profile(30x30) : L-profile(30x30) 1066mm": {
                 "count": 1
-            },
-            "sheet(AL2, 1066, 30): Aluminium tooling plate 1066mm x 30mm x 2mm": {
-                "count": 2
             },
             "screw(M8_cs_cap_screw, 16): Screw M8 cs cap x 16mm": {
                 "count": 5

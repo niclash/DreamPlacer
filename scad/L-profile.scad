@@ -13,16 +13,17 @@
 //   limitations under the License.
 
 include <NopSCADlib/lib.scad>
-
-module L_shape(material, w1, w2, length) {
+ 
+L_shape(2, 30, 30, 1140);
+ 
+module L_shape(thickness, w1, w2, length) {
   vitamin(str("L-profile(",w1,"x",w2,") : L-profile(",w1,"x",w2,") ", length, "mm" ));
   color("silver")
-    translate([0,-sheet_thickness(material),-sheet_thickness(material)])
+    translate([-length/2,0,0])
       union() {
-        translate([0,w1/2,sheet_thickness(material)/2])
-          sheet(material, length, w1 );
-        translate([0,sheet_thickness(material)/2, w2/2])
-          rotate([90,0,0])
-            sheet(material, length, w2 );
+        translate([0,-w1,0])
+          cube([length, w1, thickness] );
+        rotate([90,0,0])
+          cube([length, w2, thickness] );
       }
 }

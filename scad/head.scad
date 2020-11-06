@@ -15,7 +15,7 @@
 include <NopSCADlib/lib.scad>
 use <L-profile.scad>
 
-position = -26;
+position = -28;
 stepper = NEMA17;
 
 if( $preview ) { 
@@ -52,6 +52,7 @@ module head_assembly()
       
   translate([38,-2,0]) pulley_belt();  
   translate([-38,-2,0]) pulley_belt();  
+  translate([0,25,-90]) rotate([0,180,-90]) camera(rpi_camera_v2);
   
   translate([0,0,5]) rotate([90,0,0]) {
     translate([-13,13,4.05])
@@ -179,7 +180,9 @@ module picker_assembly(position)
 
 module pick_bracket(nema) {
   difference() {
-    L_shape(AL2,30,30,25);
+    translate([0,-2,-2])
+    rotate([0,0,180])
+      L_shape(2,30,30,25);
     translate([0,15,-2.5]) linear_extrude(3) nema_holes_dxf(nema);
     translate([0,0.5,15]) rotate([90,0,0]) linear_extrude(3) rail_holes_dxf();
   }

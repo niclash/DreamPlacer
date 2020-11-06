@@ -4,7 +4,6 @@ Vitamins:
   2 Stepper motor NEMA8 x 30mm
   2 Linear rail MGN7 x 100mm
  16 Screw M2 cs cap x  6mm
-  4 Aluminium tooling plate 25mm x 30mm x 2mm
 
 CNC cut:
   2 nema_holes.dxf
