@@ -283,7 +283,7 @@
             "NEMA(NEMA17): Stepper motor NEMA17 x 47mm": {
                 "count": 2
             },
-            "sheet(AL8, 110, 150, [3, 3, 3, 3]): Aluminium tooling plate 110mm x 150mm x 8mm": {
+            "sheet(AL8, 180, 160, [3, 3, 3, 3]): Aluminium tooling plate 180mm x 160mm x 8mm": {
                 "count": 1
             },
             "extrusion_corner_bracket(E40_corner_bracket): Extrusion corner bracket 35": {

@@ -13,8 +13,8 @@ Vitamins:
   2 Screw M4 cap x 30mm
   4 Screw M4 cs cap x 16mm
   8 Screw M5 cs cap x 20mm
-  1 Aluminium tooling plate 110mm x 150mm x 8mm
   1 Aluminium tooling plate 120mm x 240mm x 8mm
+  1 Aluminium tooling plate 180mm x 160mm x 8mm
   8 Washer  M4 x 9mm x 0.8mm
   4 Washer  M5 x 10mm x 1mm
 
