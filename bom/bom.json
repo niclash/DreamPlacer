@@ -21,7 +21,7 @@
                 "count": 3
             },
             "extrusion_inner_corner_bracket(E40_inner_corner_bracket, true): Extrusion inner corner bracket 8.5": {
-                "count": 15
+                "count": 6
             },
             "extrusion_corner_bracket(E40_corner_bracket): Extrusion corner bracket 35": {
                 "count": 1
@@ -134,7 +134,7 @@
                 "count": 3
             },
             "extrusion_inner_corner_bracket(E40_inner_corner_bracket, true): Extrusion inner corner bracket 8.5": {
-                "count": 15
+                "count": 6
             },
             "extrusion_corner_bracket(E40_corner_bracket): Extrusion corner bracket 35": {
                 "count": 1
@@ -237,7 +237,7 @@
             "L-profile(30x30) : L-profile(30x30) 25mm": {
                 "count": 2
             },
-            "screw(M2_cs_cap_screw, 6): Screw M2 cs cap x  6mm": {
+            "screw(M2_cap_screw, 6): Screw M2 cap x  6mm": {
                 "count": 16
             },
             "NEMA(NEMA8): Stepper motor NEMA8 x 30mm": {
@@ -268,7 +268,13 @@
             "screw(M3_cs_cap_screw, 12): Screw M3 cs cap x 12mm": {
                 "count": 8
             },
-            "screw(M2_cap_screw, 10): Screw M2 cap x 10mm": {
+            "screw(M2_cap_screw, 13.5): Screw M2 cap x 13.5mm": {
+                "count": 14
+            },
+            "nut(M2_nut): Nut M2 x 1.6mm ": {
+                "count": 14
+            },
+            "washer(M2_washer): Washer  M2 x 5mm x 0.3mm": {
                 "count": 14
             },
             "screw(M5_cs_cap_screw, 20): Screw M5 cs cap x 20mm": {
@@ -311,7 +317,7 @@
                 "count": 1
             },
             "screw(M4_cs_cap_screw, 16): Screw M4 cs cap x 16mm": {
-                "count": 4
+                "count": 8
             }
         },
         "printed": {},
@@ -432,6 +438,9 @@
         "vitamins": {
             "extrusion(E4040, 1498): Extrusion E4040 x 1498mm": {
                 "count": 5
+            },
+            "extrusion_inner_corner_bracket(E40_inner_corner_bracket, true): Extrusion inner corner bracket 8.5": {
+                "count": 20
             }
         },
         "printed": {},
@@ -448,7 +457,7 @@
             "left_side_frame_assembly": 1
         },
         "vitamins": {
-            "sheet(AL2, 1498, 645, 6): Aluminium tooling plate 1498mm x 645mm x 2mm": {
+            "sheet(AL2, 1498, 670, 6): Aluminium tooling plate 1498mm x 670mm x 2mm": {
                 "count": 1
             },
             "L-profile(30x30) : L-profile(30x30) 1066mm": {

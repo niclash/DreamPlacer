@@ -3,7 +3,7 @@ Vitamins:
   2 L-profile(30x30) 25mm
   2 Stepper motor NEMA8 x 30mm
   2 Linear rail MGN7 x 100mm
- 16 Screw M2 cs cap x  6mm
+ 16 Screw M2 cap x  6mm
 
 CNC cut:
   2 nema_holes.dxf

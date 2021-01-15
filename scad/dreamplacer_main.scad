@@ -24,11 +24,11 @@ WIDTH=1498;
 LENGTH=1000;
 FEEDER_GAP = 100;
 X_AXIS_HEIGHT = 120;
-GANTRY_POS = 170;
+GANTRY_POS = 430;
 //GANTRY_POS = sin($t*360)*LENGTH/3;
 HEAD_POS = -WIDTH/2 + 90;
 //HEAD_POS = sin($t*180)*LENGTH/3;
-BACK_OFFSET=150;
+BACK_OFFSET=130;
 Y_AXIS_MOTOR=Lichuan_M03530_80ST;
 X_AXIS_MOTOR=Lichuan_M03530_80ST;
 KP_BLOCK=KP001;
@@ -171,7 +171,6 @@ module bracket_right_dxf() {
     minkowski() {
       difference() {
         sheet_2D(AL8, 200, 300, 3);
-        translate([0,105]) motor_mount_holes(X_AXIS_MOTOR);
         translate([50,23]) square([50,130]);
         translate([-100,23]) square([50,130]);
         translate([-100,-151]) square([50,130]);
@@ -180,6 +179,7 @@ module bracket_right_dxf() {
       }
       circle(2);
     }  
+    translate([0,105]) motor_mount_holes(X_AXIS_MOTOR);
     translate([75,0,0])
       carriage_hole_positions(HGH20CA_carriage)
         circle(d=carriage_screw(HGH20CA_carriage)[3]+0.2);
@@ -447,27 +447,6 @@ module side_frame() {
     translate([0,length/2-60,40]) rotate([-90,0,-90])
       extrusion_inner_corner_bracket(E40_inner_corner_bracket, true);
 
-    translate([20,length/2-150,-60]) rotate([0,0,0])
-      extrusion_inner_corner_bracket(E40_inner_corner_bracket, true);
-    translate([20,length/2-190,-60]) rotate([180,0,0])
-      extrusion_inner_corner_bracket(E40_inner_corner_bracket, true);
-
-    translate([20,length/2-250,-60]) rotate([0,0,0])
-      extrusion_inner_corner_bracket(E40_inner_corner_bracket, true);
-    translate([20,length/2-290,-60]) rotate([180,0,0])
-      extrusion_inner_corner_bracket(E40_inner_corner_bracket, true);
-
-    translate([20,-55,-60]) rotate([0,0,0])
-      extrusion_inner_corner_bracket(E40_inner_corner_bracket, true);
-    translate([20,-95,-60]) rotate([180,0,0])
-      extrusion_inner_corner_bracket(E40_inner_corner_bracket, true);
-
-    translate([20,-length/2 + 40,-60]) rotate([0,0,0])
-      extrusion_inner_corner_bracket(E40_inner_corner_bracket, true);
-    translate([20,-length/2 + 100,-60]) rotate([180,0,0])
-      extrusion_inner_corner_bracket(E40_inner_corner_bracket, true);
-    translate([20,-length/2 + 140,-60]) rotate([0,0,0])
-      extrusion_inner_corner_bracket(E40_inner_corner_bracket, true);
 
     
     translate([-72,-16,0]) 
@@ -639,18 +618,69 @@ module frame_assembly()
     length = LENGTH;
   
     rotate([0,90,0]) {  
+      w = width/2;
       first = length/2-20;
       second = first-FEEDER_GAP;
-      at_y(-first) extrusion(E4040,width);
-      at_y(first-BACK_OFFSET) extrusion(E4040,width);
-      at_y(-BACK_OFFSET/2) extrusion(E4040,width);   
-      at_y(second-BACK_OFFSET) extrusion(E4040,width);
-      at_y(-second) extrusion(E4040,width);
+      at_y(-first) {
+          extrusion(E4040,width);
+          translate([0,20,w]) rotate([-90,0,90])
+            extrusion_inner_corner_bracket(E40_inner_corner_bracket, true);
+          translate([0,-20,w]) rotate([-90,0,-90])
+            extrusion_inner_corner_bracket(E40_inner_corner_bracket, true);
+          translate([0,20,-w]) rotate([90,0,90])
+            extrusion_inner_corner_bracket(E40_inner_corner_bracket, true);
+          translate([0,-20,-w]) rotate([90,0,-90])
+            extrusion_inner_corner_bracket(E40_inner_corner_bracket, true);
+      }
+      at_y(first-BACK_OFFSET) {
+          extrusion(E4040,width);
+          translate([0,20,w]) rotate([-90,0,90])
+            extrusion_inner_corner_bracket(E40_inner_corner_bracket, true);
+          translate([0,-20,w]) rotate([-90,0,-90])
+            extrusion_inner_corner_bracket(E40_inner_corner_bracket, true);
+          translate([0,20,-w]) rotate([90,0,90])
+            extrusion_inner_corner_bracket(E40_inner_corner_bracket, true);
+          translate([0,-20,-w]) rotate([90,0,-90])
+            extrusion_inner_corner_bracket(E40_inner_corner_bracket, true);
+      }
+      at_y(-BACK_OFFSET/2) {
+          extrusion(E4040,width);   
+          translate([0,20,w]) rotate([-90,0,90])
+            extrusion_inner_corner_bracket(E40_inner_corner_bracket, true);
+          translate([0,-20,w]) rotate([-90,0,-90])
+            extrusion_inner_corner_bracket(E40_inner_corner_bracket, true);
+          translate([0,20,-w]) rotate([90,0,90])
+            extrusion_inner_corner_bracket(E40_inner_corner_bracket, true);
+          translate([0,-20,-w]) rotate([90,0,-90])
+            extrusion_inner_corner_bracket(E40_inner_corner_bracket, true);
+      }
+      at_y(second-BACK_OFFSET) {
+          extrusion(E4040,width);
+          translate([0,20,w]) rotate([-90,0,90])
+            extrusion_inner_corner_bracket(E40_inner_corner_bracket, true);
+          translate([0,-20,w]) rotate([-90,0,-90])
+            extrusion_inner_corner_bracket(E40_inner_corner_bracket, true);
+          translate([0,20,-w]) rotate([90,0,90])
+            extrusion_inner_corner_bracket(E40_inner_corner_bracket, true);
+          translate([0,-20,-w]) rotate([90,0,-90])
+            extrusion_inner_corner_bracket(E40_inner_corner_bracket, true);
+      }
+      at_y(-second) {
+          extrusion(E4040,width);
+          translate([0,20,w]) rotate([-90,0,90])
+            extrusion_inner_corner_bracket(E40_inner_corner_bracket, true);
+          translate([0,-20,w]) rotate([-90,0,-90])
+            extrusion_inner_corner_bracket(E40_inner_corner_bracket, true);
+          translate([0,20,-w]) rotate([90,0,90])
+            extrusion_inner_corner_bracket(E40_inner_corner_bracket, true);
+          translate([0,-20,-w]) rotate([90,0,-90])
+            extrusion_inner_corner_bracket(E40_inner_corner_bracket, true);
+      }
     }
   }
 
 module build_bed(width, length) {
-  d = length - (BACK_OFFSET/2 + 2*(40+FEEDER_GAP));
+  d = (length-BACK_OFFSET) - 2*FEEDER_GAP;
   translate([0,-BACK_OFFSET/2,20]) {
     sheet(AL2, width, d, 6);
   }
@@ -687,8 +717,8 @@ module x_dragchain() {
       for( [1 : end_links] ) [ 1,0 ]
     ];
     chain_segments = concat( start_segments, bend_segments, end_segments );
-  translate([WIDTH/2+80,50,-50]) rotate([0,0,90])  
-    color("#606060") dragchain([25,15,25.5], chain_segments);
+    translate([WIDTH/2+80,50,-50]) rotate([0,0,90])  
+      color("#606060") dragchain([25,15,25.5], chain_segments);
 }
 
 module y_dragchain() {
@@ -708,6 +738,6 @@ module y_dragchain() {
       for( [1 : end_links] ) [ 1,0 ]
     ];
     chain_segments = concat( start_segments, bend_segments, end_segments );
-  translate([WIDTH/2+68,LENGTH/2,20]) rotate([0,0,180])
-    color("#606060") dragchain([40,15,25.5], chain_segments);
+    translate([WIDTH/2+68,LENGTH/2,20]) rotate([0,0,180])
+      color("#606060") dragchain([40,15,25.5], chain_segments);
 }

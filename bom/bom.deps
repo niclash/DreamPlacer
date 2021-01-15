@@ -1,4 +1,5 @@
 openscad.echo: \
+	/home/niclas/dev/3D/DreamPlacer/scad/vacuum-cover.scad \
 	/home/niclas/dev/3D/NopSCADlib/vitamins/e3d.scad \
 	/home/niclas/dev/3D/NopSCADlib/vitamins/dip.scad \
 	/home/niclas/dev/3D/NopSCADlib/utils/core/sphere.scad \

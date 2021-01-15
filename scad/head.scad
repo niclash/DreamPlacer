@@ -14,6 +14,7 @@
 
 include <NopSCADlib/lib.scad>
 use <L-profile.scad>
+use <../scad/vacuum-cover.scad>
 
 position = -28;
 stepper = NEMA17;
@@ -54,7 +55,7 @@ module head_assembly()
   translate([-38,-2,0]) pulley_belt();  
   translate([0,25,-90]) rotate([0,180,-90]) camera(rpi_camera_v2);
   
-  translate([0,0,5]) rotate([90,0,0]) {
+  translate([40,0,5]) rotate([90,0,0]) {
     translate([-13,13,4.05])
       screw(M4_cs_cap_screw, 16 );
     translate([13,13,4.05])
@@ -64,6 +65,17 @@ module head_assembly()
     translate([13,-13,4.05])
       screw(M4_cs_cap_screw, 16 );
   }
+  translate([-40,0,5]) rotate([90,0,0]) {
+    translate([-13,13,4.05])
+      screw(M4_cs_cap_screw, 16 );
+    translate([13,13,4.05])
+      screw(M4_cs_cap_screw, 16 );
+    translate([-13,-13,4.05])
+      screw(M4_cs_cap_screw, 16 );
+    translate([13,-13,4.05])
+      screw(M4_cs_cap_screw, 16 );
+  }
+
 }
 
 module head_plate_dxf() {
@@ -98,7 +110,7 @@ module head_plate_dxf() {
       translate([-38,-110])
         circle(d=5);
     }
-    translate([0,-15]) {
+    translate([40,-15]){
       translate([-13,13])
         circle(d=4.2);
       translate([13,13])
@@ -107,6 +119,18 @@ module head_plate_dxf() {
         circle(d=4.2);
       translate([13,-13])
         circle(d=4.2);
+    }
+    translate([-40,-15]){
+      translate([-13,13])
+        circle(d=4.2);
+      translate([13,13])
+        circle(d=4.2);
+      translate([-13,-13])
+        circle(d=4.2);
+      translate([13,-13])
+        circle(d=4.2);
+    }
+    translate([0,-15]) {
       translate([14,-50]) rotate(90) rail_hole_positions(MGN7, 100)  
         circle(d=2.1);
       translate([-14,-50]) rotate(90) rail_hole_positions(MGN7, 100)  
@@ -128,10 +152,16 @@ module head_plate() {
     for( hole = holes )
       translate(hole)
         screw(M3_cs_cap_screw, 12 );
-  translate([14,-65,6.5]) rotate(90) rail_hole_positions(MGN7, 100)
-    screw(M2_cap_screw, 10 );
-  translate([-14,-65,6.5]) rotate(90) rail_hole_positions(MGN7, 100)
-    screw(M2_cap_screw, 10 );
+  translate([14,-65,6.5]) rotate(90) rail_hole_positions(MGN7, 100) {
+    screw(M2_cap_screw, 13.5 );
+    translate([0,0,-12.3]) nut(screw_nut(M2_cap_screw));
+    translate([0,0,-10.8]) washer(screw_washer(M2_cap_screw));
+  }
+  translate([-14,-65,6.5]) rotate(90) rail_hole_positions(MGN7, 100){
+    screw(M2_cap_screw, 13.5 );
+    translate([0,0,-12.3]) nut(screw_nut(M2_cap_screw));
+    translate([0,0,-10.8]) washer(screw_washer(M2_cap_screw));
+  }
 
   translate([30,38,4.05]) rotate(90) {
     screw(M5_cs_cap_screw, 20 );
@@ -171,6 +201,8 @@ module picker_assembly(position)
     translate([position+10,0,22]) {
         translate([55,0,-12]) rotate([90,0,-90]) pick_bracket(nema);
         translate([55,0,3]) rotate([0,90,0]) {
+          translate([0,0,-30]) rotate([180,0,0])
+          vacuum_mount();
           NEMA(nema);
           color("silver") translate([0,0,-37]) cylinder(h=7,d=5);
         }
@@ -186,9 +218,9 @@ module pick_bracket(nema) {
     translate([0,15,-2.5]) linear_extrude(3) nema_holes_dxf(nema);
     translate([0,0.5,15]) rotate([90,0,0]) linear_extrude(3) rail_holes_dxf();
   }
-  translate([0,-7.95,15]) rotate([-90,0,0]) carriage_hole_positions(MGN7_carriage) screw(M2_cs_cap_screw, 6);
+  translate([0,-7.95,15]) rotate([-90,0,0]) carriage_hole_positions(MGN7_carriage) screw(M2_cap_screw, 6);
   translate([0,15,-2.05]) rotate([180,0,0]) NEMA_screw_positions(nema) {
-      screw(M2_cs_cap_screw, 6);
+      screw(M2_cap_screw, 6);
   }
 }
 module rail_holes_dxf() {

@@ -7,7 +7,7 @@ Vitamins:
   2 Extrusion E4040 x 1070mm
   3 Extrusion E4040 x 80mm
   1 Extrusion corner bracket 35
- 15 Extrusion inner corner bracket 8.5
+  6 Extrusion inner corner bracket 8.5
   1 Leadscrew nut for SFU1610
   1 Leadscrew 16 x 935mm, 10mm lead, 1 starts
   8 Nut M5 x 4mm nyloc

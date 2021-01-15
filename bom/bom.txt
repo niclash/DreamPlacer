@@ -31,10 +31,11 @@ Vitamins:
   |  | 3|  |  | 3|  |  6 Extrusion E4040 x 80mm
   |  |  |  |  |  | 1|  1 Extrusion E4080 x 1638mm
   | 2| 1|  |  | 1|  |  4 Extrusion corner bracket 35
-  |  |15|  |  |15|  | 30 Extrusion inner corner bracket 8.5
+20|  | 6|  |  | 6|  | 32 Extrusion inner corner bracket 8.5
   |  | 1|  |  | 1| 1|  3 Leadscrew nut for SFU1610
   |  |  |  |  |  | 1|  1 Leadscrew 16 x 1433mm, 10mm lead, 1 starts
   |  | 1|  |  | 1|  |  2 Leadscrew 16 x 935mm, 10mm lead, 1 starts
+  |14|  |  |  |  |  | 14 Nut M2 x 1.6mm 
   | 4|  |  |  |  |  |  4 Nut M4 x 3.2mm 
   | 4| 8|  |  | 8|  | 20 Nut M5 x 4mm nyloc
   |  | 4|  |  | 4| 4| 12 Nut M6 x 5mm nyloc
@@ -46,12 +47,12 @@ Vitamins:
   |  | 1|  |  | 1| 1|  3 Smooth rod 10mm x 15mm
   |  | 1|  |  | 1| 1|  3 Smooth rod 12mm x 15mm
   |  | 1|  |  | 1| 1|  3 Smooth rod 12mm x 50mm
-  |14|  |  |  |  |  | 14 Screw M2 cap x 10mm
-  |  |  |  |16|  |  | 16 Screw M2 cs cap x  6mm
+  |14|  |  |  |  |  | 14 Screw M2 cap x 13.5mm
+  |  |  |  |16|  |  | 16 Screw M2 cap x  6mm
   | 8|  |  |  |  |  |  8 Screw M3 cs cap x 12mm
   |  |  |  |  |  |25| 25 Screw M4 cap x 20mm
   | 2|  |  |  |  |  |  2 Screw M4 cap x 30mm
-  | 4|  |  |  |  |  |  4 Screw M4 cs cap x 16mm
+  | 8|  |  |  |  |  |  8 Screw M4 cs cap x 16mm
   |  |17|  |  |17|  | 34 Screw M5 cap x 24mm
   |  |12|  |  |12| 8| 32 Screw M5 cs cap x 16mm
   | 8|  |  |  |  |  |  8 Screw M5 cs cap x 20mm
@@ -62,7 +63,7 @@ Vitamins:
   |  | 2|  |  | 2|  |  4 Screw M8 cap x  8mm
   |  | 9| 5|  | 9| 8| 31 Screw M8 cs cap x 16mm
   |  |  |  |  |  | 4|  4 Screw M8 cs cap x 24mm
-  |  |  | 1|  |  |  |  1 Aluminium tooling plate 1498mm x 645mm x 2mm
+  |  |  | 1|  |  |  |  1 Aluminium tooling plate 1498mm x 670mm x 2mm
   | 1|  |  |  |  |  |  1 Aluminium tooling plate 120mm x 240mm x 8mm
   |  | 1|  |  | 1|  |  2 Aluminium tooling plate 140mm x 160mm x 8mm
   |  | 1|  |  | 1|  |  2 Aluminium tooling plate 140mm x 78mm x 8mm
@@ -72,6 +73,7 @@ Vitamins:
   |  |  |  |  |  | 1|  1 Aluminium tooling plate 200mm x 300mm x 8mm
   |  |  |  |  |  | 2|  2 Aluminium tooling plate 60mm x 80mm x 8mm
   |  | 2|  |  | 2|  |  4 Nut M8 sliding T
+  |14|  |  |  |  |  | 14 Washer  M2 x 5mm x 0.3mm
   | 8|  |  |  |  |  |  8 Washer  M4 x 9mm x 0.8mm
   | 4| 8|  |  | 8|  | 20 Washer  M5 x 10mm x 1mm
   |  | 4|  |  | 4| 4| 12 Washer  M6 x 12.5mm x 1.5mm
