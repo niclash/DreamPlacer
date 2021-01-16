@@ -79,6 +79,9 @@ Vitamins:
   |  | 4|  |  | 4| 4| 12 Washer  M6 x 12.5mm x 1.5mm
   |  | 2|  |  | 2|  |  4 Washer  M8 x 17mm x 1.6mm
 
+Printed:
+  |  |  |  | 2|  |  |  2 vacuum_mount.stl
+
 CNC cut:
   |  | 1|  |  | 1|  |  2 ballscrew_mount1.dxf
   |  | 1|  |  | 1|  |  2 ballscrew_mount2.dxf

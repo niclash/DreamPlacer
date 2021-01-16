@@ -1,1 +1,3 @@
-{}
+{
+    "vacuum_mount.stl": 11.616
+}

@@ -1,13 +1,13 @@
 {
-    "x_axis_screw_standoff_left.dxf": 0.283,
-    "x_axis_screw_standoff_right.dxf": 0.284,
-    "bracket_right.dxf": 0.31,
-    "bracket_left.dxf": 0.283,
-    "bracket_y_motor.dxf": 0.285,
-    "ballscrew_mount1.dxf": 0.514,
-    "ballscrew_mount2.dxf": 0.328,
-    "head_plate.dxf": 0.416,
-    "rail_holes.dxf": 0.266,
-    "nema_holes.dxf": 0.345,
-    "horiz_plate.dxf": 0.273
+    "x_axis_screw_standoff_left.dxf": 0.369,
+    "x_axis_screw_standoff_right.dxf": 0.32,
+    "bracket_right.dxf": 0.568,
+    "bracket_left.dxf": 0.349,
+    "bracket_y_motor.dxf": 0.396,
+    "ballscrew_mount1.dxf": 0.457,
+    "ballscrew_mount2.dxf": 0.489,
+    "head_plate.dxf": 0.304,
+    "rail_holes.dxf": 0.272,
+    "nema_holes.dxf": 0.316,
+    "horiz_plate.dxf": 0.28
 }

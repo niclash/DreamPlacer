@@ -200,10 +200,10 @@ module picker_assembly(position)
     translate([50,0,0]) rail_assembly(MGN7, 100, position );
     translate([position+10,0,22]) {
         translate([55,0,-12]) rotate([90,0,-90]) pick_bracket(nema);
-        translate([55,0,3]) rotate([0,90,0]) {
-          translate([0,0,-30]) rotate([180,0,0])
-          vacuum_mount();
-          NEMA(nema);
+        translate([55,0,3]) rotate([90,0,90]) {
+          translate([0,0,-30]) rotate([0,180,90])
+            vacuum_mount();
+          NEMA(nema, jst_connector=true);
           color("silver") translate([0,0,-37]) cylinder(h=7,d=5);
         }
         translate([57,0,3]) rotate([0,90,0]) nozzle();

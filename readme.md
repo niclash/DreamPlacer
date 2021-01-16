@@ -86,6 +86,9 @@
 | &nbsp;&nbsp;4&nbsp; | &nbsp;&nbsp;4&nbsp; | &nbsp;&nbsp;.&nbsp; | &nbsp;&nbsp;.&nbsp; | &nbsp;&nbsp;4&nbsp; | &nbsp;&nbsp;.&nbsp; | &nbsp;&nbsp;.&nbsp; |  &nbsp;&nbsp;12&nbsp; | &nbsp;&nbsp; Washer  M6 x 12.5mm x 1.5mm |
 | &nbsp;&nbsp;2&nbsp; | &nbsp;&nbsp;2&nbsp; | &nbsp;&nbsp;.&nbsp; | &nbsp;&nbsp;.&nbsp; | &nbsp;&nbsp;.&nbsp; | &nbsp;&nbsp;.&nbsp; | &nbsp;&nbsp;.&nbsp; |  &nbsp;&nbsp;4&nbsp; | &nbsp;&nbsp; Washer  M8 x 17mm x 1.6mm |
 | &nbsp;&nbsp;107&nbsp; | &nbsp;&nbsp;107&nbsp; | &nbsp;&nbsp;22&nbsp; | &nbsp;&nbsp;101&nbsp; | &nbsp;&nbsp;81&nbsp; | &nbsp;&nbsp;25&nbsp; | &nbsp;&nbsp;7&nbsp; | &nbsp;&nbsp;450&nbsp; | &nbsp;&nbsp;Total vitamins count |
+|  |  |  |  |  |  |  | | **3D printed parts** |
+| &nbsp;&nbsp;.&nbsp; | &nbsp;&nbsp;.&nbsp; | &nbsp;&nbsp;2&nbsp; | &nbsp;&nbsp;.&nbsp; | &nbsp;&nbsp;.&nbsp; | &nbsp;&nbsp;.&nbsp; | &nbsp;&nbsp;.&nbsp; |  &nbsp;&nbsp;2&nbsp; | &nbsp;&nbsp;vacuum_mount.stl |
+| &nbsp;&nbsp;.&nbsp; | &nbsp;&nbsp;.&nbsp; | &nbsp;&nbsp;2&nbsp; | &nbsp;&nbsp;.&nbsp; | &nbsp;&nbsp;.&nbsp; | &nbsp;&nbsp;.&nbsp; | &nbsp;&nbsp;.&nbsp; | &nbsp;&nbsp;2&nbsp; | &nbsp;&nbsp;Total 3D printed parts count |
 |  |  |  |  |  |  |  | | **CNC routed parts** |
 | &nbsp;&nbsp;1&nbsp; | &nbsp;&nbsp;1&nbsp; | &nbsp;&nbsp;.&nbsp; | &nbsp;&nbsp;.&nbsp; | &nbsp;&nbsp;.&nbsp; | &nbsp;&nbsp;.&nbsp; | &nbsp;&nbsp;.&nbsp; |  &nbsp;&nbsp;2&nbsp; | &nbsp;&nbsp;ballscrew_mount1.dxf |
 | &nbsp;&nbsp;1&nbsp; | &nbsp;&nbsp;1&nbsp; | &nbsp;&nbsp;.&nbsp; | &nbsp;&nbsp;.&nbsp; | &nbsp;&nbsp;.&nbsp; | &nbsp;&nbsp;.&nbsp; | &nbsp;&nbsp;.&nbsp; |  &nbsp;&nbsp;2&nbsp; | &nbsp;&nbsp;ballscrew_mount2.dxf |
@@ -218,6 +221,14 @@
 |2| Linear rail MGN7 x 100mm|
 |16| Screw M2 cap x  6mm|
 |2| Stepper motor NEMA8 x 30mm|
+
+
+### 3D Printed parts
+
+| 2 x vacuum_mount.stl |
+|---|
+| ![vacuum_mount.stl](stls/vacuum_mount.png) 
+
 
 
 ### CNC Routed parts

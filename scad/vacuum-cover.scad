@@ -12,10 +12,12 @@
 //   See the License for the specific language governing permissions and
 //   limitations under the License.
 $fn=50;
-
+include <NopSCADlib/lib.scad>
 vacuum_mount();
 
 module vacuum_mount() {
+  stl("vacuum_mount");
+    
   linear_extrude(8){
     wall_2D();
   }
@@ -24,7 +26,6 @@ module vacuum_mount() {
 }
 
 module vacuum_mount_stl() {
-  stl("vacuum mount");
   vacuum_mount();
 }
   

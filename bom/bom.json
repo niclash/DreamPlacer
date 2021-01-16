@@ -244,7 +244,12 @@
                 "count": 2
             }
         },
-        "printed": {},
+        "printed": {
+            "vacuum_mount.stl": {
+                "count": 2,
+                "colour": "[0, 0.572549, 0]"
+            }
+        },
         "routed": {
             "nema_holes.dxf": {
                 "count": 2
