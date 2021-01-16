@@ -2,6 +2,7 @@ tmp.png: \
 	/home/niclas/dev/3D/DreamPlacer/scad/vacuum-cover.scad \
 	/home/niclas/dev/3D/NopSCADlib/vitamins/e3d.scad \
 	/home/niclas/dev/3D/NopSCADlib/vitamins/dip.scad \
+	/home/niclas/.local/share/OpenSCAD/libraries/NopSCADlib/utils/core/rounded_rectangle.scad \
 	/home/niclas/dev/3D/NopSCADlib/utils/core/sphere.scad \
 	/home/niclas/.local/share/OpenSCAD/libraries/NopSCADlib/core.scad \
 	/home/niclas/dev/3D/DreamPlacer/scad/ParametricCableChain.scad \
@@ -9,9 +10,8 @@ tmp.png: \
 	/home/niclas/dev/3D/NopSCADlib/vitamins/jhead.scad \
 	/home/niclas/dev/3D/DreamPlacer/scad/head.scad \
 	/home/niclas/dev/3D/NopSCADlib/utils/sector.scad \
+	/home/niclas/dev/3D/NopSCADlib/utils/rounded_right_triangle.scad \
 	/home/niclas/dev/3D/NopSCADlib/utils/rounded_polygon.scad \
-	/home/niclas/dev/3D/NopSCADlib/utils/core/rounded_rectangle.scad \
-	/home/niclas/dev/3D/NopSCADlib/utils/hanging_hole.scad \
 	/home/niclas/dev/3D/NopSCADlib/utils/gears.scad \
 	/home/niclas/dev/3D/NopSCADlib/utils/sweep.scad \
 	/home/niclas/dev/3D/NopSCADlib/utils/quadrant.scad \
@@ -21,6 +21,8 @@ tmp.png: \
 	/home/niclas/dev/3D/NopSCADlib/vitamins/veroboard.scad \
 	/home/niclas/dev/3D/NopSCADlib/vitamins/sealing_strip.scad \
 	/home/niclas/dev/3D/NopSCADlib/vitamins/opengrab.scad \
+	/home/niclas/dev/3D/NopSCADlib/vitamins/jack.scad \
+	/home/niclas/dev/3D/NopSCADlib/vitamins/ziptie.scad \
 	/home/niclas/dev/3D/NopSCADlib/vitamins/geared_stepper.scad \
 	/home/niclas/dev/3D/NopSCADlib/vitamins/extrusion.scad \
 	/home/niclas/dev/3D/NopSCADlib/vitamins/geared_steppers.scad \
@@ -81,7 +83,6 @@ tmp.png: \
 	/home/niclas/dev/3D/NopSCADlib/vitamins/screws.scad \
 	/home/niclas/dev/3D/NopSCADlib/vitamins/camera.scad \
 	/home/niclas/dev/3D/NopSCADlib/vitamins/ssr.scad \
-	/home/niclas/dev/3D/NopSCADlib/vitamins/jack.scad \
 	/home/niclas/dev/3D/NopSCADlib/vitamins/fan.scad \
 	/home/niclas/dev/3D/NopSCADlib/vitamins/batteries.scad \
 	/home/niclas/dev/3D/NopSCADlib/vitamins/tubing.scad \
@@ -152,6 +153,9 @@ tmp.png: \
 	/home/niclas/dev/3D/NopSCADlib/vitamins/servos.scad \
 	/home/niclas/dev/3D/NopSCADlib/utils/dogbones.scad \
 	/home/niclas/dev/3D/NopSCADlib/vitamins/servo.scad \
+	/home/niclas/dev/3D/NopSCADlib/utils/core/rounded_rectangle.scad \
+	/home/niclas/dev/3D/NopSCADlib/utils/hanging_hole.scad \
+	/home/niclas/dev/3D/NopSCADlib/vitamins/shaft_couplings.scad \
 	/home/niclas/dev/3D/NopSCADlib/vitamins/wire.scad \
 	/home/niclas/.local/share/OpenSCAD/libraries/NopSCADlib/lib.scad \
 	/home/niclas/dev/3D/NopSCADlib/vitamins/sk_brackets.scad \
@@ -163,5 +167,5 @@ tmp.png: \
 	/home/niclas/dev/3D/NopSCADlib/vitamins/swiss_clips.scad \
 	/home/niclas/dev/3D/DreamPlacer/scad/dreamplacer_main.scad \
 	/home/niclas/dev/3D/NopSCADlib/vitamins/toggle.scad \
-	/home/niclas/dev/3D/NopSCADlib/vitamins/tubings.scad \
-	/home/niclas/dev/3D/NopSCADlib/vitamins/ziptie.scad
+	/home/niclas/dev/3D/NopSCADlib/vitamins/shaft_coupling.scad \
+	/home/niclas/dev/3D/NopSCADlib/vitamins/tubings.scad

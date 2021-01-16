@@ -1,7 +1,7 @@
 head_assembly:
 Vitamins:
   2 Stepper motor NEMA17 x 47mm
-  2 Belt GT2 x 6mm x nanmm
+  2 Belt GT2 x 6mm x 442mm
   1 Raspberry Pi camera V2
   2 Extrusion corner bracket 35
  14 Nut M2 x 1.6mm 
