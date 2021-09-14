@@ -2,27 +2,27 @@ xaxis_assembly:
 Vitamins:
   1 Bearing BF12 
   1 Bearing BK12 
-  1 L-profile(30x30) 1638mm
+  1 L-profile(30x30) 1637mm
   3 Ball bearing 6201-2RS 12mm x 32mm x 10mm
   1 Linear rail carriage HGH15CA
-  1 Extrusion E4080 x 1638mm
+  1 Extrusion E4080 x 1637mm
   1 Leadscrew nut for SFU1610
-  1 Leadscrew 16 x 1433mm, 10mm lead, 1 starts
+  1 Leadscrew 16 x 1432mm, 10mm lead, 1 starts
   4 Nut M6 x 5mm nyloc
-  1 Linear rail HGH15CA x 1498mm
+  1 Linear rail HGH15CA x 1497mm
   1 Smooth rod 10mm x 15mm
   1 Smooth rod 12mm x 15mm
   1 Smooth rod 12mm x 50mm
  25 Screw M4 cap x 20mm
   8 Screw M5 cs cap x 16mm
-  4 Screw M6 cap x 24mm
+  4 Screw M6 cap x 30mm
   6 Screw M6 cap x 40mm
-  8 Screw M8 cs cap x 16mm
+  8 Screw M8 cap x 20mm
   4 Screw M8 cs cap x 24mm
   1 Servo Lichuan LCMT07L02NB-80M03530B 80ST mount 80 x 178mm
   1 Aluminium tooling plate 200mm x 180mm x 8mm
   1 Aluminium tooling plate 200mm x 300mm x 8mm
-  2 Aluminium tooling plate 60mm x 80mm x 8mm
+  2 Aluminium tooling plate 80mm x 80mm x 8mm
   4 Washer  M6 x 12.5mm x 1.5mm
 
 CNC cut:

@@ -1,4 +1,7 @@
 frame_assembly:
 Vitamins:
-  5 Extrusion E4040 x 1498mm
- 20 Extrusion inner corner bracket for E4040t
+  5 Extrusion E4040 x 1497mm
+ 18 Extrusion corner bracket 35mm for E4040t
+ 36 Screw M8 cap x 12mm
+ 36 Nut M8 sliding T with spring loaded ball
+ 36 Washer  M8 x 17mm x 1.6mm

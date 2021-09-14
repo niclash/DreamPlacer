@@ -25,20 +25,17 @@
             "extrusion(E4040, 80): Extrusion E4040 x 80mm": {
                 "count": 3
             },
-            "extrusion_inner_corner_bracket(E40_inner_corner_bracket): Extrusion inner corner bracket for E4040t": {
-                "count": 6
-            },
             "extrusion_corner_bracket(E40_corner_bracket): Extrusion corner bracket 35mm for E4040t": {
-                "count": 1
+                "count": 7
             },
             "washer(M8_washer): Washer  M8 x 17mm x 1.6mm": {
-                "count": 2
+                "count": 14
             },
             "screw(M8_cap_screw, 12): Screw M8 cap x 12mm": {
-                "count": 2
+                "count": 14
             },
             "sliding_t_nut(M8_sliding_ball_t_nut): Nut M8 sliding T with spring loaded ball": {
-                "count": 2
+                "count": 14
             },
             "leadscrew(16, 935, 10, 1): Leadscrew 16 x 935mm, 10mm lead, 1 starts": {
                 "count": 1
@@ -70,7 +67,7 @@
             "sheet(AL8, 200, 160, 3): Aluminium tooling plate 200mm x 160mm x 8mm": {
                 "count": 1
             },
-            "screw(M6_cap_screw, 24): Screw M6 cap x 24mm": {
+            "screw(M6_cap_screw, 30): Screw M6 cap x 30mm": {
                 "count": 4
             },
             "washer(M6_washer): Washer  M6 x 12.5mm x 1.5mm": {
@@ -143,20 +140,17 @@
             "extrusion(E4040, 80): Extrusion E4040 x 80mm": {
                 "count": 3
             },
-            "extrusion_inner_corner_bracket(E40_inner_corner_bracket): Extrusion inner corner bracket for E4040t": {
-                "count": 6
-            },
             "extrusion_corner_bracket(E40_corner_bracket): Extrusion corner bracket 35mm for E4040t": {
-                "count": 1
+                "count": 7
             },
             "washer(M8_washer): Washer  M8 x 17mm x 1.6mm": {
-                "count": 2
+                "count": 14
             },
             "screw(M8_cap_screw, 12): Screw M8 cap x 12mm": {
-                "count": 2
+                "count": 14
             },
             "sliding_t_nut(M8_sliding_ball_t_nut): Nut M8 sliding T with spring loaded ball": {
-                "count": 2
+                "count": 14
             },
             "leadscrew(16, 935, 10, 1): Leadscrew 16 x 935mm, 10mm lead, 1 starts": {
                 "count": 1
@@ -188,7 +182,7 @@
             "sheet(AL8, 200, 160, 3): Aluminium tooling plate 200mm x 160mm x 8mm": {
                 "count": 1
             },
-            "screw(M6_cap_screw, 24): Screw M6 cap x 24mm": {
+            "screw(M6_cap_screw, 30): Screw M6 cap x 30mm": {
                 "count": 4
             },
             "washer(M6_washer): Washer  M6 x 12.5mm x 1.5mm": {
@@ -370,10 +364,10 @@
             "head_assembly": 1
         },
         "vitamins": {
-            "extrusion(E4080, 1638): Extrusion E4080 x 1638mm": {
+            "extrusion(E4080, 1637): Extrusion E4080 x 1637mm": {
                 "count": 1
             },
-            "rail(HGH15CA, 1498): Linear rail HGH15CA x 1498mm": {
+            "rail(HGH15CA, 1497): Linear rail HGH15CA x 1497mm": {
                 "count": 1
             },
             "carriage(HGH15CA_carriage): Linear rail carriage HGH15CA": {
@@ -382,7 +376,7 @@
             "screw(M4_cap_screw, 20): Screw M4 cap x 20mm": {
                 "count": 25
             },
-            "leadscrew(16, 1433, 10, 1): Leadscrew 16 x 1433mm, 10mm lead, 1 starts": {
+            "leadscrew(16, 1432, 10, 1): Leadscrew 16 x 1432mm, 10mm lead, 1 starts": {
                 "count": 1
             },
             "rod(12, 50): Smooth rod 12mm x 50mm": {
@@ -406,13 +400,13 @@
             "Bearing(BF12) : Bearing BF12 ": {
                 "count": 1
             },
-            "sheet(AL8, 60, 80, 3): Aluminium tooling plate 60mm x 80mm x 8mm": {
+            "sheet(AL8, 80, 80, 3): Aluminium tooling plate 80mm x 80mm x 8mm": {
                 "count": 2
             },
             "screw(M6_cap_screw, 40): Screw M6 cap x 40mm": {
                 "count": 6
             },
-            "screw(M8_cs_cap_screw, 16): Screw M8 cs cap x 16mm": {
+            "screw(M8_cap_screw, 20): Screw M8 cap x 20mm": {
                 "count": 8
             },
             "servo_motor(Lichuan_M03530_80ST) : Servo Lichuan LCMT07L02NB-80M03530B 80ST mount 80 x 178mm": {
@@ -430,7 +424,7 @@
             "sheet(AL8, 200, 300, 3): Aluminium tooling plate 200mm x 300mm x 8mm": {
                 "count": 1
             },
-            "screw(M6_cap_screw, 24): Screw M6 cap x 24mm": {
+            "screw(M6_cap_screw, 30): Screw M6 cap x 30mm": {
                 "count": 4
             },
             "washer(M6_washer): Washer  M6 x 12.5mm x 1.5mm": {
@@ -439,7 +433,7 @@
             "nut(M6_nut, nyloc = true): Nut M6 x 5mm nyloc": {
                 "count": 4
             },
-            "L-profile(30x30) : L-profile(30x30) 1638mm": {
+            "L-profile(30x30) : L-profile(30x30) 1637mm": {
                 "count": 1
             }
         },
@@ -471,11 +465,20 @@
         "count": 1,
         "assemblies": {},
         "vitamins": {
-            "extrusion(E4040, 1498): Extrusion E4040 x 1498mm": {
+            "extrusion(E4040, 1497): Extrusion E4040 x 1497mm": {
                 "count": 5
             },
-            "extrusion_inner_corner_bracket(E40_inner_corner_bracket): Extrusion inner corner bracket for E4040t": {
-                "count": 20
+            "extrusion_corner_bracket(E40_corner_bracket): Extrusion corner bracket 35mm for E4040t": {
+                "count": 18
+            },
+            "washer(M8_washer): Washer  M8 x 17mm x 1.6mm": {
+                "count": 36
+            },
+            "screw(M8_cap_screw, 12): Screw M8 cap x 12mm": {
+                "count": 36
+            },
+            "sliding_t_nut(M8_sliding_ball_t_nut): Nut M8 sliding T with spring loaded ball": {
+                "count": 36
             }
         },
         "printed": {},
@@ -494,7 +497,7 @@
             "left_side_frame_assembly": 1
         },
         "vitamins": {
-            "sheet(AL2, 1498, 670, 6): Aluminium tooling plate 1498mm x 670mm x 2mm": {
+            "sheet(AL2, 1497, 620, 6): Aluminium tooling plate 1497mm x 620mm x 2mm": {
                 "count": 1
             },
             "L-profile(30x30) : L-profile(30x30) 1066mm": {

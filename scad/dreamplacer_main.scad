@@ -275,7 +275,7 @@ module ballscrew_assembly(length,pos, rotation=0) {
   }
   
   translate([0, 6, pos+11]) { 
-    rotate(90,0,0)  
+    rotate([0,0,90])  
       leadnut(SFU1610);
     rotate([0,180,rotation])
       difference() {
