@@ -16,7 +16,7 @@ include <NopSCADlib/lib.scad>
 use <L-profile.scad>
 use <../scad/vacuum-cover.scad>
 
-position = -28;
+position = 0;
 stepper = NEMA17;
 
 if( $preview ) { 
@@ -30,11 +30,11 @@ module head_assembly()
       head_plate(); 
   translate([14,-4,5])
     rotate([90,90,0])
-      picker_assembly(-position);
+      picker_assembly();
   
   translate([-14,-4,5])
     rotate([90,90,0])
-      picker_assembly(position);
+      picker_assembly();
  
   translate([38,4,109])
     rotate([90,0,0])
@@ -52,8 +52,9 @@ module head_assembly()
       
       
   translate([38,-2,0]) pulley_belt();  
-  translate([-38,-2,0]) pulley_belt();  
-  translate([0,25,-90]) rotate([0,180,-90]) camera(rpi_camera_v2);
+  translate([-38,-2,0]) pulley_belt(); 
+
+  translate([0,45,-43]) rotate([0,180,180]) camera_plate();
   
   translate([40,0,5]) rotate([90,0,0]) {
     translate([-13,13,4.05])
@@ -78,6 +79,15 @@ module head_assembly()
 
 }
 
+module camera_plate() {
+  translate([25,31,-15]) rotate([0,90,0]) 
+    sheet(AL8, 30, 20, [3,3,3,3] );
+  translate([-25,31,-15]) rotate([0,90,0]) 
+    sheet(AL8, 30, 20, [3,3,3,3] );
+  translate([0,21,0]) rotate([0,180,0]) 
+    L_shape(2,30,30,60); 
+  camera(rpi_camera);
+}
 module head_plate_dxf() {
   dxf("head_plate");
   difference() {
@@ -86,7 +96,7 @@ module head_plate_dxf() {
       NEMA_screw_positions(stepper)
         circle(d=3.2);
     translate([38,89,-5])
-      circle(NEMA_big_hole(stepper) );
+      circle(NEMA_boss_radius(stepper) );
     translate([-38,89]) 
       NEMA_screw_positions(stepper)
         circle(d=3.2);
@@ -194,10 +204,10 @@ module pulley_belt() {
   }
 }
 
-module picker_assembly(position) 
+module picker_assembly() 
   assembly("picker") {
-    nema=NEMA8;
-    translate([50,0,0]) rail_assembly(MGN7, 100, position );
+    nema=NEMA8BH;
+    translate([50,0,0]) rail_assembly(MGN7C_carriage, 100, position );
     translate([position+10,0,22]) {
         translate([55,0,-12]) rotate([90,0,-90]) pick_bracket(nema);
         translate([55,0,3]) rotate([90,0,90]) {
@@ -213,26 +223,27 @@ module picker_assembly(position)
 module pick_bracket(nema) {
   difference() {
     translate([0,-2,-2])
-    rotate([0,0,180])
-      L_shape(2,30,30,25);
-    translate([0,15,-2.5]) linear_extrude(3) nema_holes_dxf(nema);
+      rotate([0,0,180])
+        L_shape(2,30,30,25);
+    translate([0,15,-2.5]) linear_extrude(3) nema_holes_dxf();
     translate([0,0.5,15]) rotate([90,0,0]) linear_extrude(3) rail_holes_dxf();
   }
-  translate([0,-7.95,15]) rotate([-90,0,0]) carriage_hole_positions(MGN7_carriage) screw(M2_cap_screw, 6);
+  translate([0,-7.95,15]) rotate([-90,0,0]) carriage_hole_positions(MGN7C_carriage) screw(M2_cap_screw, 6);
   translate([0,15,-2.05]) rotate([180,0,0]) NEMA_screw_positions(nema) {
-      screw(M2_cap_screw, 6);
+//      screw(M2_cap_screw, 6);
   }
 }
+
 module rail_holes_dxf() {
   dxf("rail_holes");
-  carriage_hole_positions(MGN7_carriage) circle(d=2.1);
+  carriage_hole_positions(MGN7C_carriage) circle(d=2.1);
 }
 
-module nema_holes_dxf(nema) {
+module nema_holes_dxf() {
   dxf("nema_holes");
-  big_hole = NEMA_big_hole(nema);
+  big_hole = NEMA_boss_radius(NEMA8BH);
   union() {
-    NEMA_screw_positions(nema)
+    NEMA_screw_positions(NEMA8BH, 4)
       circle(d=2.0);
     circle(big_hole );
   }

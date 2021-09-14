@@ -1,4 +1,4 @@
 frame_assembly:
 Vitamins:
   5 Extrusion E4040 x 1498mm
- 20 Extrusion inner corner bracket 8.5
+ 20 Extrusion inner corner bracket for E4040t

@@ -1,0 +1,68 @@
+'Bearing BF12 ',  3
+'Bearing BK12 ',  3
+'L-profile(30x30) 1066mm',  1
+'L-profile(30x30) 1638mm',  1
+'L-profile(30x30) 25mm',  2
+'L-profile(30x30) 60mm',  1
+'Stepper motor NEMA17 x 47mm',  2
+'Stepper motor NEMA8 x 30mm',  2
+'Ball bearing 6201-2RS 12mm x 32mm x 10mm',  9
+'Belt GT2 x 6mm x 442mm',  2
+'Raspberry Pi focusable camera',  1
+'Linear rail carriage HGH15CA',  1
+'Linear rail carriage HGH20CA',  4
+'Linear rail carriage MGN7C',  2
+'Extrusion E4040 x 1070mm',  4
+'Extrusion E4040 x 1498mm',  5
+'Extrusion E4040 x 80mm',  6
+'Extrusion E4080 x 1638mm',  1
+'Extrusion corner bracket 35mm for E4040t',  4
+'Extrusion inner corner bracket for E4040t', 32
+'Leadscrew nut for SFU1610',  3
+'Leadscrew 16 x 1433mm, 10mm lead, 1 starts',  1
+'Leadscrew 16 x 935mm, 10mm lead, 1 starts',  2
+'Nut M2 x 1.6mm ', 14
+'Nut M4 x 3.2mm ',  4
+'Nut M5 x 4mm nyloc', 20
+'Nut M6 x 5mm nyloc', 12
+'Pulley GT2 idler smooth 12mm',  2
+'Pulley GT2OB 20 teeth',  2
+'Linear rail HGH15CA x 1498mm',  1
+'Linear rail HGH20CA x 1000mm',  2
+'Linear rail MGN7 x 100mm',  2
+'Smooth rod 10mm x 15mm',  3
+'Smooth rod 12mm x 15mm',  3
+'Smooth rod 12mm x 50mm',  3
+'Screw M2 cap x 13.5mm', 14
+'Screw M2 cap x  6mm',  8
+'Screw M3 cs cap x 12mm',  8
+'Screw M4 cap x 20mm', 25
+'Screw M4 cap x 30mm',  2
+'Screw M4 cs cap x 16mm',  8
+'Screw M5 cap x 24mm', 34
+'Screw M5 cs cap x 16mm', 32
+'Screw M5 cs cap x 20mm',  8
+'Screw M5 cs cap x 40mm',  8
+'Screw M5 cs cap x 45mm',  8
+'Screw M6 cap x 24mm', 12
+'Screw M6 cap x 40mm',  6
+'Screw M8 cap x 12mm',  4
+'Screw M8 cs cap x 16mm', 31
+'Screw M8 cs cap x 24mm',  4
+'Servo Lichuan LCMT07L02NB-80M03530B 80ST mount 80 x 178mm',  3
+'Aluminium tooling plate 1498mm x 670mm x 2mm',  1
+'Aluminium tooling plate 120mm x 240mm x 8mm',  1
+'Aluminium tooling plate 140mm x 160mm x 8mm',  2
+'Aluminium tooling plate 140mm x 78mm x 8mm',  2
+'Aluminium tooling plate 180mm x 160mm x 8mm',  1
+'Aluminium tooling plate 200mm x 160mm x 8mm',  2
+'Aluminium tooling plate 200mm x 180mm x 8mm',  1
+'Aluminium tooling plate 200mm x 300mm x 8mm',  1
+'Aluminium tooling plate 30mm x 20mm x 8mm',  2
+'Aluminium tooling plate 60mm x 80mm x 8mm',  2
+'Nut M8 sliding T with spring loaded ball',  4
+'Washer  M2 x 5mm x 0.3mm', 14
+'Washer  M4 x 9mm x 0.8mm',  8
+'Washer  M5 x 10mm x 1mm', 20
+'Washer  M6 x 12.5mm x 1.5mm', 12
+'Washer  M8 x 17mm x 1.6mm',  4

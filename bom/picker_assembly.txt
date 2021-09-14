@@ -2,8 +2,9 @@ picker_assemblies:
 Vitamins:
   2 L-profile(30x30) 25mm
   2 Stepper motor NEMA8 x 30mm
+  2 Linear rail carriage MGN7C
   2 Linear rail MGN7 x 100mm
- 16 Screw M2 cap x  6mm
+  8 Screw M2 cap x  6mm
 
 Printed:
   2 vacuum_mount.stl

@@ -1,9 +1,10 @@
 head_assembly:
 Vitamins:
+  1 L-profile(30x30) 60mm
   2 Stepper motor NEMA17 x 47mm
   2 Belt GT2 x 6mm x 442mm
-  1 Raspberry Pi camera V2
-  2 Extrusion corner bracket 35
+  1 Raspberry Pi focusable camera
+  2 Extrusion corner bracket 35mm for E4040t
  14 Nut M2 x 1.6mm 
   4 Nut M4 x 3.2mm 
   4 Nut M5 x 4mm nyloc
@@ -16,6 +17,7 @@ Vitamins:
   8 Screw M5 cs cap x 20mm
   1 Aluminium tooling plate 120mm x 240mm x 8mm
   1 Aluminium tooling plate 180mm x 160mm x 8mm
+  2 Aluminium tooling plate 30mm x 20mm x 8mm
  14 Washer  M2 x 5mm x 0.3mm
   8 Washer  M4 x 9mm x 0.8mm
   4 Washer  M5 x 10mm x 1mm

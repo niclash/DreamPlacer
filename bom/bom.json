@@ -2,6 +2,8 @@
     {
         "name": "left_side_frame_assembly",
         "big": null,
+        "ngb": false,
+        "zoomed": 0,
         "count": 1,
         "assemblies": {},
         "vitamins": {
@@ -10,6 +12,9 @@
             },
             "rail(HGH20CA, 1000): Linear rail HGH20CA x 1000mm": {
                 "count": 1
+            },
+            "carriage(HGH20CA_carriage): Linear rail carriage HGH20CA": {
+                "count": 2
             },
             "screw(M5_cap_screw, 24): Screw M5 cap x 24mm": {
                 "count": 17
@@ -20,19 +25,19 @@
             "extrusion(E4040, 80): Extrusion E4040 x 80mm": {
                 "count": 3
             },
-            "extrusion_inner_corner_bracket(E40_inner_corner_bracket, true): Extrusion inner corner bracket 8.5": {
+            "extrusion_inner_corner_bracket(E40_inner_corner_bracket): Extrusion inner corner bracket for E4040t": {
                 "count": 6
             },
-            "extrusion_corner_bracket(E40_corner_bracket): Extrusion corner bracket 35": {
+            "extrusion_corner_bracket(E40_corner_bracket): Extrusion corner bracket 35mm for E4040t": {
                 "count": 1
             },
             "washer(M8_washer): Washer  M8 x 17mm x 1.6mm": {
                 "count": 2
             },
-            "screw(M8_cap_screw, 8): Screw M8 cap x  8mm": {
+            "screw(M8_cap_screw, 12): Screw M8 cap x 12mm": {
                 "count": 2
             },
-            "sliding_t_nut(M8_sliding_t_nut): Nut M8 sliding T": {
+            "sliding_t_nut(M8_sliding_ball_t_nut): Nut M8 sliding T with spring loaded ball": {
                 "count": 2
             },
             "leadscrew(16, 935, 10, 1): Leadscrew 16 x 935mm, 10mm lead, 1 starts": {
@@ -59,7 +64,7 @@
             "Bearing(BF12) : Bearing BF12 ": {
                 "count": 1
             },
-            "Servo(LCMT07L02NB_80M03530B) : Servo 80ST standard mount 90 x 178mm": {
+            "servo_motor(Lichuan_M03530_80ST) : Servo Lichuan LCMT07L02NB-80M03530B 80ST mount 80 x 178mm": {
                 "count": 1
             },
             "sheet(AL8, 200, 160, 3): Aluminium tooling plate 200mm x 160mm x 8mm": {
@@ -115,6 +120,8 @@
     {
         "name": "right_side_frame_assembly",
         "big": null,
+        "ngb": false,
+        "zoomed": 0,
         "count": 1,
         "assemblies": {},
         "vitamins": {
@@ -123,6 +130,9 @@
             },
             "rail(HGH20CA, 1000): Linear rail HGH20CA x 1000mm": {
                 "count": 1
+            },
+            "carriage(HGH20CA_carriage): Linear rail carriage HGH20CA": {
+                "count": 2
             },
             "screw(M5_cap_screw, 24): Screw M5 cap x 24mm": {
                 "count": 17
@@ -133,19 +143,19 @@
             "extrusion(E4040, 80): Extrusion E4040 x 80mm": {
                 "count": 3
             },
-            "extrusion_inner_corner_bracket(E40_inner_corner_bracket, true): Extrusion inner corner bracket 8.5": {
+            "extrusion_inner_corner_bracket(E40_inner_corner_bracket): Extrusion inner corner bracket for E4040t": {
                 "count": 6
             },
-            "extrusion_corner_bracket(E40_corner_bracket): Extrusion corner bracket 35": {
+            "extrusion_corner_bracket(E40_corner_bracket): Extrusion corner bracket 35mm for E4040t": {
                 "count": 1
             },
             "washer(M8_washer): Washer  M8 x 17mm x 1.6mm": {
                 "count": 2
             },
-            "screw(M8_cap_screw, 8): Screw M8 cap x  8mm": {
+            "screw(M8_cap_screw, 12): Screw M8 cap x 12mm": {
                 "count": 2
             },
-            "sliding_t_nut(M8_sliding_t_nut): Nut M8 sliding T": {
+            "sliding_t_nut(M8_sliding_ball_t_nut): Nut M8 sliding T with spring loaded ball": {
                 "count": 2
             },
             "leadscrew(16, 935, 10, 1): Leadscrew 16 x 935mm, 10mm lead, 1 starts": {
@@ -172,7 +182,7 @@
             "Bearing(BF12) : Bearing BF12 ": {
                 "count": 1
             },
-            "Servo(LCMT07L02NB_80M03530B) : Servo 80ST standard mount 90 x 178mm": {
+            "servo_motor(Lichuan_M03530_80ST) : Servo Lichuan LCMT07L02NB-80M03530B 80ST mount 80 x 178mm": {
                 "count": 1
             },
             "sheet(AL8, 200, 160, 3): Aluminium tooling plate 200mm x 160mm x 8mm": {
@@ -228,19 +238,24 @@
     {
         "name": "picker_assembly",
         "big": null,
+        "ngb": false,
+        "zoomed": 0,
         "count": 2,
         "assemblies": {},
         "vitamins": {
             "rail(MGN7, 100): Linear rail MGN7 x 100mm": {
                 "count": 2
             },
+            "carriage(MGN7C_carriage): Linear rail carriage MGN7C": {
+                "count": 2
+            },
             "L-profile(30x30) : L-profile(30x30) 25mm": {
                 "count": 2
             },
             "screw(M2_cap_screw, 6): Screw M2 cap x  6mm": {
-                "count": 16
+                "count": 8
             },
-            "NEMA(NEMA8): Stepper motor NEMA8 x 30mm": {
+            "NEMA(NEMA8BH): Stepper motor NEMA8 x 30mm": {
                 "count": 2
             }
         },
@@ -262,6 +277,8 @@
     {
         "name": "head_assembly",
         "big": null,
+        "ngb": false,
+        "zoomed": 0,
         "count": 1,
         "assemblies": {
             "picker_assembly": 2
@@ -297,7 +314,7 @@
             "sheet(AL8, 180, 160, [3, 3, 3, 3]): Aluminium tooling plate 180mm x 160mm x 8mm": {
                 "count": 1
             },
-            "extrusion_corner_bracket(E40_corner_bracket): Extrusion corner bracket 35": {
+            "extrusion_corner_bracket(E40_corner_bracket): Extrusion corner bracket 35mm for E4040t": {
                 "count": 2
             },
             "pulley(GT2x20ob_pulley): Pulley GT2OB 20 teeth": {
@@ -318,7 +335,13 @@
             "nut(M4_nut): Nut M4 x 3.2mm ": {
                 "count": 4
             },
-            "camera(rpi_camera_v2): Raspberry Pi camera V2": {
+            "sheet(AL8, 30, 20, [3, 3, 3, 3]): Aluminium tooling plate 30mm x 20mm x 8mm": {
+                "count": 2
+            },
+            "L-profile(30x30) : L-profile(30x30) 60mm": {
+                "count": 1
+            },
+            "camera(rpi_camera): Raspberry Pi focusable camera": {
                 "count": 1
             },
             "screw(M4_cs_cap_screw, 16): Screw M4 cs cap x 16mm": {
@@ -340,6 +363,8 @@
     {
         "name": "xaxis_assembly",
         "big": null,
+        "ngb": false,
+        "zoomed": 0,
         "count": 1,
         "assemblies": {
             "head_assembly": 1
@@ -349,6 +374,9 @@
                 "count": 1
             },
             "rail(HGH15CA, 1498): Linear rail HGH15CA x 1498mm": {
+                "count": 1
+            },
+            "carriage(HGH15CA_carriage): Linear rail carriage HGH15CA": {
                 "count": 1
             },
             "screw(M4_cap_screw, 20): Screw M4 cap x 20mm": {
@@ -387,7 +415,7 @@
             "screw(M8_cs_cap_screw, 16): Screw M8 cs cap x 16mm": {
                 "count": 8
             },
-            "Servo(LCMT07L02NB_80M03530B) : Servo 80ST standard mount 90 x 178mm": {
+            "servo_motor(Lichuan_M03530_80ST) : Servo Lichuan LCMT07L02NB-80M03530B 80ST mount 80 x 178mm": {
                 "count": 1
             },
             "sheet(AL8, 200, 180, 3): Aluminium tooling plate 200mm x 180mm x 8mm": {
@@ -438,13 +466,15 @@
     {
         "name": "frame_assembly",
         "big": null,
+        "ngb": false,
+        "zoomed": 0,
         "count": 1,
         "assemblies": {},
         "vitamins": {
             "extrusion(E4040, 1498): Extrusion E4040 x 1498mm": {
                 "count": 5
             },
-            "extrusion_inner_corner_bracket(E40_inner_corner_bracket, true): Extrusion inner corner bracket 8.5": {
+            "extrusion_inner_corner_bracket(E40_inner_corner_bracket): Extrusion inner corner bracket for E4040t": {
                 "count": 20
             }
         },
@@ -454,6 +484,8 @@
     {
         "name": "main_assembly",
         "big": null,
+        "ngb": false,
+        "zoomed": 0,
         "count": 1,
         "assemblies": {
             "frame_assembly": 1,
